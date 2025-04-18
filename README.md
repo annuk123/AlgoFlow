@@ -1,6 +1,4 @@
-Here’s a fully polished, professional, and engaging `README.md` file for your **AlgoFlow** project:
 
----
 
 ```md
 # 🔍 AlgoFlow
@@ -9,7 +7,7 @@ Here’s a fully polished, professional, and engaging `README.md` file for your 
 
 Built using modern tools like **Next.js 14**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **Framer Motion**, AlgoFlow delivers a smooth, professional developer experience and is easy to expand.
 
-![AlgoFlow Screenshot](./public/preview.png) <!-- You can add your screenshot here -->
+![AlgoFlow Screenshot](./public/image.png)
 
 ---
 
@@ -129,12 +127,3 @@ Built with 💻 & 💙 by **[Your Name]**
 > Empowering developers to learn DSA with clarity, simplicity, and style.
 
 ```
-
----
-
-Let me know if you want me to:
-- Include a badge section (e.g., Netlify, Vercel, License, GitHub stars)
-- Generate a `preview.png` with a styled screenshot
-- Add specific commands for deploying on **Vercel** or **Netlify**
-
-Want a one-liner project tagline too?
