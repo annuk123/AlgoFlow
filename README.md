@@ -119,7 +119,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Built with 💻 & 💙 by **[Annu Kumari]**  
+Built with 💻 & 💙 by **Annu Kumari**  
 🔗 [Portfolio](https://bio.link/annukumalu) • 🐦 [Twitter](https://x.com/Annu66126617) • 🐙 [GitHub](https://github.com/annuk123)
 
 ---
@@ -127,10 +127,8 @@ Built with 💻 & 💙 by **[Annu Kumari]**
 > Empowering developers to learn DSA with clarity, simplicity, and style.
 
 > **AlgoFlow** — Learn DSA like never before with clear, visual, and interactive problem solving.
+
 ```
-
----
-
 Let me know if you'd like:
 - A banner image or preview graphic added
 - Deployment instructions for Vercel
