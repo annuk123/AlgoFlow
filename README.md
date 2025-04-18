@@ -1,6 +1,11 @@
 # 🔍 AlgoFlow
 
-**AlgoFlow** is a modern, interactive platform built to **visualize Data Structures and Algorithms (DSA) step by step**, making learning and solving DSA problems easier, clearer, and more intuitive.
+**AlgoFlow** is a modern, interactive platform built to **visualize Data Structures and Algorithms (DSA) step by step**, making learning and solving DSA problems easier, clearer, and more intuitive. The core idea behind AlgoFlow is to bridge the gap between writing code and actually understanding how it works under the hood — especially for beginners and intermediate learners preparing for coding interviews.
+
+It features a clean, responsive UI with real-time search, tag-based filtering, and dynamic problem routing, all built using modern technologies like Next.js 14, TypeScript, Tailwind CSS, Framer Motion, and shadcn/ui. Users can explore curated problems by category (e.g., Arrays, Graphs, DP), search problems by keywords, and open detailed pages for each problem.
+
+AlgoFlow is designed not just as a problem list, but as a DSA learning companion — where the focus is on clarity, visual learning, and clean UX, making the complex process of solving algorithms more approachable and even enjoyable.
+
 
 Crafted with the latest frontend technologies like **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, AlgoFlow delivers a clean, responsive UI with real-time filtering, search, and beautiful animations.
 
