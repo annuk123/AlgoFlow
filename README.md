@@ -127,9 +127,3 @@ Built with 💻 & 💙 by **Annu Kumari**
 > Empowering developers to learn DSA with clarity, simplicity, and style.
 
 > **AlgoFlow** — Learn DSA like never before with clear, visual, and interactive problem solving.
-
-```
-Let me know if you'd like:
-- A banner image or preview graphic added
-- Deployment instructions for Vercel
-- Any badges like `Made with Next.js`, `MIT License`, `Open to Contributions`, etc.
