@@ -7,7 +7,7 @@
 
 Built using modern tools like **Next.js 14**, **TypeScript**, **Tailwind CSS**, **shadcn/ui**, and **Framer Motion**, AlgoFlow delivers a smooth, professional developer experience and is easy to expand.
 
-![AlgoFlow Screenshot](./public/image.png)
+![AlgoFlow Screenshot](/public/image.png)
 
 ---
 
@@ -48,7 +48,7 @@ Built using modern tools like **Next.js 14**, **TypeScript**, **Tailwind CSS**, 
 
 ## 🗂️ Project Structure
 
-```
+```plaintext
 .
 ├── app/
 │   ├── page.tsx             # Home page with search & filter
