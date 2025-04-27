@@ -48,8 +48,10 @@ export default function Navbar() {
         <Link
           href="/"
           className="text-2xl font-extrabold tracking-tight hover:opacity-80 transition"
-        >
+          >
+            <div>
           Algo<span className="text-primary">Flow</span>
+          </div>
         </Link>
 
         {/* Desktop Menu */}
@@ -64,7 +66,7 @@ export default function Navbar() {
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               )}
-            >
+              >
               {item.label}
             </Link>
           ))}
@@ -87,7 +89,6 @@ export default function Navbar() {
           </Button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isOpen && (
         <motion.div
@@ -102,7 +103,7 @@ export default function Navbar() {
               href={item.href}
               className="block text-lg font-medium text-muted-foreground hover:text-foreground transition"
               onClick={() => setIsOpen(false)}
-            >
+              legacyBehavior>
               {item.label}
             </Link>
           ))}

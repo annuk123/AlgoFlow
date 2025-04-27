@@ -10,7 +10,7 @@ import clsx from "clsx"
 import { Input } from "@/components/ui/input"
 import { ThemeToggle } from "../ThemeToggle/page";
 import { useTheme } from "next-themes"
-import { DropMenu } from "./dropdown/page"
+// import { DropMenu } from "./dropdown/page"
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -70,7 +70,7 @@ export default function Navbar({
             )}
     >
       <div className="flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" >
           <span className="font-extrabold text-2xl sm:text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
             Algo<span className="text-foreground">Flow</span>
           </span>
@@ -136,5 +136,5 @@ export default function Navbar({
         </button>
       </div>
     </motion.nav>
-  )
+  );
 }

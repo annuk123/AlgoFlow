@@ -87,20 +87,19 @@ export default function VisualizerDashboard() {
       >
         Choose an Algorithm to Visualize
       </motion.h1> */}
-<motion.h1 
-    initial={{ opacity: 0, y: -60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
->
-  <span className="block text-center">
-    Choose Your
-  </span>
-  <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
-    Algorithm to Visualize
-  </span>
-</motion.h1>
-
+      <motion.h1 
+          initial={{ opacity: 0, y: -60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
+      >
+        <span className="block text-center">
+          Choose Your
+        </span>
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+          Algorithm to Visualize
+        </span>
+      </motion.h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
         {filteredProblems.map((algorithm, index) => (
           <motion.div
@@ -109,7 +108,7 @@ export default function VisualizerDashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Link href={`/visualizer/${algorithm.slug}`}>
+            <Link href={`/visualizer/${algorithm.slug}`} >
               <div className="border border-border rounded-2xl p-6 hover:shadow-xl hover:scale-[1.03] transition cursor-pointer flex flex-col items-center text-center">
                 <h2 className="text-2xl font-bold mb-2">{algorithm.name}</h2>
                 <p className="text-muted-foreground">{algorithm.description}</p>

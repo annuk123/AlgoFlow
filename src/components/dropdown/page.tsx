@@ -74,7 +74,7 @@ export function DropMenuMain() {
                   <Link
                     href="/"
                     className="flex h-full w-full flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none transition hover:shadow-lg"
-                  >
+                    >
                     <div className="mb-2 mt-4 text-lg font-semibold">AlgoFlow</div>
                     <p className="text-sm text-muted-foreground">
                       A modern platform to visualize and master DSA algorithms with code.
@@ -128,7 +128,7 @@ export function DropMenuMain() {
 
         {/* Contact */}
         <NavigationMenuItem>
-          <Link href="/contact" passHref legacyBehavior>
+         <Link href="/docs"  passHref>
             <NavigationMenuLink className="block rounded-md p-3 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
               Contact
             </NavigationMenuLink>
@@ -147,7 +147,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
+      {/* <NavigationMenuLink asChild> */}
         <a
 
           ref={ref}
@@ -162,7 +162,7 @@ const ListItem = React.forwardRef<
             {children}
           </p>
         </a>
-      </NavigationMenuLink>
+      {/* </NavigationMenuLink> */}
     </li>
   );
 });
