@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    
+    dataRoutes: [
+      {
+        source: /^\/_next\/data\/development\/{routes}\/daily\.json$/,
+        destination: '/daily',
+      }
+    ]
+  }
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig;

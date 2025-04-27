@@ -1,13 +1,16 @@
 // components/navbar/page.tsx
 'use client'
 
-import { useTheme } from "next-themes"
-import { useState } from "react"
+// import { useTheme } from "next-themes"
+import { useState, useEffect } from "react"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import Link from "next/link"
 import { Moon, Sun, Menu, X, Filter, Search } from "lucide-react"
 import clsx from "clsx"
 import { Input } from "@/components/ui/input"
+import { ThemeToggle } from "../ThemeToggle/page";
+import { useTheme } from "next-themes"
+import { DropMenu } from "./dropdown/page"
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -15,6 +18,7 @@ import {
   DropdownMenuCheckboxItem,
 } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
+
 
 const categories = ["Array", "Graph", "DP", "Stack", "Greedy", "String", "Binary Search"]
 
@@ -31,9 +35,10 @@ export default function Navbar({
   selectedTags,
   setSelectedTags,
 }: NavbarProps) {
-  const { theme, setTheme } = useTheme()
+  // const { theme, setTheme } = useTheme()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { theme } = useTheme();
 
   useMotionValueEvent(useScroll().scrollY, "change", (latest) => {
     setScrolled(latest > 10)
@@ -45,16 +50,24 @@ export default function Navbar({
     )
   }
 
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => setMounted(true), []);
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={clsx(
-        "fixed top-4 left-1/2 z-50 -translate-x-1/2 rounded-full px-6 py-3 w-[95%] max-w-5xl transition-all",
-        "backdrop-blur-lg border bg-zinc-900/60 shadow-xl",
-        scrolled && "border-zinc-700 bg-zinc-900/80 shadow-zinc-800/40"
-      )}
+              "fixed top-4 py-2 left-1/2 z-50 -translate-x-1/2 rounded-full px-4 sm:px-6 w-[95%] max-w-5xl transition-all",
+              "backdrop-blur-lg border shadow-md",
+              theme === "light"
+                ? "bg-white/70 border-gray-200 shadow-gray-300/40"
+                : "bg-zinc-900/60 border-zinc-700 shadow-zinc-800/40",
+              scrolled && (theme === "light"
+                ? "bg-white/90 border-gray-300"
+                : "bg-zinc-900/80 border-zinc-700 shadow-lg")
+            )}
     >
       <div className="flex items-center justify-between">
         <Link href="/">
@@ -74,6 +87,7 @@ export default function Navbar({
           />
           <Search className="w-8 h-8 text-gray-300" />
         </div>
+        
 
         {/* Filter */}
         <DropdownMenu>
@@ -97,7 +111,8 @@ export default function Navbar({
         </DropdownMenu>
 
         {/* Theme toggle */}
-        <div className="hidden md:flex items-center gap-4">
+        {mounted && <ThemeToggle />}
+        {/* <div className="hidden md:flex items-center gap-4">
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="rounded-full p-1.5 transition hover:bg-zinc-800"
@@ -109,7 +124,7 @@ export default function Navbar({
               <Moon className="w-4 h-4 text-blue-400" />
             )}
           </button>
-        </div>
+        </div> */}
 
         {/* Mobile menu toggle */}
         <button
