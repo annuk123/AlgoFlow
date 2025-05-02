@@ -2,6 +2,8 @@
 
 import { useParams } from "next/navigation";
 import BubbleSortVisualizer from "@/components/dashboard/bubble-sort/page";
+import InsertionSortPage from "@/components/dashboard/insertion-sort/page";
+import SelectionSortVisualizer from "@/components/dashboard/selection-sort/page";
 
 export default function VisualizerPage() {
   const { slug } = useParams();
@@ -16,6 +18,17 @@ export default function VisualizerPage() {
       <BubbleSortVisualizer />
     );
   }
-  // return <BubbleSortVisualizer />;
-  // return <VisualizerPlayer />;
+
+  if (slugStr === "insertion-sort") {
+    return (
+      <InsertionSortPage />
+    );
+  }
+
+  if (slugStr === "selection-sort") {
+    return (
+      <SelectionSortVisualizer />
+    );
+  }
+  return <div className="text-center mt-10 text-xl">Invalid visualizer selected.</div>;
 }

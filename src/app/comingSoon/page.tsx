@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function ComingSoonPage() {
   const title = "Coming Soon ...";
   const subtitle = "We’re cooking up something awesome!";
-  const memeUrl = "https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif";
+  const memeUrl = "/image.png";
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white flex flex-col items-center justify-center px-4 text-center transition-colors duration-300">

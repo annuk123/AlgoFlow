@@ -16,7 +16,7 @@ export default function Home() {
   if (!isMounted) return null; // 🛡️ Avoid SSR hydration issues
 
   return (
-    <main className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-500">
+    <main className="flex z-10 flex-col min-h-screen bg-background text-foreground transition-colors duration-500">
       {/* Navbar */}
       <Navbar />
 
@@ -59,7 +59,7 @@ export default function Home() {
     className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl"
   >
     Welcome to <span className="font-semibold text-primary">AlgoFlow</span> — where complex algorithms turn into 
-    <span className="font-semibold text-secondary"> beautiful, interactive visual stories.</span> Learn smarter, practice faster, master deeper.
+    <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient"> beautiful, interactive visual stories.</span> Learn smarter, practice faster, master deeper.
   </motion.p>
 
   <motion.div
@@ -78,9 +78,6 @@ export default function Home() {
 
 
       {/* Footer */}
-      {/* <footer className="py-6 text-center text-xs text-muted-foreground">
-        © 2025 AlgoFlow. Built with ❤️
-      </footer> */}
       <Footer />
     </main>
   );

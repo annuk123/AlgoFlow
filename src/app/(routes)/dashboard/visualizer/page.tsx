@@ -7,8 +7,8 @@ import Navbar from "@/components/navbar/page";
 
 const algorithms = [
   { name: "Bubble Sort", slug: "../dashboard/visualizer/bubble-sort", description: "Visualize Bubble Sort step by step" },
-  { name: "Insertion Sort", slug: "../../comingSoon", description: "Learn how Insertion Sort works" },
-  { name: "Selection Sort", slug: "../../comingSoon", description: "Watch Selection Sort find the minimum element" },
+  { name: "Insertion Sort", slug: "../dashboard/visualizer/insertion-sort", description: "Learn how Insertion Sort works" },
+  { name: "Selection Sort", slug: "../dashboard/visualizer/selection-sort", description: "Watch Selection Sort find the minimum element" },
   { name: "Merge Sort", slug: "../../comingSoon", description: "Visualize the divide and conquer approach of Merge Sort" },
   { name: "Quick Sort", slug: "../../comingSoon", description: "Watch Quick Sort in action" },
   { name: "Heap Sort", slug: "../../comingSoon", description: "Learn how Heap Sort builds a heap and sorts" },
@@ -50,7 +50,6 @@ const algorithms = [
 ];
 
 export default function VisualizerDashboard() {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProblems, setFilteredProblems] = useState(algorithms);
 
@@ -59,24 +58,19 @@ export default function VisualizerDashboard() {
       const query = searchQuery.toLowerCase();
       const filtered = algorithms.filter((algorithm) => {
         const matchesQuery = algorithm.name.toLowerCase().includes(query); // Filter only by name
-        const matchesTags =
-          selectedTags.length === 0 ||
-          selectedTags.some((tag) => algorithm.description.toLowerCase().includes(tag.toLowerCase())); // Filter based on tags and description
-        return matchesQuery && matchesTags;
+        return matchesQuery ;
       });
       setFilteredProblems(filtered);
     }, 300);
 
     return () => clearTimeout(timeout);
-  }, [searchQuery, selectedTags]);
+  }, [searchQuery]);
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-background">
       <Navbar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        selectedTags={selectedTags}
-        setSelectedTags={setSelectedTags}
       />
       {/* Main Content */}
       <motion.h1 

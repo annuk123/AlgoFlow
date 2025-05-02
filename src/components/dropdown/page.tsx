@@ -68,7 +68,8 @@ export function DropMenuMain() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-4 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+          <ul className="grid gap-4 p-4 w-[90vw] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <Link
@@ -100,7 +101,7 @@ export function DropMenuMain() {
 <NavigationMenuItem>
           <NavigationMenuTrigger>Features</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="grid gap-6 p-6 md:w-[600px] lg:w-[700px] md:grid-cols-2">
+          <div className="grid gap-6 p-4 w-[90vw] md:w-[600px] lg:w-[700px] md:grid-cols-2">
               <div>
                 <h3 className="mb-2 text-sm font-bold text-muted-foreground uppercase tracking-wide">Algorithm Visualizer</h3>
                 <ul className="grid gap-4">
@@ -116,7 +117,8 @@ export function DropMenuMain() {
                 <h3 className="mb-2 text-sm font-bold text-muted-foreground uppercase tracking-wide">Problem Visualizer</h3>
                 <ul className="grid gap-4">
                   {problemTopics.map((topic) => (
-                    <ListItem key={topic.title} title={topic.title} href={topic.href}>
+                    <ListItem key={topic.title} title={topic.title} href={topic.href} className="block select-none space-y-1 rounded-md p-4 text-left leading-none no-underline outline-none transition hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground
+">
                       {topic.description}
                     </ListItem>
                   ))}
@@ -125,18 +127,6 @@ export function DropMenuMain() {
             </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
-        {/* Contact */}
-        <NavigationMenuItem>
-  <NavigationMenuLink asChild>
-    <Link
-      href="/docs"
-      className="block rounded-md p-3 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-    >
-      Contact
-    </Link>
-  </NavigationMenuLink>
-</NavigationMenuItem>
 
 
       </NavigationMenuList>
@@ -174,3 +164,5 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
   );
 });
 ListItem.displayName = "ListItem";
+
+

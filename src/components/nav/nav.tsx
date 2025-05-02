@@ -11,6 +11,19 @@ import { ThemeToggle } from "../ThemeToggle/page";
 import clsx from "clsx";
 import { Menu, X } from "lucide-react";
 import { DropMenuMain } from "../dropdown/page";
+import { AnimatePresence } from "framer-motion";
+import {
+  FaGithub,
+} from "react-icons/fa";
+
+const socials = [
+  {
+    name: "GitHub",
+    icon: <FaGithub />,
+    href: "https://github.com/annuk123/algoflow",
+  },
+]
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -26,6 +39,7 @@ export default function Navbar() {
   // Fix hydration mismatch for ThemeToggle
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
+
 
   return (
     <motion.nav
@@ -46,13 +60,10 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between py-3 px-2 sm:px-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-2xl font-extrabold tracking-tight hover:opacity-80 transition"
-          >
-            <div>
-          Algo<span className="text-primary">Flow</span>
-          </div>
+        <Link href="/" className="flex-shrink-0">
+          <span className="font-extrabold text-2xl sm:text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
+            Algo<span className="text-foreground">Flow</span>
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -72,61 +83,135 @@ export default function Navbar() {
             </Link>
           ))}
           <DropMenuMain />
-          <Button size="lg" className="rounded-full">
-            Login
-          </Button>
+
+          {/* Feedback */}
+          <Link
+          href={"../../comingSoon"}
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            FeedBack
+          </Link>
+
+          {/* Contact */}
+          <Link
+          href={"../../comingSoon"}
+          // href={"/contact"}
+          className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Contact
+          </Link>
+           <div className="flex gap-5 text-xl">
+                    {socials.map(({ name, icon, href }, i) => (
+                      <motion.a
+                        key={name}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-125"
+                        whileHover={{ scale: 1.2 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 15, delay: i * 0.05 }}
+                        aria-label={name}
+                      >
+                        {icon}
+                      </motion.a>
+                    ))}
+                  </div>
           {mounted && <ThemeToggle />}
         </div>
+        
 
         {/* Mobile Menu Toggle */}
 {/* Mobile Hamburger Toggle */}
+
+
 <div className="md:hidden flex items-center gap-2">
+   <div className="flex gap-5 text-xl">
+            {socials.map(({ name, icon, href }, i) => (
+              <motion.a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-125"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15, delay: i * 0.05 }}
+                aria-label={name}
+              >
+                {icon}
+              </motion.a>
+            ))}
+          </div>
   {mounted && <ThemeToggle />}
+  
   <Button
     variant="ghost"
     size="icon"
     onClick={() => setIsOpen(!isOpen)}
-    className="hover:bg-accent/30 rounded-full transition"
+    className="hover:bg-accent/30 rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-ring"
+    aria-label="Toggle menu"
   >
-    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={isOpen ? "close" : "menu"}
+        initial={{ opacity: 0, rotate: -90 }}
+        animate={{ opacity: 1, rotate: 0 }}
+        exit={{ opacity: 0, rotate: 90 }}
+        transition={{ duration: 0.2 }}
+      >
+        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </motion.div>
+    </AnimatePresence>
   </Button>
 </div>
 
 {/* Full Screen Mobile Menu */}
+
 <motion.div
-  initial={false}
-  animate={isOpen ? "open" : "closed"}
-  variants={{
-    open: { opacity: 1, y: 0, pointerEvents: "auto" },
-    closed: { opacity: 0, y: -20, pointerEvents: "none" },
-  }}
+  initial={{ x: "-100%" }}
+  animate={{ x: isOpen ? 0 : "-100%" }}
   transition={{ duration: 0.3, ease: "easeInOut" }}
   className={clsx(
-    "fixed inset-0 top-20 z-40 md:hidden flex flex-col items-center justify-start bg-background/95 backdrop-blur-lg px-6 py-8 space-y-6 rounded-2xl mx-4 shadow-2xl border border-border",
-    scrolled && "top-16"
+    "fixed top-0 left-0 z-50 h-full w-[80%] max-w-sm bg-background shadow-2xl flex flex-col md:hidden"
   )}
 >
-  {navItems.map((item) => (
-    <Link
-      key={item.href}
-      href={item.href}
-      onClick={() => setIsOpen(false)}
-      className="text-xl font-semibold text-muted-foreground hover:text-primary transition-all"
-    >
-      {item.label}
-    </Link>
-  ))}
-  <DropMenuMain />
-  <Button
-    className="w-full rounded-full mt-4 hover:scale-[1.03] transition"
-    onClick={() => setIsOpen(false)}
-  >
-    Get Started
-  </Button>
-  {/* <div className="max-h-64 overflow-y-auto">
-  <DropMenuMain />
-</div> */}
+  {/* Inner Content with Blurred Dark Backdrop */}
+  {/* <div className="flex flex-col h-full p-6 bg-purple-50 backdrop-blur-sm rounded-r-2xl"> */}
+    <div className="flex flex-col gap-5 w-full mt-10 p-10 bg-gray-100 dark:bg-gray-950 rounded-lg min-h-80vh">
+      {/* Links */}
+      <Link
+        href="/"
+        onClick={() => setIsOpen(false)}
+        className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-colors"
+      >
+        Home
+      </Link>
+      <Link
+        href="../../comingSoon"
+        onClick={() => setIsOpen(false)}
+        className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-colors"
+      >
+        Feedback
+      </Link>
+      <Link
+        href="../../comingSoon"
+        onClick={() => setIsOpen(false)}
+        className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-colors"
+      >
+        Contact
+      </Link>
+
+      {/* Drop menu */}
+      <DropMenuMain />
+
+      {/* Footer */}
+      <div className="pt-6 border-t border-border">
+        <p className="text-sm text-muted-foreground">© 2025 Codexio</p>
+      </div>
+    {/* </div> */}
+  </div>
 </motion.div>
+
+
       </div>
     </motion.nav>
   );

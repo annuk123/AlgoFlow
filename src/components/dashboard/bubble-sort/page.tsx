@@ -35,14 +35,26 @@ export const BubbleSortVisualizer = () => {
 
 
   const [customInput, setCustomInput] = useState(""); // new
+  const [error, setError] = useState(""); // new
 
   const handleCustomInput = () => {
-    const cleaned = customInput.split(",").map(Number).filter(n => !isNaN(n));
-    if (cleaned.length > 0) {
-      setArray(cleaned);
-      setTimeline([]);
+    // Remove whitespace, split by commas, and validate
+    const rawItems = customInput.split(",").map(item => item.trim());
+  
+    // Check for empty strings (caused by ,, or leading/trailing commas)
+    const hasInvalid = rawItems.some(item => item === "" || isNaN(Number(item)));
+  
+    if (hasInvalid || rawItems.length === 0) {
+      setError("Please enter a valid comma-separated list of numbers.");
+      return;
     }
+  
+    const cleaned = rawItems.map(Number);
+    setArray(cleaned);
+    setTimeline([]);
+    setError(""); // Clear error
   };
+
 
   const addTimelineEvent = (event: string) => {
     setTimeline(prev => [...prev, event]);
@@ -285,27 +297,7 @@ useEffect(() => {
       <div className="w-full flex flex-col items-center px-4 sm:px-6 md:px-10 py-6 gap-8">
 
 {/* Visualization Bars */}
-{/* <div className="flex items-end justify-center w-full max-w-4xl gap-[2px] sm:gap-1 overflow-hidden bg-muted rounded-lg p-4 h-[300px] sm:h-[400px] transition-all">
-  {array.map((value, idx) => (
-    <motion.div
-      key={idx}
-      className={cn(
-        "rounded-t-md transition-all duration-300",
-        swapIndices.includes(idx)
-          ? "bg-green-500"
-          : activeIndices.includes(idx)
-          ? "bg-red-400"
-          : "bg-primary",
-        "w-[8px] sm:w-[13px] md:w-[16px] lg:w-[20px]"
-      )}
-      style={{
-        height: `${value * 3}px`,
-      }}
-      layout
-      transition={{ type: "spring", stiffness: 120, damping: 20 }}
-    />
-  ))}
-</div> */}
+
 <div className="flex items-end justify-center w-full max-w-4xl gap-[2px] sm:gap-1 overflow-hidden bg-muted rounded-lg p-4 h-[300px] sm:h-[400px] transition-all">
   {array.map((value, idx) => (
     <div key={idx} className="flex flex-col items-center">
@@ -410,20 +402,15 @@ useEffect(() => {
   </div>
 )}
 
-{/* <button
-  onClick={() => setIsPaused(!isPaused)}
-  className="px-6 py-3 bg-yellow-400 text-white rounded-full font-semibold hover:scale-105 transition"
-  disabled={!isSorting}
->
-  {isPaused ? "Resume" : "Pause"}
-</button> */}
   {/* Custom Input */}
+
+  <div className="w-full flex flex-col items-center justify-center mt-7 gap-2">
   <div className="w-full flex flex-col sm:flex-row gap-3 items-center justify-center">
     <input
       type="text"
       value={customInput}
       onChange={(e) => setCustomInput(e.target.value)}
-      placeholder="Enter numbers like 5,2,9,1"
+      placeholder="Enter numbers like 5, 2, 9, 1"
       className="w-full sm:w-[250px] border rounded-md px-4 py-2"
       disabled={isSorting}
     />
@@ -435,6 +422,11 @@ useEffect(() => {
       Visualize Input
     </button>
   </div>
+
+  {error && (
+    <p className="text-red-500 text-sm text-center">{error}</p>
+  )}
+</div>
 
 </div>
 </div>
