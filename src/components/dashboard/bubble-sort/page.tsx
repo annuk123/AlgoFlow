@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { VisualizerLayout } from "@/components/VisualizerLayout/page";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -32,19 +32,7 @@ export const BubbleSortVisualizer = () => {
     setEndTime(null);
   };
 
-  const waitWhilePaused = () => {
-    return new Promise<void>((resolve) => {
-      const check = () => {
-        if (!isPaused) {
-          resolve();
-        } else {
-          setTimeout(check, 100); // Check every 100ms
-        }
-      };
-      check();
-    });
-  };
-  
+
 
   const [customInput, setCustomInput] = useState(""); // new
 
@@ -60,12 +48,32 @@ export const BubbleSortVisualizer = () => {
     setTimeline(prev => [...prev, event]);
   };
 
-  // const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+
+const isPausedRef = useRef(isPaused);
+
+useEffect(() => {
+  isPausedRef.current = isPaused;
+}, [isPaused]);
+
+
+  const waitWhilePaused = () => {
+    return new Promise<void>((resolve) => {
+      const check = () => {
+        if (!isPausedRef.current) {
+          resolve();
+        } else {
+          setTimeout(check, 100);
+        }
+      };
+      check();
+    });
+  };
+  
   const pausableDelay = async (ms: number) => {
-    const interval = 50; // Check every 50ms
+    const interval = 50;
     let elapsed = 0;
     while (elapsed < ms) {
-      if (!isPaused) {
+      if (!isPausedRef.current) {
         await new Promise((res) => setTimeout(res, interval));
         elapsed += interval;
       } else {
@@ -74,44 +82,6 @@ export const BubbleSortVisualizer = () => {
     }
   };
   
-
-
-  // const bubbleSort = async () => {
-  //   setIsSorting(true);
-  //   setStartTime(Date.now()); // Start timing
-    
-  //   const arr = [...array];
-  //   const n = arr.length;
-  //   let swapped;
-  
-  //   for (let i = 0; i < n - 1; i++) {
-  //     swapped = false;
-  //     for (let j = 0; j < n - i - 1; j++) {
-  //       setActiveIndices([j, j + 1]);
-  //       addTimelineEvent(`Comparing ${arr[j]} and ${arr[j + 1]}`);
-        
-  //       if (arr[j] > arr[j + 1]) {
-  //         addTimelineEvent(`Swapping ${arr[j]} and ${arr[j + 1]}`);
-  //         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-  //         setArray([...arr]);
-  //         await delay(speed);
-  //         swapped = true;
-  //       } else {
-  //         await delay(speed / 2);
-  //       }
-  //     }
-  //     if (!swapped) {
-  //       addTimelineEvent("Array already sorted early!");
-  //       break;
-  //     }
-  //   }
-  
-  //   setActiveIndices([]);
-  //   addTimelineEvent("Sorting Complete!");
-  
-  //   setEndTime(Date.now()); // End timing
-  //   setIsSorting(false);
-  // };
   
   const bubbleSort = async () => {
     setIsSorting(true);
@@ -139,8 +109,7 @@ export const BubbleSortVisualizer = () => {
           setArray([...arr]);
           setSwapIndices([j, j + 1]);
   
-          // await waitWhilePaused();
-          // await delay(speed);
+        
           await pausableDelay(speed);      // during swap
                // if no swap
 
@@ -319,24 +288,6 @@ export const BubbleSortVisualizer = () => {
 {/* <div className="flex items-end justify-center w-full max-w-4xl gap-[2px] sm:gap-1 overflow-hidden bg-muted rounded-lg p-4 h-[300px] sm:h-[400px] transition-all">
   {array.map((value, idx) => (
     <motion.div
-    key={idx}
-    className={cn(
-      "rounded-t-md",
-      activeIndices.includes(idx) ? "bg-red-400" : "bg-primary",
-      "w-[8px] sm:w-[13px] md:w-[16px] lg:w-[20px]" // Responsive widths
-    )}
-    style={{
-      height: `${value * 3}px`, // Keep dynamic height
-    }}
-    layout
-    transition={{ type: "spring", stiffness: 120, damping: 20 }}
-  />
-  
-  ))}
-</div> */}
-<div className="flex items-end justify-center w-full max-w-4xl gap-[2px] sm:gap-1 overflow-hidden bg-muted rounded-lg p-4 h-[300px] sm:h-[400px] transition-all">
-  {array.map((value, idx) => (
-    <motion.div
       key={idx}
       className={cn(
         "rounded-t-md transition-all duration-300",
@@ -353,6 +304,43 @@ export const BubbleSortVisualizer = () => {
       layout
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
     />
+  ))}
+</div> */}
+<div className="flex items-end justify-center w-full max-w-4xl gap-[2px] sm:gap-1 overflow-hidden bg-muted rounded-lg p-4 h-[300px] sm:h-[400px] transition-all">
+  {array.map((value, idx) => (
+    <div key={idx} className="flex flex-col items-center">
+      {/* Label on top of the bar */}
+      <span
+        className={cn(
+          "mb-1 text-xs sm:text-sm font-medium",
+          swapIndices.includes(idx)
+            ? "text-green-600"
+            : activeIndices.includes(idx)
+            ? "text-red-500"
+            : "text-foreground"
+        )}
+      >
+        {value}
+      </span>
+
+      {/* The actual animated bar */}
+      <motion.div
+        className={cn(
+          "rounded-t-md transition-all duration-300",
+          swapIndices.includes(idx)
+            ? "bg-green-500"
+            : activeIndices.includes(idx)
+            ? "bg-red-400"
+            : "bg-primary",
+          "w-[8px] sm:w-[13px] md:w-[16px] lg:w-[20px]"
+        )}
+        style={{
+          height: `${value * 3}px`,
+        }}
+        layout
+        transition={{ type: "spring", stiffness: 120, damping: 20 }}
+      />
+    </div>
   ))}
 </div>
 
@@ -378,6 +366,13 @@ export const BubbleSortVisualizer = () => {
       Start Sorting
     </button>
 
+    <button
+  onClick={() => setIsPaused(!isPaused)}
+  className="px-6 py-3 bg-yellow-400 text-white rounded-full font-semibold hover:scale-105 transition"
+  disabled={!isSorting}
+>
+  {isPaused ? "Resume" : "Pause"}
+</button>
 
   </div>
 
@@ -415,13 +410,13 @@ export const BubbleSortVisualizer = () => {
   </div>
 )}
 
-<button
+{/* <button
   onClick={() => setIsPaused(!isPaused)}
   className="px-6 py-3 bg-yellow-400 text-white rounded-full font-semibold hover:scale-105 transition"
   disabled={!isSorting}
 >
   {isPaused ? "Resume" : "Pause"}
-</button>
+</button> */}
   {/* Custom Input */}
   <div className="w-full flex flex-col sm:flex-row gap-3 items-center justify-center">
     <input
@@ -445,6 +440,7 @@ export const BubbleSortVisualizer = () => {
 </div>
 
     </VisualizerLayout>
+    
     </section>
   );
 };

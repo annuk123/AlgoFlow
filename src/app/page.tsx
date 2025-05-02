@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/nav/nav";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer/page";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -77,9 +78,10 @@ export default function Home() {
 
 
       {/* Footer */}
-      <footer className="py-6 text-center text-xs text-muted-foreground">
+      {/* <footer className="py-6 text-center text-xs text-muted-foreground">
         © 2025 AlgoFlow. Built with ❤️
-      </footer>
+      </footer> */}
+      <Footer />
     </main>
   );
 }

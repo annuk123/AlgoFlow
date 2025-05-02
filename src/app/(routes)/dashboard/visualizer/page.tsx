@@ -79,14 +79,6 @@ export default function VisualizerDashboard() {
         setSelectedTags={setSelectedTags}
       />
       {/* Main Content */}
-      {/* <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-6xl font-extrabold mb-10 text-center"
-      >
-        Choose an Algorithm to Visualize
-      </motion.h1> */}
       <motion.h1 
           initial={{ opacity: 0, y: -60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +95,8 @@ export default function VisualizerDashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
         {filteredProblems.map((algorithm, index) => (
           <motion.div
-            key={algorithm.slug}
+            // key={algorithm.slug}
+            key={`${algorithm.slug}-${algorithm.name}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
