@@ -17,6 +17,7 @@ export default function Navbar() {
   const { theme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  
 
   useMotionValueEvent(useScroll().scrollY, "change", (latest) => {
     setScrolled(latest > 10);
@@ -78,43 +79,55 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center gap-2">
-          {mounted && <ThemeToggle />}
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
-        </div>
+{/* Mobile Hamburger Toggle */}
+<div className="md:hidden flex items-center gap-2">
+  {mounted && <ThemeToggle />}
+  <Button
+    variant="ghost"
+    size="icon"
+    onClick={() => setIsOpen(!isOpen)}
+    className="hover:bg-accent/30 rounded-full transition"
+  >
+    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+  </Button>
+</div>
+
+{/* Full Screen Mobile Menu */}
+<motion.div
+  initial={false}
+  animate={isOpen ? "open" : "closed"}
+  variants={{
+    open: { opacity: 1, y: 0, pointerEvents: "auto" },
+    closed: { opacity: 0, y: -20, pointerEvents: "none" },
+  }}
+  transition={{ duration: 0.3, ease: "easeInOut" }}
+  className={clsx(
+    "fixed inset-0 top-20 z-40 md:hidden flex flex-col items-center justify-start bg-background/95 backdrop-blur-lg px-6 py-8 space-y-6 rounded-2xl mx-4 shadow-2xl border border-border",
+    scrolled && "top-16"
+  )}
+>
+  {navItems.map((item) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      onClick={() => setIsOpen(false)}
+      className="text-xl font-semibold text-muted-foreground hover:text-primary transition-all"
+    >
+      {item.label}
+    </Link>
+  ))}
+  <DropMenuMain />
+  <Button
+    className="w-full rounded-full mt-4 hover:scale-[1.03] transition"
+    onClick={() => setIsOpen(false)}
+  >
+    Get Started
+  </Button>
+  {/* <div className="max-h-64 overflow-y-auto">
+  <DropMenuMain />
+</div> */}
+</motion.div>
       </div>
-      {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border px-6 pt-4 pb-6 space-y-4 rounded-b-2xl"
-        >
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block text-lg font-medium text-muted-foreground hover:text-foreground transition"
-              onClick={() => setIsOpen(false)}
-              legacyBehavior>
-              {item.label}
-            </Link>
-          ))}
-          <Button
-            className="w-full mt-4 rounded-full"
-            onClick={() => setIsOpen(false)}
-          >
-            Get Started
-          </Button>
-        </motion.div>
-      )}
     </motion.nav>
   );
 }

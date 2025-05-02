@@ -16,22 +16,22 @@ import {
 const algorithmTopics: { title: string; href: string; description: string }[] = [
   {
     title: "Sorting Algorithms",
-    href: "/visualizer/sorting",
+    href: "../../comingSoon",
     description: "Visualize Bubble Sort, Merge Sort, Quick Sort, and more.",
   },
   {
     title: "Searching Algorithms",
-    href: "/visualizer/searching",
+    href: "../../comingSoon",
     description: "Explore Binary Search, Linear Search, and related techniques.",
   },
   {
     title: "Graph Algorithms",
-    href: "/visualizer/graph",
+    href: "../../comingSoon",
     description: "Visualize BFS, DFS, Dijkstra’s Algorithm, and more.",
   },
   {
     title: "Dynamic Programming",
-    href: "/visualizer/dp",
+    href: "../../comingSoon",
     description: "Understand dynamic programming with step-by-step visuals.",
   },
 
@@ -40,22 +40,22 @@ const algorithmTopics: { title: string; href: string; description: string }[] = 
 const problemTopics: { title: string; href: string; description: string }[] = [
   {
     title: "Striver DSA Sheet",
-    href: "/problems/striver-sheet",
+    href: "../../comingSoon",
     description: "Visualize and solve curated problems from Striver's DSA Sheet.",
   },
   {
     title: "Top Interview Questions",
-    href: "/problems/top-interview",
+    href: "../../comingSoon",
     description: "Practice and visualize solutions to the most asked interview problems.",
   },
   {
     title: "Blind 75 Problems",
-    href: "/problems/blind-75",
+    href: "../../comingSoon",
     description: "Master essential problems every software engineer must know.",
   },
   {
     title: "LeetCode Patterns",
-    href: "/problems/leetcode-patterns",
+    href: "../../comingSoon",
     description: "Learn and visualize popular patterns to crack LeetCode.",
   },
 ];
@@ -83,13 +83,13 @@ export function DropMenuMain() {
                 </NavigationMenuLink>
               </li>
 
-              <ListItem href="/docs" title="Introduction">
+              <ListItem href="../../comingSoon" title="Introduction">
                 Get an overview of how AlgoFlow helps you master DSA visually.
               </ListItem>
               <ListItem href="../dashboard/visualizer" title="Algorithm Visualizer">
                 Visualize and master DSA algorithms and problems Interactively
               </ListItem>
-              <ListItem href="/docs/algorithms" title="Problem Visualizer">
+              <ListItem href="../../comingSoon" title="Problem Visualizer">
                 Solve top curated DSA Problem with step-by-step interactive explanation.
               </ListItem>
             </ul>
@@ -128,28 +128,35 @@ export function DropMenuMain() {
 
         {/* Contact */}
         <NavigationMenuItem>
-         <Link href="/docs"  passHref>
-            <NavigationMenuLink className="block rounded-md p-3 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
-              Contact
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+  <NavigationMenuLink asChild>
+    <Link
+      href="/docs"
+      className="block rounded-md p-3 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+    >
+      Contact
+    </Link>
+  </NavigationMenuLink>
+</NavigationMenuItem>
+
 
       </NavigationMenuList>
     </NavigationMenu>
   );
 }
 
-// List Item Component
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+type ListItemProps = {
+  href: string; // <- Must be a string, cannot be undefined
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+};
+
+const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
+({ className, title, children, ...props }, ref) => {
   return (
     <li>
-      {/* <NavigationMenuLink asChild> */}
-        <a
-
+      <NavigationMenuLink asChild>
+        <Link
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-4 leading-none no-underline outline-none transition hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -161,8 +168,8 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm text-muted-foreground">
             {children}
           </p>
-        </a>
-      {/* </NavigationMenuLink> */}
+        </Link>
+      </NavigationMenuLink>
     </li>
   );
 });

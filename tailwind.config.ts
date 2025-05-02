@@ -12,6 +12,9 @@ extend: {
     animation: {
       gradient: 'gradient 4s ease infinite',
     },
+    colors: {
+      'pale-yellow': '#f7f7d5',
+    },
     keyframes: {
       gradient: {
         '0%, 100%': {

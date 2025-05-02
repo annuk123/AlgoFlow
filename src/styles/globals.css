@@ -15,6 +15,71 @@
   animation: gradientMove 6s ease infinite;
 }
 
+/* GLOBAL STYLES FOR VISUALIZER PAGES */
+
+/* Container for layout content */
+.visualizer-container {
+  width: 100%;
+  max-width: 768px; /* Same as Tailwind's max-w-screen-md */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem; /* 16px */
+}
+
+/* Accordion Styles */
+.visualizer-accordion {
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted-foreground, #6b7280); /* fallback gray if variable not available */
+}
+
+/* Responsive text inside Accordion */
+.visualizer-accordion-content p,
+.visualizer-accordion-content ul,
+.visualizer-accordion-content ol,
+.visualizer-accordion-content li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Flowchart or Image Wrapper */
+.visualizer-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #F7F7D5; /* Light yellow background */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Flowchart Image itself */
+.visualizer-image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+/* Responsive Improvements */
+@media (min-width: 640px) {
+  .visualizer-accordion {
+    font-size: 1rem;
+  }
+  
+  .visualizer-image-wrapper img {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .visualizer-accordion {
+    font-size: 1rem;
+  }
+}
+
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

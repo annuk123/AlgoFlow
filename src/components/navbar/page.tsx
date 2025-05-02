@@ -5,7 +5,7 @@
 import { useState, useEffect } from "react"
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import Link from "next/link"
-import { Moon, Sun, Menu, X, Filter, Search } from "lucide-react"
+import { Menu, X, Filter, Search } from "lucide-react"
 import clsx from "clsx"
 import { Input } from "@/components/ui/input"
 import { ThemeToggle } from "../ThemeToggle/page";
