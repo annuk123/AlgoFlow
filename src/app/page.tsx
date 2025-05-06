@@ -76,6 +76,46 @@ export default function Home() {
   </motion.div>
 </section>
 
+<div className="relative flex items-center justify-center text-center -top-30 py-32 bg-white dark:bg-background overflow-hidden">
+  {/* Background Overlay (optional) */}
+  <div className="absolute inset-0 z-0" />
+
+  {/* Centered Video */}
+  <div className="relative z-10 max-w-5xl w-full rounded-2xl overflow-hidden shadow-2xl">
+    <video
+      src="https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4"
+      className="w-full h-auto object-cover"
+      autoPlay
+      muted
+      loop
+      playsInline
+    />
+  </div>
+
+  {/* Optional Animation Styles */}
+  <style jsx>{`
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+    }
+
+    .delay-100 {
+      animation-delay: 0.1s;
+    }
+  `}</style>
+</div>
+
+
 
       {/* Footer */}
       <Footer />

@@ -46,7 +46,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 px-6 sm:px-12 lg:px-24 py-10 mt-15  bg-black border-b border-gray-900 dark:border-gray-800 ">
+    <footer className="relative z-10 px-6 sm:px-12 lg:px-24 py-10 mt-15  bg-white dark:bg-background border-b border-gray-900 dark:border-gray-800 ">
       <motion.div
         className="flex flex-col sm:flex-row justify-between items-center gap-6"
         initial={{ opacity: 0, y: 40 }}
