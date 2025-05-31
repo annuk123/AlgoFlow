@@ -15,6 +15,46 @@ export default function Home() {
 
   if (!isMounted) return null; // 🛡️ Avoid SSR hydration issues
 
+  const features = [
+  {
+    title: "Visualize Algorithms",
+    description: "Experience step-by-step animations for Bubble, Merge, Quick Sort, and more. Watch your code come alive with every comparison and swap.",
+    video: "https://res.cloudinary.com/your/video.mp4",
+    poster: "https://res.cloudinary.com/your/image.jpg",
+  },
+  {
+    title: "Striver DSA Visualizer",
+    description: "Follow Striver’s legendary DSA roadmap with structured, interactive visual learning and practice tools.",
+    video: "https://res.cloudinary.com/your/striver.mp4",
+    poster: "https://res.cloudinary.com/your/striver-thumbnail.jpg",
+  },
+  {
+    title: "Explore Problems by Topic",
+    description: "Browse hundreds of DSA problems categorized by topic and difficulty. Focus on what you need to improve.",
+    video: "https://res.cloudinary.com/your/topic.mp4",
+    poster: "https://res.cloudinary.com/your/topic-thumbnail.jpg",
+  },
+  {
+    title: "Practice & Run Code",
+    description: "Built-in code editor lets you solve problems and run test cases without switching tabs.",
+    video: "https://res.cloudinary.com/your/code.mp4",
+    poster: "https://res.cloudinary.com/your/code-thumbnail.jpg",
+  },
+  {
+    title: "Favorites & Bookmarks",
+    description: "Bookmark tricky problems to revisit later. Build your own custom problem lists.",
+    video: "https://res.cloudinary.com/your/bookmark.mp4",
+    poster: "https://res.cloudinary.com/your/bookmark-thumbnail.jpg",
+  },
+  {
+    title: "Continue Where You Left Off",
+    description: "We automatically remember what you were practicing so you can jump right back in.",
+    video: "https://res.cloudinary.com/your/continue.mp4",
+    poster: "https://res.cloudinary.com/your/continue-thumbnail.jpg",
+  },
+];
+
+
   return (
     <main className="flex z-10 flex-col min-h-screen bg-background text-foreground transition-colors duration-500">
       {/* Navbar */}
@@ -114,8 +154,60 @@ export default function Home() {
     }
   `}</style>
 </div>
+{/* 
+<section className="relative px-6 md:px-20 py-32 bg-background text-foreground">
+  <motion.h2
+    initial={{ opacity: 0, y: -40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="text-4xl md:text-5xl font-bold text-center mb-20"
+  >
+    Unlock The <span className="text-primary">Full Potential</span> of AlgoFlow
+  </motion.h2>
 
+  <div className="flex flex-col gap-32">
+    {features.map((feature, index) => {
+      const isReversed = index % 2 !== 0;
 
+      return (
+        <motion.div
+          key={feature.title}
+          initial={{ opacity: 0, x: isReversed ? 80 : -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          className={`flex flex-col-reverse md:flex-row ${
+            isReversed ? "md:flex-row-reverse" : ""
+          } items-center gap-12`} */}
+        {/* > */}
+          {/* Text */}
+          {/* <div className="md:w-1/2 text-center md:text-left space-y-4">
+            <h3 className="text-3xl font-semibold text-primary">
+              {feature.title}
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              {feature.description}
+            </p>
+          </div> */}
+
+          {/* Video with Poster Thumbnail */}
+          {/* <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
+            <video
+              src={feature.video}
+              poster={feature.poster}
+              className="w-full h-auto object-cover rounded-xl"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+          </div>
+        </motion.div>
+      );
+    })}
+  </div>
+</section> */}
 
       {/* Footer */}
       <Footer />

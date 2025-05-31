@@ -13,29 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const algorithmTopics: { title: string; href: string; description: string }[] = [
-  {
-    title: "Sorting Algorithms",
-    href: "../../comingSoon",
-    description: "Visualize Bubble Sort, Merge Sort, Quick Sort, and more.",
-  },
-  {
-    title: "Searching Algorithms",
-    href: "../../comingSoon",
-    description: "Explore Binary Search, Linear Search, and related techniques.",
-  },
-  {
-    title: "Graph Algorithms",
-    href: "../../comingSoon",
-    description: "Visualize BFS, DFS, Dijkstra’s Algorithm, and more.",
-  },
-  {
-    title: "Dynamic Programming",
-    href: "../../comingSoon",
-    description: "Understand dynamic programming with step-by-step visuals.",
-  },
 
-];
 
 const problemTopics: { title: string; href: string; description: string }[] = [
   {
@@ -68,7 +46,7 @@ export function DropMenuMain() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
           <NavigationMenuContent>
-          <ul className="grid gap-4 p-4 w-[90vw] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+          <ul className="grid gap-4 p-4 w-[80vw] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 
               <li className="row-span-3">
                 <NavigationMenuLink asChild>
@@ -99,20 +77,9 @@ export function DropMenuMain() {
 
 
 <NavigationMenuItem>
-          <NavigationMenuTrigger>Features</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Problems</NavigationMenuTrigger>
           <NavigationMenuContent>
-          <div className="grid gap-6 p-4 w-[90vw] md:w-[600px] lg:w-[700px] md:grid-cols-2">
-              <div>
-                <h3 className="mb-2 text-sm font-bold text-muted-foreground uppercase tracking-wide">Algorithm Visualizer</h3>
-                <ul className="grid gap-4">
-                  {algorithmTopics.map((topic) => (
-                    <ListItem key={topic.title} title={topic.title} href={topic.href}>
-                      {topic.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </div>
-
+          <div className="grid gap-6 p-4 w-[80vw] md:w-[400px] lg:w-[500px]">
               <div>
                 <h3 className="mb-2 text-sm font-bold text-muted-foreground uppercase tracking-wide">Problem Visualizer</h3>
                 <ul className="grid gap-4">
