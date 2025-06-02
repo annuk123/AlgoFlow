@@ -35,6 +35,16 @@
   color: var(--muted-foreground, #6b7280); /* fallback gray if variable not available */
 }
 
+/* For hiding Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
 /* Responsive text inside Accordion */
 .visualizer-accordion-content p,
 .visualizer-accordion-content ul,

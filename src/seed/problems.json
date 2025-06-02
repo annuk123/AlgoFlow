@@ -1,0 +1,207 @@
+[
+  {
+    "title": "Two Sum",
+    "tags": [
+      "hashmap",
+      "brute-force"
+    ],
+    "topic": "Array",
+    "difficulty": "Easy",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "constraints": [
+      "2 <= nums.length <= 10^4",
+      "-10^9 <= nums[i] <= 10^9",
+      "-10^9 <= target <= 10^9",
+      "Only one valid answer exists."
+    ],
+    "sampleInput": "nums = [2,7,11,15], target = 9",
+    "sampleOutput": "[0,1]",
+    "id": "two-sum"
+  },
+  {
+    "title": "Best Time to Buy and Sell Stock",
+    "tags": [
+      "greedy",
+      "array"
+    ],
+    "topic": "Array",
+    "difficulty": "Easy",
+    "description": "Given an array where prices[i] is the price of a stock on day i, find the maximum profit you can achieve from a single buy and sell.",
+    "constraints": [
+      "1 <= prices.length <= 10^5",
+      "0 <= prices[i] <= 10^4"
+    ],
+    "sampleInput": "prices = [7,1,5,3,6,4]",
+    "sampleOutput": "5",
+    "id": "best-time-to-buy-and-sell-stock"
+  },
+  {
+    "title": "Maximum Subarray (Kadane's Algorithm)",
+    "tags": [
+      "dp",
+      "greedy"
+    ],
+    "topic": "Array",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, find the contiguous subarray with the largest sum and return its sum.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+    "sampleOutput": "6",
+    "id": "maximum-subarray-(kadane's-algorithm)"
+  },
+  {
+    "title": "Trapping Rain Water",
+    "tags": [
+      "two-pointers",
+      "stack"
+    ],
+    "topic": "Array",
+    "difficulty": "Hard",
+    "description": "Given n non-negative integers representing an elevation map, compute how much water it can trap after raining.",
+    "constraints": [
+      "1 <= height.length <= 2 * 10^4",
+      "0 <= height[i] <= 10^5"
+    ],
+    "sampleInput": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+    "sampleOutput": "6",
+    "id": "trapping-rain-water"
+  },
+  {
+    "title": "Valid Parentheses",
+    "tags": [
+      "stack"
+    ],
+    "topic": "Stack",
+    "difficulty": "Easy",
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "constraints": [
+      "1 <= s.length <= 10^4",
+      "s consists of parentheses only"
+    ],
+    "sampleInput": "s = \"()[]{}\"",
+    "sampleOutput": "true",
+    "id": "valid-parentheses"
+  },
+  {
+    "title": "Daily Temperatures",
+    "tags": [
+      "monotonic-stack"
+    ],
+    "topic": "Stack",
+    "difficulty": "Medium",
+    "description": "Given a list of daily temperatures, return a list such that, for each day, tells how many days until a warmer temperature.",
+    "constraints": [
+      "1 <= temperatures.length <= 10^5",
+      "30 <= temperatures[i] <= 100"
+    ],
+    "sampleInput": "temperatures = [73,74,75,71,69,72,76,73]",
+    "sampleOutput": "[1,1,4,2,1,1,0,0]",
+    "id": "daily-temperatures"
+  },
+  {
+    "title": "Reverse a Linked List",
+    "tags": [
+      "iteration",
+      "recursion"
+    ],
+    "topic": "Linked List",
+    "difficulty": "Easy",
+    "description": "Reverse a singly linked list in-place and return the head of the reversed list.",
+    "constraints": [
+      "The number of nodes in the list is the range [0, 5000]",
+      "-5000 <= Node.val <= 5000"
+    ],
+    "sampleInput": "head = [1,2,3,4,5]",
+    "sampleOutput": "[5,4,3,2,1]",
+    "id": "reverse-a-linked-list"
+  },
+  {
+    "title": "Detect Cycle in Linked List",
+    "tags": [
+      "fast-slow-pointers"
+    ],
+    "topic": "Linked List",
+    "difficulty": "Medium",
+    "description": "Given the head of a linked list, determine if the linked list has a cycle in it.",
+    "constraints": [
+      "The number of nodes in the list is the range [0, 10^4]",
+      "-10^5 <= Node.val <= 10^5"
+    ],
+    "sampleInput": "head = [3,2,0,-4] with pos = 1",
+    "sampleOutput": "true",
+    "id": "detect-cycle-in-linked-list"
+  },
+  {
+    "title": "Climbing Stairs",
+    "tags": [
+      "dp",
+      "fibonacci"
+    ],
+    "topic": "Dynamic Programming",
+    "difficulty": "Easy",
+    "description": "You are climbing a staircase. Each time you can climb 1 or 2 steps. In how many distinct ways can you reach the top?",
+    "constraints": [
+      "1 <= n <= 45"
+    ],
+    "sampleInput": "n = 5",
+    "sampleOutput": "8",
+    "id": "climbing-stairs"
+  },
+  {
+    "title": "Longest Increasing Subsequence",
+    "tags": [
+      "dp",
+      "binary-search"
+    ],
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "constraints": [
+      "1 <= nums.length <= 2500",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [10,9,2,5,3,7,101,18]",
+    "sampleOutput": "4",
+    "id": "longest-increasing-subsequence"
+  },
+  {
+    "title": "Number of Islands",
+    "tags": [
+      "dfs",
+      "bfs"
+    ],
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "description": "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.",
+    "constraints": [
+      "m == grid.length",
+      "n == grid[i].length",
+      "1 <= m, n <= 300",
+      "grid[i][j] is '0' or '1'."
+    ],
+    "sampleInput": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+    "sampleOutput": "3",
+    "id": "number-of-islands"
+  },
+  {
+    "title": "Top K Frequent Elements",
+    "tags": [
+      "heap",
+      "bucket-sort"
+    ],
+    "topic": "Heap",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4",
+      "k is in the range [1, the number of unique elements in nums]"
+    ],
+    "sampleInput": "nums = [1,1,1,2,2,3], k = 2",
+    "sampleOutput": "[1,2]",
+    "id": "top-k-frequent-elements"
+  }
+]

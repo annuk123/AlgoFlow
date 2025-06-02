@@ -6,12 +6,12 @@ const nextConfig = {
 
   experimental: {
     
-    dataRoutes: [
-      {
-        source: /^\/_next\/data\/development\/{routes}\/daily\.json$/,
-        destination: '/daily',
-      }
-    ]
+    // dataRoutes: [
+    //   {
+    //     source: /^\/_next\/data\/development\/{routes}\/daily\.json$/,
+    //     destination: '/daily',
+    //   }
+    // ]
 
 
   }

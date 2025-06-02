@@ -4,13 +4,23 @@ import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values"; // Corrected import path for 'v'
 
 export default defineSchema({
-  // Table: progress tracking
+  problems: defineTable({
+    slug: v.string(), // ✅ custom unique slug
+    title: v.string(),
+    topic: v.string(),
+    difficulty: v.union(v.literal("Easy"), v.literal("Medium"), v.literal("Hard")),
+    description: v.string(),
+    constraints: v.array(v.string()),
+    sampleInput: v.string(),
+    sampleOutput: v.string(),
+    createdAt: v.number(),
+  }).index("by_slug", ["slug"]),
+
   progress: defineTable({
-    userId: v.string(),          // Local random ID stored in browser
-    problemId: v.string(),        // ID of the problem (from your problems JSON)
-    status: v.string(),           // "completed" | "incomplete" (you can extend later)
-    completedAt: v.number(),      // Timestamp when user completed the problem
-  })
-    .index("by_user", ["userId"])        // For fetching all progress by user
-    .index("by_user_problem", ["userId", "problemId"]), // For checking specific problem status
-});
+    userId: v.string(),
+    problemId: v.id("problems"), // ✅ references the problems table
+    status: v.union(v.literal("solved"), v.literal("attempted")),
+    updatedAt: v.number(),
+  }).index("by_user", ["userId"])
+    .index("by_problem", ["problemId"])
+})

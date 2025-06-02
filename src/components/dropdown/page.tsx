@@ -68,7 +68,7 @@ export function DropMenuMain() {
               <ListItem href="../dashboard/visualizer" title="Algorithm Visualizer">
                 Visualize and master DSA algorithms and problems Interactively
               </ListItem>
-              <ListItem href="../../comingSoon" title="Problem Visualizer">
+              <ListItem href="../../problems" title="Problem Visualizer">
                 Solve top curated DSA Problem with step-by-step interactive explanation.
               </ListItem>
             </ul>

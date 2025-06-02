@@ -1,0 +1,474 @@
+[
+  {
+    "id": 1,
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "tags": ["hashmap", "brute-force"],
+    "topic": "Array",
+    "difficulty": "Easy",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "constraints": [
+      "2 <= nums.length <= 10^4",
+      "-10^9 <= nums[i] <= 10^9",
+      "-10^9 <= target <= 10^9",
+      "Only one valid answer exists."
+    ],
+    "sampleInput": "nums = [2,7,11,15], target = 9",
+    "sampleOutput": "[0,1]"
+  },
+  {
+    "id": 2,
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "tags": ["greedy", "array"],
+    "topic": "Array",
+    "difficulty": "Easy",
+    "description": "Given an array where prices[i] is the price of a stock on day i, find the maximum profit you can achieve from a single buy and sell.",
+    "constraints": [
+      "1 <= prices.length <= 10^5",
+      "0 <= prices[i] <= 10^4"
+    ],
+    "sampleInput": "prices = [7,1,5,3,6,4]",
+    "sampleOutput": "5"
+  },
+  {
+    "id": 3,
+    "slug": "maximum-subarray-kadane's-algorithm",
+    "title": "Maximum Subarray (Kadane's Algorithm)",
+    "tags": ["dp", "greedy"],
+    "topic": "Array",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, find the contiguous subarray with the largest sum and return its sum.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+    "sampleOutput": "6"
+  },
+  {
+    "id": 4,
+    "slug": "trapping-rain-water",
+    "title": "Trapping Rain Water",
+    "tags": ["two-pointers", "stack"],
+    "topic": "Array",
+    "difficulty": "Hard",
+    "description": "Given n non-negative integers representing an elevation map, compute how much water it can trap after raining.",
+    "constraints": [
+      "1 <= height.length <= 2 * 10^4",
+      "0 <= height[i] <= 10^5"
+    ],
+    "sampleInput": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+    "sampleOutput": "6"
+  },
+  {
+    "id": 5,
+    "slug": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "tags": ["stack"],
+    "topic": "Stack",
+    "difficulty": "Easy",
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.",
+    "constraints": [
+      "1 <= s.length <= 10^4",
+      "s consists of parentheses only"
+    ],
+    "sampleInput": "s = \"()[]{}\"",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 6,
+    "slug": "daily-temperatures",
+    "title": "Daily Temperatures",
+    "tags": ["monotonic-stack"],
+    "topic": "Stack",
+    "difficulty": "Medium",
+    "description": "Given a list of daily temperatures, return a list such that, for each day, tells how many days until a warmer temperature.",
+    "constraints": [
+      "1 <= temperatures.length <= 10^5",
+      "30 <= temperatures[i] <= 100"
+    ],
+    "sampleInput": "temperatures = [73,74,75,71,69,72,76,73]",
+    "sampleOutput": "[1,1,4,2,1,1,0,0]"
+  },
+  {
+    "id": 7,
+    "slug": "reverse-a-linked-list",
+    "title": "Reverse a Linked List",
+    "tags": ["iteration", "recursion"],
+    "topic": "Linked List",
+    "difficulty": "Easy",
+    "description": "Reverse a singly linked list in-place and return the head of the reversed list.",
+    "constraints": [
+      "The number of nodes in the list is the range [0, 5000]",
+      "-5000 <= Node.val <= 5000"
+    ],
+    "sampleInput": "head = [1,2,3,4,5]",
+    "sampleOutput": "[5,4,3,2,1]"
+  },
+  {
+    "id": 8,
+    "slug": "detect-cycle-in-linked-list",
+    "title": "Detect Cycle in Linked List",
+    "tags": ["fast-slow-pointers"],
+    "topic": "Linked List",
+    "difficulty": "Medium",
+    "description": "Given the head of a linked list, determine if the linked list has a cycle in it.",
+    "constraints": [
+      "The number of nodes in the list is the range [0, 10^4]",
+      "-10^5 <= Node.val <= 10^5"
+    ],
+    "sampleInput": "head = [3,2,0,-4] with pos = 1",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 9,
+    "slug": "merge-two-sorted-lists",
+    "title": "Climbing Stairs",
+    "tags": ["dp", "fibonacci"],
+    "topic": "Dynamic Programming",
+    "difficulty": "Easy",
+    "description": "You are climbing a staircase. Each time you can climb 1 or 2 steps. In how many distinct ways can you reach the top?",
+    "constraints": [
+      "1 <= n <= 45"
+    ],
+    "sampleInput": "n = 5",
+    "sampleOutput": "8"
+  },
+  {
+    "id": 10,
+    "slug": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "tags": ["dp", "binary-search"],
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "constraints": [
+      "1 <= nums.length <= 2500",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [10,9,2,5,3,7,101,18]",
+    "sampleOutput": "4"
+  },
+  {
+    "id": 11,
+    "slug": "number-of-islands",
+    "title": "Number of Islands",
+    "tags": ["dfs", "bfs"],
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "description": "Given a 2D grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.",
+    "constraints": [
+      "m == grid.length",
+      "n == grid[i].length",
+      "1 <= m, n <= 300",
+      "grid[i][j] is '0' or '1'."
+    ],
+    "sampleInput": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+    "sampleOutput": "3"
+  },
+  {
+    "id": 12,
+    "slug": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "tags": ["heap", "bucket-sort"],
+    "topic": "Heap",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4",
+      "k is in the range [1, the number of unique elements in nums]"
+    ],
+    "sampleInput": "nums = [1,1,1,2,2,3], k = 2",
+    "sampleOutput": "[1,2]"
+  },
+  {
+    "id": 13,
+    "slug": "merge-intervals",
+    "title": "Merge Intervals",
+    "tags": ["sorting", "intervals"],
+    "topic": "Array",
+    "difficulty": "Medium",
+    "description": "Given an array of intervals where intervals[i] = [start_i, end_i], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+    "constraints": [
+      "1 <= intervals.length <= 10^4",
+      "intervals[i].length == 2",
+      "0 <= start_i <= end_i <= 10^4"
+    ],
+    "sampleInput": "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+    "sampleOutput": "[[1,6],[8,10],[15,18]]"
+  },
+  {
+    "id": 14,
+    "slug": "insert-interval",
+    "title": "Insert Interval",
+    "tags": ["array", "sorting"],
+    "topic": "Array",
+    "difficulty": "Medium",
+    "description": "You are given an array of non-overlapping intervals intervals sorted by their start time and an interval newInterval. Insert newInterval into intervals such that the result is still sorted and merged if necessary.",
+    "constraints": [
+      "0 <= intervals.length <= 10^4",
+      "intervals[i].length == 2",
+      "0 <= start_i <= end_i <= 10^5"
+    ],
+    "sampleInput": "intervals = [[1,3],[6,9]], newInterval = [2,5]",
+    "sampleOutput": "[[1,5],[6,9]]"
+  },
+  {
+    "id": 15,
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "tags": ["binary-search"],
+    "topic": "Binary Search",
+    "difficulty": "Easy",
+    "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, return the index of target if it is in nums, or -1 if it is not.",
+    "constraints": [
+      "1 <= nums.length <= 10^4",
+      "-10^4 <= nums[i], target <= 10^4",
+      "All the integers in nums are unique."
+    ],
+    "sampleInput": "nums = [-1,0,3,5,9,12], target = 9",
+    "sampleOutput": "4"
+  },
+  {
+    "id": 16,
+    "slug": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "tags": ["matrix", "binary-search"],
+    "topic": "Binary Search",
+    "difficulty": "Medium",
+    "description": "Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:\n 1. Integers in each row are sorted from left to right.\n 2. The first integer of each row is greater than the last integer of the previous row.",
+    "constraints": [
+      "m == matrix.length",
+      "n == matrix[i].length",
+      "1 <= m, n <= 100",
+      "-10^4 <= matrix[i][j], target <= 10^4"
+    ],
+    "sampleInput": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 17,
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "tags": ["hashmap", "string"],
+    "topic": "Hashing",
+    "difficulty": "Easy",
+    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+    "constraints": [
+      "1 <= s.length, t.length <= 5 * 10^4",
+      "s and t consist of lowercase English letters."
+    ],
+    "sampleInput": "s = \"anagram\", t = \"nagaram\"",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 18,
+    "slug": "group-anagrams",
+    "title": "Group Anagrams",
+    "tags": ["hashmap", "sorting"],
+    "topic": "Hashing",
+    "difficulty": "Medium",
+    "description": "Given an array of strings strs, group the anagrams together. You can return the answer in any order.",
+    "constraints": [
+      "1 <= strs.length <= 10^4",
+      "0 <= strs[i].length <= 100",
+      "strs[i] consists of lowercase English letters."
+    ],
+    "sampleInput": "strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]",
+    "sampleOutput": "[[\"eat\",\"tea\",\"ate\"],[\"tan\",\"nat\"],[\"bat\"]]"
+  },
+  {
+    "id": 19,
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "tags": ["hashset", "union-find"],
+    "topic": "Hashing",
+    "difficulty": "Medium",
+    "description": "Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.",
+    "constraints": [
+      "0 <= nums.length <= 10^5",
+      "-10^9 <= nums[i] <= 10^9"
+    ],
+    "sampleInput": "nums = [100,4,200,1,3,2]",
+    "sampleOutput": "4"
+  },
+  {
+    "id": 20,
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "tags": ["heap", "quickselect"],
+    "topic": "Heap",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums and an integer k, return the k-th largest element in the array. Note that it is the k-th largest element in the sorted order, not the k-th distinct element.",
+    "constraints": [
+      "1 <= k <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [3,2,1,5,6,4], k = 2",
+    "sampleOutput": "5"
+  },
+  {
+    "id": 21,
+    "slug": "rotting-oranges",
+    "title": "Rotting Oranges",
+    "tags": ["bfs", "matrix"],
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "description": "You are given an m x n grid where each cell can have one of three values:\n 0 representing an empty cell,\n 1 representing a fresh orange,\n 2 representing a rotten orange.\nEvery minute, any fresh orange that is 4-directionally adjacent to a rotten orange becomes rotten.\nReturn the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.",
+    "constraints": [
+      "m == grid.length",
+      "n == grid[i].length",
+      "1 <= m, n <= 10",
+      "grid[i][j] is 0, 1, or 2."
+    ],
+    "sampleInput": "grid = [[2,1,1],[1,1,0],[0,1,1]]",
+    "sampleOutput": "4"
+  },
+  {
+    "id": 22,
+    "slug": "course-schedule",
+    "title": "Course Schedule",
+    "tags": ["dfs", "topological-sort"],
+    "topic": "Graphs",
+    "difficulty": "Medium",
+    "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi], indicating that you must take course bi before course ai. Return true if you can finish all courses. Otherwise, return false.",
+    "constraints": [
+      "1 <= numCourses <= 2000",
+      "0 <= prerequisites.length <= 5000",
+      "prerequisites[i].length == 2"
+    ],
+    "sampleInput": "numCourses = 2, prerequisites = [[1,0]]",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 23,
+    "slug": "implement-trie",
+    "title": "Implement Trie (Prefix Tree)",
+    "tags": ["trie", "design"],
+    "topic": "Trie",
+    "difficulty": "Medium",
+    "description": "A trie (pronounced as \"try\") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. Implement the Trie class with insert, search, and startsWith methods.",
+    "constraints": [
+      "1 <= word.length, prefix.length <= 2000",
+      "word and prefix consist only of lowercase English letters",
+      "At most 3 * 10^4 calls in total will be made to insert, search, and startsWith"
+    ],
+    "sampleInput": "insert(\"apple\"), search(\"apple\"), search(\"app\"), startsWith(\"app\"), insert(\"app\"), search(\"app\")",
+    "sampleOutput": "null, true, false, true, null, true"
+  },
+  {
+    "id": 24,
+    "slug": "word-search",
+    "title": "Word Search",
+    "tags": ["backtracking", "matrix"],
+    "topic": "Backtracking",
+    "difficulty": "Medium",
+    "description": "Given an m x n grid of characters board and a string word, return true if word exists in the grid. The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.",
+    "constraints": [
+      "m == board.length",
+      "n == board[i].length",
+      "1 <= m, n <= 6",
+      "1 <= word.length <= 15",
+      "board and word consists of lowercase and uppercase English letters."
+    ],
+    "sampleInput": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 25,
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "tags": ["binary-search"],
+    "topic": "Binary Search",
+    "difficulty": "Medium",
+    "description": "Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. Find the minimum element in the array.",
+    "constraints": [
+      "1 <= nums.length <= 5000",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [3,4,5,1,2]",
+    "sampleOutput": "1"
+  },
+  {
+    "id": 26,
+    "slug": "search-in-rotated-sorted-array",
+    "title": "Search in Rotated Sorted Array",
+    "tags": ["binary-search"],
+    "topic": "Binary Search",
+    "difficulty": "Medium",
+    "description": "You are given an integer array nums sorted in ascending order, and an integer target. If target is found in the array, return its index. Otherwise, return -1.",
+    "constraints": [
+      "1 <= nums.length <= 5000",
+      "-10^4 <= nums[i] <= 10^4",
+      "All integers in nums are unique.",
+      "nums is guaranteed to be rotated at some pivot."
+    ],
+    "sampleInput": "nums = [4,5,6,7,0,1,2], target = 0",
+    "sampleOutput": "4"
+  },
+  {
+    "id": 27,
+    "slug": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "tags": ["dp", "greedy"],
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "description": "Given an integer array nums, find a contiguous non-empty subarray within the array that has the largest product, and return the product.",
+    "constraints": [
+      "1 <= nums.length <= 2 * 10^4",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "sampleInput": "nums = [2,3,-2,4]",
+    "sampleOutput": "6"
+  },
+  {
+    "id": 28,
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring",
+    "tags": ["dp", "expand-around-center"],
+    "topic": "String",
+    "difficulty": "Medium",
+    "description": "Given a string s, return the longest palindromic substring in s.",
+    "constraints": [
+      "1 <= s.length <= 1000",
+      "s consists of only digits and English letters."
+    ],
+    "sampleInput": "s = \"babad\"",
+    "sampleOutput": "\"bab\" or \"aba\""
+  },
+  {
+    "id": 29,
+    "slug": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "tags": ["hashmap", "matrix"],
+    "topic": "Hashing",
+    "difficulty": "Medium",
+    "description": "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the rules of Sudoku.",
+    "constraints": [
+      "board.length == 9",
+      "board[i].length == 9",
+      "'0' <= board[i][j] <= '9'",
+      "'1' <= board[i][j] <= '9'",
+      "'A' <= board[i][j] <= 'Z'"
+    ],
+    "sampleInput": "board = [[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]",
+    "sampleOutput": "true"
+  },
+  {
+    "id": 30,
+    "slug": "minimum-window-substring",
+    "title": "Minimum Window Substring",
+    "tags": ["sliding-window", "hashmap"],
+    "topic": "String",
+    "difficulty": "Hard",
+    "description": "Given two strings s and t, return the minimum window in s which will contain all the characters in t. If there is no such window in s that covers all characters in t, return the empty string \"\".",
+    "constraints": [
+      "1 <= s.length, t.length <= 10^5",
+      "s and t consist of English letters."
+    ],
+    "sampleInput": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+    "sampleOutput": "\"BANC\""
+  }
+]
