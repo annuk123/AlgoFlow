@@ -1,0 +1,86 @@
+[
+        {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "selection-sort",
+    "title": "Selection Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": ["kadane", "prefix-sum"]
+  },
+     {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "bubble-sort",
+    "title": "Bubble Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": ["kadane", "prefix-sum"]
+  },
+     {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "insertion-sort",
+    "title": "Insertion Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": ["kadane", "prefix-sum"]
+  },
+        {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "merge-sort",
+    "title": "Merge Sort",
+    "difficulty": "Medium",
+    "description": "Sort an array using the Merge Sort algorithm.",
+    "tags": ["sorting", "merge-sort"]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "recursive-bubble-sort",
+    "title": "Recursive Bubble Sort",
+    "difficulty": "Easy",
+    "description": "Sort an array using the Recursive Bubble Sort algorithm.",
+    "tags": ["sorting", "bubble-sort"]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "recursive-insertion-sort",
+    "title": "Recursive Insertion Sort",
+    "difficulty": "Medium",
+    "description": "Sort an array using the Recursive Insertion Sort algorithm.",
+    "tags": ["sorting", "insertion-sort"]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "quick-sort",
+    "title": "Quick Sort",
+    "difficulty": "Easy",
+    "description": "Sort an array using the Quick Sort algorithm.",
+    "tags": ["sorting", "quick-sort"]
+  }
+]

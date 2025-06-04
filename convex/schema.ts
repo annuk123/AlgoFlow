@@ -22,5 +22,26 @@ export default defineSchema({
     status: v.union(v.literal("solved"), v.literal("attempted")),
     updatedAt: v.number(),
   }).index("by_user", ["userId"])
-    .index("by_problem", ["problemId"])
+    .index("by_problem", ["problemId"]),
+
+    a2zProblems: defineTable({
+    slug: v.string(), // ✅ custom unique slug
+    title: v.string(),
+    topic: v.string(),
+    difficulty: v.union(v.literal("Easy"), v.literal("Medium"), v.literal("Hard")),
+    description: v.string(),
+    constraints: v.array(v.string()),
+    sampleInput: v.string(),
+    sampleOutput: v.string(),
+    createdAt: v.number(),
+  }).index("by_slug", ["slug"]),
+
+  a2zProgress: defineTable({
+  userId: v.string(),
+  problemId: v.id("a2zProblems"), // references A2Z problem
+  status: v.union(v.literal("solved"), v.literal("attempted")),
+  updatedAt: v.number(),
+}).index("by_user", ["userId"])
+  .index("by_problem", ["problemId"]),
+
 })

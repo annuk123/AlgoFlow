@@ -1,0 +1,13 @@
+[
+      {
+    "id": 14,
+    "step": "Step 14",
+    "stepTitle": "Binary Search Trees [Concept and Problems]",
+    "topic": "Greedy Algorithms",
+    "slug": "activity-selection",
+    "title": "Activity Selection Problem",
+    "difficulty": "Medium",
+    "description": "Select the maximum number of activities that don't overlap.",
+    "tags": ["greedy", "optimization"]
+  }
+]

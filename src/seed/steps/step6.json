@@ -1,0 +1,13 @@
+[
+      {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "LinkedList",
+    "slug": "linked-list-basics-1",
+    "title": "Linked List Basics",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a sorted array using binary search.",
+    "tags": ["binary-search", "divide-and-conquer"]
+  }
+]

@@ -1,0 +1,13 @@
+[
+      {
+    "id": 13,
+    "step": "Step 13",
+    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "coin-change",
+    "title": "Coin Change Problem",
+    "difficulty": "Medium",
+    "description": "Find the minimum number of coins needed to make a target amount.",
+    "tags": ["dynamic-programming", "greedy"]
+  }
+]

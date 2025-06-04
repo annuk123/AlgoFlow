@@ -1,0 +1,13 @@
+[
+      {
+    "id": 11,
+    "step": "Step 11",
+    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
+    "topic": "Graph",
+    "slug": "bfs-and-dfs",
+    "title": "BFS and DFS",
+    "difficulty": "Medium",
+    "description": "Implement breadth-first search and depth-first search algorithms.",
+    "tags": ["graph", "bfs", "dfs"]
+  }
+]

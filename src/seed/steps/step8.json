@@ -1,0 +1,13 @@
+[
+      {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Bit Manipulation",
+    "slug": "bit-manipulation",
+    "title": "Bit Manipulation Basics",
+    "difficulty": "Medium",
+    "description": "Understand the basics of bit manipulation.",
+    "tags": ["bit-manipulation", "math"]
+  }
+]

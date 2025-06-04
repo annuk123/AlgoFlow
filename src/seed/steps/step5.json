@@ -1,0 +1,13 @@
+[
+      {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Recursion",
+    "slug": "fibonacci-1",
+    "title": "Fibonacci Sequence",
+    "difficulty": "Medium",
+    "description": "Find the nth Fibonacci number using recursion.",
+    "tags": ["recursion", "dynamic-programming"]
+  }
+]

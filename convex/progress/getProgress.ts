@@ -1,7 +1,7 @@
 // convex/progress/getProgress.ts
 
-import { query } from "../_generated/server"; // ✅ Correct import
-import { v } from "convex/values";             // ✅ For validation
+import { query } from "../_generated/server"; //Correct import
+import { v } from "convex/values";             //00 For validation
 
 export const getProgress = query({
   args: {
@@ -15,7 +15,9 @@ handler: async (ctx, args) => {
 
   const detailed = await Promise.all(
     progress.map(async (p) => {
-      const problem = await ctx.db.get(p.problemId);
+      // Convert problemId to the correct table's Id type (e.g., "leetcode")
+      const leetcodeProblemId = ctx.db.normalizeId("problems", p.problemId);
+      const problem = leetcodeProblemId ? await ctx.db.get(leetcodeProblemId) : null;
       return {
         ...p,
         problem,

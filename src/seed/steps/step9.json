@@ -1,0 +1,13 @@
+[
+      {
+    "id": 9,
+    "step": "Step 9",
+    "stepTitle": "Stack and Queues [Learning, Pre-In-Post-fix, Monotonic Stack, Implementation]",
+    "topic": "Stack and Queues",
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "Medium",
+    "description": "Find the kth largest element in an unsorted array.",
+    "tags": ["sorting", "heap"]
+  }
+]

@@ -55,14 +55,7 @@ import { Clock } from "lucide-react";
 import problems from "@/seed/rawProblems.json"; // 👈 Import local problems
 import { TimerDialog } from "@/components/problems/timer";
 
-// type Problem = {
-//   slug: string; // Unique slug for the problem
-//   id: string;
-//   title: string;
-//   description: string;
-//   difficulty: string;
-//   tags: string[];
-// };
+
 
 const getAutoEstimatedTime = (difficulty: string) => {
   switch (difficulty.toLowerCase()) {

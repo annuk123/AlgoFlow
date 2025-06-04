@@ -1,0 +1,13 @@
+[
+    {
+    "id": 16,
+    "step": "Step 16",
+    "stepTitle": "Dynamic Programming [Patterns and Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "n-queens",
+    "title": "N-Queens Problem",
+    "difficulty": "Hard",
+    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
+    "tags": ["backtracking", "recursion"]
+  }
+]

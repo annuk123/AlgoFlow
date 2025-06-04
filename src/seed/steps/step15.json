@@ -1,0 +1,13 @@
+[
+    {
+    "id": 15,
+    "step": "Step 15",
+    "stepTitle": "Graphs [Concepts & Problems]",
+    "topic": "Graphs",
+    "slug": "minimum-spanning-tree",
+    "title": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
+    "tags": ["greedy", "graph"]
+  }
+]

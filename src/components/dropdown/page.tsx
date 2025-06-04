@@ -17,25 +17,32 @@ import {
 
 const problemTopics: { title: string; href: string; description: string }[] = [
   {
-    title: "Striver DSA Sheet",
-    href: "../../comingSoon",
+    title: "Striver A2Z DSA Sheet",
+    href: "../../a2zProblems",
     description: "Visualize and solve curated problems from Striver's DSA Sheet.",
   },
+
+  {
+    title: "Striver SDE Sheet",
+    href: "../../comingSoon",
+    description: "Learn, visualize and solve problems from Striver's SDE Sheet.",
+  },
+{
+    title: "Striver 79 Sheet",
+    href: "../../comingSoon",
+    description: "Master 79 essential problems for coding interviews with visual explanations.",
+  },
+
   {
     title: "Top Interview Questions",
     href: "../../comingSoon",
     description: "Practice and visualize solutions to the most asked interview problems.",
   },
   {
-    title: "Blind 75 Problems",
+    title: "Blind 75 Sheet",
     href: "../../comingSoon",
     description: "Master essential problems every software engineer must know.",
-  },
-  {
-    title: "LeetCode Patterns",
-    href: "../../comingSoon",
-    description: "Learn and visualize popular patterns to crack LeetCode.",
-  },
+  }
 ];
 
 export function DropMenuMain() {

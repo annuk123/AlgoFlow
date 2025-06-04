@@ -1,0 +1,13 @@
+[
+      {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Recursion",
+    "slug": "search-in-rotated-sorted-array-1",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "description": "Find the index of a target value in a rotated sorted array.",
+    "tags": ["binary-search", "array"]
+  }
+]

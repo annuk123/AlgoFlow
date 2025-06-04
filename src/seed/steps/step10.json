@@ -1,0 +1,13 @@
+[
+      {
+    "id": 10,
+    "step": "Step 10",
+    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
+    "topic": "Graph",
+    "slug": "graph-representation",
+    "title": "Graph Representation",
+    "difficulty": "Easy",
+    "description": "Understand how to represent graphs using adjacency lists and matrices.",
+    "tags": ["graph", "data-structure"]
+  }
+]

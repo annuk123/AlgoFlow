@@ -1,0 +1,13 @@
+[
+    {
+    "id": 17,
+    "step": "Step 17",
+    "stepTitle": "Tries",
+    "topic": "Backtracking",
+    "slug": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "difficulty": "Hard",
+    "description": "Solve a Sudoku puzzle using backtracking.",
+    "tags": ["backtracking", "recursion"]
+  }
+]

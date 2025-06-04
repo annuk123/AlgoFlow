@@ -1,0 +1,13 @@
+[
+      {
+    "id": 12,
+    "step": "Step 12",
+    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
+    "topic": "Dynamic Programming",
+    "slug": "dynamic-programming-introduction",
+    "title": "Dynamic Programming Introduction",
+    "difficulty": "Medium",
+    "description": "Understand the principles of dynamic programming.",
+    "tags": ["dynamic-programming", "optimization"]
+  }
+]

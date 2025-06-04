@@ -1,0 +1,13 @@
+[
+    {
+    "id": 18,
+    "step": "Step 18",
+    "stepTitle": "Strings",
+    "topic": "Strings",
+    "slug": "bitwise-operations",
+    "title": "Bitwise Operations",
+    "difficulty": "Medium",
+    "description": "Understand basic bitwise operations and their applications.",
+    "tags": ["bit-manipulation", "math"]
+  }
+]

@@ -1,0 +1,1818 @@
+[
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "user-input-output",
+    "title": "User Input / Output",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "data-types",
+    "title": "Data Types",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "operators",
+    "title": "If Else statements",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "switch-statement",
+    "title": "Switch Statement",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "arrays-strings",
+    "title": "What are arrays, strings?",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "for-loops",
+    "title": "For Loops",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "while-loops",
+    "title": "While loops",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "functions",
+    "title": "Functions (Pass by Reference and Value)",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Things to Know in C++/Java/Python or any language",
+    "slug": "pointers",
+    "title": "Time Complexity [Learn Basics, and then analyse in next Steps]",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 2",
+    "topicTitle": "Build-up Logical Thinking",
+    "slug": "patterns",
+    "title": "Patterns",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 3",
+    "topicTitle": "Learn STL/Java-Collections or similar thing in your language",
+    "slug": "cpp-stl",
+    "title": "C++ STL",
+    "difficulty": "Medium",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 3",
+    "topicTitle": "Learn STL/Java-Collections or similar thing in your language",
+    "slug": "java-collections",
+    "title": "Java Collections",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "count-digits",
+    "title": "Count Digits",
+    "difficulty": "Easy",
+    "description": "Count the number of digits in a number.",
+    "tags": [
+      "math",
+      "number"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "reverse-a-number",
+    "title": "Reverse a Number",
+    "difficulty": "Easy",
+    "description": "Reverse a given number.",
+    "tags": [
+      "math",
+      "number"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "check-palindrome",
+    "title": "Check Palindrome",
+    "difficulty": "Easy",
+    "description": "Check if a string is a palindrome.",
+    "tags": [
+      "string",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "gcd-or-hcf",
+    "title": "GCD Or HCF",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "armstrong-numbers",
+    "title": "Armstrong Numbers",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "print-all-divisors",
+    "title": "Print all Divisors",
+    "difficulty": "Easy",
+    "description": "Print all divisors of a number.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 4",
+    "topicTitle": "Know Basic Maths",
+    "slug": "check-for-prime",
+    "title": "Check for Prime",
+    "difficulty": "Easy",
+    "description": "Check if a number is prime.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "understand-recursion",
+    "title": "Understand recursion by print something N times",
+    "difficulty": "Easy",
+    "description": "Find two numbers that add up to the target.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "print-name-n-times",
+    "title": "Print name N times using recursion",
+    "difficulty": "Easy",
+    "description": "Print name N times using recursion.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "print-1-to-n-using-recursion",
+    "title": "Print 1 to N using recursion",
+    "difficulty": "Easy",
+    "description": "Print 1 to N using recursion.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "print-n-to-1",
+    "title": "Print N to 1 using recursion",
+    "difficulty": "Easy",
+    "description": "Print N to 1 using recursion.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "sum-of-first-n-numbers",
+    "title": "Sum of first N numbers",
+    "difficulty": "Easy",
+    "description": "Find the sum of first N natural numbers.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "factorial-of-n",
+    "title": "Factorial of N numbers",
+    "difficulty": "Easy",
+    "description": "Find the factorial of a number.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "reverse-array",
+    "title": "Reverse an array",
+    "difficulty": "Easy",
+    "description": "Reverse a given array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "check-palindrome",
+    "title": "Check if a string is palindrome or not",
+    "difficulty": "Medium",
+    "description": "Check if a string is a palindrome.",
+    "tags": [
+      "string",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 5",
+    "topicTitle": "Learn Basic Recursion",
+    "slug": "fibonacci-number",
+    "title": "Fibonacci Number",
+    "difficulty": "Easy",
+    "description": "Find the nth Fibonacci number.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 6",
+    "topicTitle": "Learn Basic Hashing",
+    "slug": "hashing-theory",
+    "title": "Hashing Theory",
+    "difficulty": "Medium",
+    "description": "Understand the basics of hashing.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 6",
+    "topicTitle": "Learn Basic Hashing",
+    "slug": "count-frequencies",
+    "title": "Counting frequencies of array elements",
+    "difficulty": "Easy",
+    "description": "Count the frequencies of elements in an array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 1,
+    "step": "Step 1",
+    "stepTitle": "Learn the Basics",
+    "topic": "Lec 6",
+    "topicTitle": "Learn Basic Hashing",
+    "slug": "find-highest-lowest-frequency",
+    "title": "Find the highest/lowest frequency element",
+    "difficulty": "Easy",
+    "description": "Find the highest/lowest frequency element in an array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 10,
+    "step": "Step 10",
+    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
+    "topic": "Graph",
+    "slug": "graph-representation",
+    "title": "Graph Representation",
+    "difficulty": "Easy",
+    "description": "Understand how to represent graphs using adjacency lists and matrices.",
+    "tags": [
+      "graph",
+      "data-structure"
+    ]
+  },
+  {
+    "id": 11,
+    "step": "Step 11",
+    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
+    "topic": "Graph",
+    "slug": "bfs-and-dfs",
+    "title": "BFS and DFS",
+    "difficulty": "Medium",
+    "description": "Implement breadth-first search and depth-first search algorithms.",
+    "tags": [
+      "graph",
+      "bfs",
+      "dfs"
+    ]
+  },
+  {
+    "id": 12,
+    "step": "Step 12",
+    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
+    "topic": "Dynamic Programming",
+    "slug": "dynamic-programming-introduction",
+    "title": "Dynamic Programming Introduction",
+    "difficulty": "Medium",
+    "description": "Understand the principles of dynamic programming.",
+    "tags": [
+      "dynamic-programming",
+      "optimization"
+    ]
+  },
+  {
+    "id": 13,
+    "step": "Step 13",
+    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "coin-change",
+    "title": "Coin Change Problem",
+    "difficulty": "Medium",
+    "description": "Find the minimum number of coins needed to make a target amount.",
+    "tags": [
+      "dynamic-programming",
+      "greedy"
+    ]
+  },
+  {
+    "id": 14,
+    "step": "Step 14",
+    "stepTitle": "Binary Search Trees [Concept and Problems]",
+    "topic": "Greedy Algorithms",
+    "slug": "activity-selection",
+    "title": "Activity Selection Problem",
+    "difficulty": "Medium",
+    "description": "Select the maximum number of activities that don't overlap.",
+    "tags": [
+      "greedy",
+      "optimization"
+    ]
+  },
+  {
+    "id": 15,
+    "step": "Step 15",
+    "stepTitle": "Graphs [Concepts & Problems]",
+    "topic": "Graphs",
+    "slug": "minimum-spanning-tree",
+    "title": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
+    "tags": [
+      "greedy",
+      "graph"
+    ]
+  },
+  {
+    "id": 16,
+    "step": "Step 16",
+    "stepTitle": "Dynamic Programming [Patterns and Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "n-queens",
+    "title": "N-Queens Problem",
+    "difficulty": "Hard",
+    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 17,
+    "step": "Step 17",
+    "stepTitle": "Tries",
+    "topic": "Backtracking",
+    "slug": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "difficulty": "Hard",
+    "description": "Solve a Sudoku puzzle using backtracking.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 18,
+    "step": "Step 18",
+    "stepTitle": "Strings",
+    "topic": "Strings",
+    "slug": "bitwise-operations",
+    "title": "Bitwise Operations",
+    "difficulty": "Medium",
+    "description": "Understand basic bitwise operations and their applications.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "selection-sort",
+    "title": "Selection Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": [
+      "kadane",
+      "prefix-sum"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "bubble-sort",
+    "title": "Bubble Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": [
+      "kadane",
+      "prefix-sum"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 1",
+    "topicTitle": "Sorting-I",
+    "slug": "insertion-sort",
+    "title": "Insertion Sort",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray with the maximum sum.",
+    "tags": [
+      "kadane",
+      "prefix-sum"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "merge-sort",
+    "title": "Merge Sort",
+    "difficulty": "Medium",
+    "description": "Sort an array using the Merge Sort algorithm.",
+    "tags": [
+      "sorting",
+      "merge-sort"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "recursive-bubble-sort",
+    "title": "Recursive Bubble Sort",
+    "difficulty": "Easy",
+    "description": "Sort an array using the Recursive Bubble Sort algorithm.",
+    "tags": [
+      "sorting",
+      "bubble-sort"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "recursive-insertion-sort",
+    "title": "Recursive Insertion Sort",
+    "difficulty": "Medium",
+    "description": "Sort an array using the Recursive Insertion Sort algorithm.",
+    "tags": [
+      "sorting",
+      "insertion-sort"
+    ]
+  },
+  {
+    "id": 2,
+    "step": "Step 2",
+    "stepTitle": "Learn Important Sorting Techniques",
+    "topic": "Lec 2",
+    "topicTitle": "Sorting-II",
+    "slug": "quick-sort",
+    "title": "Quick Sort",
+    "difficulty": "Easy",
+    "description": "Sort an array using the Quick Sort algorithm.",
+    "tags": [
+      "sorting",
+      "quick-sort"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "largest-element-in-array",
+    "title": "Largest Element in an Array",
+    "difficulty": "Easy",
+    "description": "Find the largest element in an array.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "second-largest-element-in-array",
+    "title": "Second Largest Element in an Array without sorting",
+    "difficulty": "Easy",
+    "description": "Find the second largest element in an array without sorting.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "check-if-array-is-sorted",
+    "title": "Check if the array is sorted",
+    "difficulty": "Easy",
+    "description": "Check if the array is sorted.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "remove-duplicates-from-sorted-array",
+    "title": "Remove duplicates from Sorted array",
+    "difficulty": "Easy",
+    "description": "Remove duplicates from a sorted array.",
+    "tags": [
+      "array",
+      "two-pointers"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "left-rotate-array-by-one-place",
+    "title": "Left Rotate an array by one place",
+    "difficulty": "Easy",
+    "description": "Left Rotate an array by one place.",
+    "tags": [
+      "array",
+      "rotation"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "left-rotate-array",
+    "title": "Left rotate an array by D places",
+    "difficulty": "Easy",
+    "description": "Left rotate an array by D places.",
+    "tags": [
+      "array",
+      "rotation"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "move-zeros-to-end",
+    "title": "Move Zeros to End",
+    "difficulty": "Easy",
+    "description": "Move all zeros in an array to the end.",
+    "tags": [
+      "array",
+      "two-pointers"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "linear-search",
+    "title": "Linear Search",
+    "difficulty": "Easy",
+    "description": "Find an element in an array using linear search.",
+    "tags": [
+      "searching",
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "find-union",
+    "title": "Find the Union",
+    "difficulty": "Medium",
+    "description": "Find the union of two arrays.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "find-missing-number",
+    "title": "Find missing number in an array",
+    "difficulty": "Easy",
+    "description": "Find the missing number in a given integer array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "maximum-consecutive-ones",
+    "title": "Maximum Consecutive Ones",
+    "difficulty": "Easy",
+    "description": "Find the maximum number of consecutive 1s in a binary array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "find-number-appears-once",
+    "title": "Find the number that appears once, and other numbers twice.",
+    "difficulty": "Medium",
+    "description": "Find the number that appears once, and other numbers twice.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "longest-subarray-with-sum-k-positives",
+    "title": "Longest subarray with given sum K(positives)",
+    "difficulty": "Medium",
+    "description": "Find the longest subarray with a sum of K, where K can be positive.",
+    "tags": [
+      "subarray",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 1",
+    "topicTitle": "Easy",
+    "slug": "longest-subarray-with-sum-k",
+    "title": "Longest subarray with sum K (Positives + Negatives)",
+    "difficulty": "Medium",
+    "description": "Find the longest subarray with a sum of K, where K can be positive or negative.",
+    "tags": [
+      "subarray",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "2sum-problem",
+    "title": "2Sum Problem",
+    "difficulty": "Easy",
+    "description": "Find two numbers in an array that add up to a specific target.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "sort-an-array-of-0s-1s-and-2s",
+    "title": "Sort an array of 0's 1's and 2's",
+    "difficulty": "Easy",
+    "description": "Sort an array of 0's, 1's, and 2's.",
+    "tags": [
+      "sorting"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "majority-element",
+    "title": "Majority Element (>n/2 times)",
+    "difficulty": "Easy",
+    "description": "Find the majority element in an array (element that appears more than n/2 times).",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "kadane-algorithm-maximum-subarray-sum",
+    "title": "Kadane's Algorithm, maximum subarray sum",
+    "difficulty": "Easy",
+    "description": "Find the maximum subarray sum using Kadane's Algorithm.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "maximum-subarray-sum",
+    "title": "Print subarray with maximum subarray sum (extended version of above problem)",
+    "difficulty": "Medium",
+    "description": "Print the subarray with the maximum sum.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "stock-buy-and-sell",
+    "title": "Stock Buy and Sell",
+    "difficulty": "Easy",
+    "description": "Find the maximum profit from a stock buy and sell.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "rearrange-array-alternating-positive-negative",
+    "title": "Rearrange the array in alternating positive and negative items",
+    "difficulty": "Medium",
+    "description": "Rearrange the array in such a way that positive and negative numbers are placed alternatively.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "next-permutation",
+    "title": "Next Permutation",
+    "difficulty": "Medium",
+    "description": "Find the next permutation of an array.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "leaders-in-an-array",
+    "title": "Leaders in an Array problem",
+    "difficulty": "Easy",
+    "description": "Find all leaders in an array.",
+    "tags": [
+      "array"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence in an Array",
+    "difficulty": "Medium",
+    "description": "Find the longest consecutive elements sequence in an array.",
+    "tags": [
+      "array",
+      "hashmap"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "set-matrix-zeros",
+    "title": "Set Matrix Zeros",
+    "difficulty": "Easy",
+    "description": "Set the entire row and column to zero if an element is zero.",
+    "tags": [
+      "matrix"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "rotate-matrix-by-90-degrees",
+    "title": "Rotate Matrix by 90 degrees",
+    "difficulty": "Easy",
+    "description": "Rotate the given matrix by 90 degrees.",
+    "tags": [
+      "matrix"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "print-the-matrix-in-spiral-manner",
+    "title": "Print the matrix in spiral manner",
+    "difficulty": "Medium",
+    "description": "Print the elements of a matrix in spiral order.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 2",
+    "topicTitle": "Medium",
+    "slug": "count-subarrays-with-given-sum",
+    "title": "Count subarrays with given sum",
+    "difficulty": "Easy",
+    "description": "Count the number of subarrays with a given sum.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "pascals-triangle",
+    "title": "Pascal's Triangle",
+    "difficulty": "Medium",
+    "description": "Print Pascal's Triangle up to N rows using recursion.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "majority-element-n3",
+    "title": "Majority Element (n/3 times)",
+    "difficulty": "Medium",
+    "description": "Find the majority element in an array (element that appears more than n/3 times).",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "3-sum-problem",
+    "title": "3-Sum Problem",
+    "difficulty": "Medium",
+    "description": "Find all unique triplets in an array that sum up to a target value.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "4-sum-problem",
+    "title": "4-Sum Problem",
+    "difficulty": "Hard",
+    "description": "Find all unique quadruplets in an array that sum up to a target value.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "largest-subarray-with-0-sum",
+    "title": "Largest Subarray with 0 Sum",
+    "difficulty": "Medium",
+    "description": "Find the largest subarray with a sum of 0.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "count-subarrays-with-given-xor-k",
+    "title": "Count number of subarrays with given xor K",
+    "difficulty": "Hard",
+    "description": "Count the number of subarrays with a given XOR K.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "merge-overlapping-subintervals",
+    "title": "Merge Overlapping Subintervals",
+    "difficulty": "Medium",
+    "description": "Merge all overlapping intervals in a list.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "merge-two-sorted-arrays-without-extra-space",
+    "title": "Merge two sorted arrays without extra space",
+    "difficulty": "Medium",
+    "description": "Merge two sorted arrays without using extra space.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "find-repeating-and-missing-number",
+    "title": "Find the repeating and missing number",
+    "difficulty": "Hard",
+    "description": "Find the repeating and missing number in an array.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "count-inversions",
+    "title": "Count Inversions",
+    "difficulty": "Hard",
+    "description": "Count the number of inversions in an array.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "reverse-pairs",
+    "title": "Reverse Pairs",
+    "difficulty": "Hard",
+    "description": "Count the number of reverse pairs in an array.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 3,
+    "step": "Step 3",
+    "stepTitle": "Solve Problems on Arrays (Easy → Medium → Hard)",
+    "topic": "Lec 3",
+    "topicTitle": "Hard",
+    "slug": "maximum-product-subarray",
+    "title": "Maximum Product Subarray",
+    "difficulty": "Easy",
+    "description": "Find the contiguous subarray within a one-dimensional array of numbers which has the largest product.",
+    "tags": [
+      "recursion"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "binary-search",
+    "title": "Binary Search to find X in sorted array",
+    "difficulty": "Easy",
+    "description": "Find the position of X in a sorted array using binary search.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "implement-lower-bound",
+    "title": "Implement Lower Bound",
+    "difficulty": "Easy",
+    "description": "Find the lower bound of a target value in a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "implement-upper-bound",
+    "title": "Implement Upper Bound",
+    "difficulty": "Easy",
+    "description": "Find the upper bound of a target value in a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "search-insert-position",
+    "title": "Search Insert Position",
+    "difficulty": "Easy",
+    "description": "Find the index at which a target value should be inserted into a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "floor-and-ceil",
+    "title": "Floor/Ceil in Sorted Array",
+    "difficulty": "Medium",
+    "description": "Find the floor and ceiling of a number in a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "find-first-and-last-position",
+    "title": "Find the first or last occurrence of a given number in a sorted array",
+    "difficulty": "Easy",
+    "description": "Find the first or last occurrence of a given number in a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "count-occurrences",
+    "title": "Count occurrences of a number in a sorted array with duplicates",
+    "difficulty": "Easy",
+    "description": "Count the occurrences of a number in a sorted array with duplicates.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "search-in-rotated-sorted-array-i",
+    "title": "Search in Rotated Sorted Array I",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a rotated sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "search-in-rotated-sorted-array-ii",
+    "title": "Search in Rotated Sorted Array II",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a rotated sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find minimum in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "description": "Find the minimum element in a rotated sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "find-rotation-count",
+    "title": "Find out how many times has an array been rotated",
+    "difficulty": "Easy",
+    "description": "Find the number of times a sorted array has been rotated.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "single-element-in-sorted-array",
+    "title": "Single element in a Sorted Array",
+    "difficulty": "Easy",
+    "description": "Find the single element in a sorted array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 1",
+    "topicTitle": "BS on 1D Arrays",
+    "slug": "find-peak-element",
+    "title": "Find peak element",
+    "difficulty": "Hard",
+    "description": "Find the peak element in a 1D array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "square-root-of-number",
+    "title": "Find square root of a number in log n time",
+    "difficulty": "Medium",
+    "description": "Find the square root of a number using binary search.",
+    "tags": [
+      "binary-search",
+      "math"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "nth-root-of-number",
+    "title": "Find the Nth root of a number using binary search",
+    "difficulty": "Medium",
+    "description": "Find the Nth root of a number using binary search.",
+    "tags": [
+      "binary-search",
+      "math"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "koko-eating-bananas",
+    "title": "Koko Eating Bananas",
+    "difficulty": "Hard",
+    "description": "Find the minimum eating speed of Koko to finish all bananas in H hours.",
+    "tags": [
+      "binary-search",
+      "greedy"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "minimum-days-to-make-m-bouquets",
+    "title": "Minimum days to make M bouquets",
+    "difficulty": "Hard",
+    "description": "Find the minimum days to make M bouquets from the given flowers.",
+    "tags": [
+      "binary-search",
+      "greedy"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "find-smallest-divisor",
+    "title": "Find the smallest Divisor",
+    "difficulty": "Easy",
+    "description": "Find the smallest divisor of a number.",
+    "tags": [
+      "binary-search",
+      "math"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "capacity-to-ship-packages-within-d-days",
+    "title": "Capacity to Ship Packages within D Days",
+    "difficulty": "Hard",
+    "description": "Find the minimum capacity to ship packages within D days.",
+    "tags": [
+      "binary-search",
+      "greedy"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "kth-missing-positive",
+    "title": "Kth Missing Positive Number",
+    "difficulty": "Easy",
+    "description": "Find the Kth missing positive number in an array.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "aggressive-cows",
+    "title": "Aggressive Cows",
+    "difficulty": "Hard",
+    "description": "Place cows in stalls such that the minimum distance between them is maximized.",
+    "tags": [
+      "binary-search",
+      "greedy"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "book-allocation",
+    "title": "Book Allocation Problem",
+    "difficulty": "Hard",
+    "description": "Allocate books to students such that the maximum number of pages assigned to a student is minimized.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "split-array-largest-sum",
+    "title": "Split array - Largest Sum",
+    "difficulty": "Hard",
+    "description": "Find the largest sum of a subarray.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "painters-partition",
+    "title": "Painter's partition",
+    "difficulty": "Hard",
+    "description": "Calculate the minimum time to paint all boards.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "minimize-max-distance",
+    "title": "Minimize Max Distance to Gas Station",
+    "difficulty": "Hard",
+    "description": "Calculate the minimum max distance to a gas station.",
+    "tags": [
+      "binary-search",
+      "greedy"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "median-of-2-sorted-arrays",
+    "title": "Median of 2 sorted arrays",
+    "difficulty": "Hard",
+    "description": "Find the median of two sorted arrays.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 2",
+    "topicTitle": "BS on Answers",
+    "slug": "kth-element",
+    "title": "Kth element of 2 sorted arrays",
+    "difficulty": "Medium",
+    "description": "Find the Kth element in two sorted arrays.",
+    "tags": [
+      "array",
+      "binary-search"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 3",
+    "topicTitle": "BS on 2D Arrays",
+    "slug": "find-row-with-maximum-1s",
+    "title": "Find the row with maximum number of 1's",
+    "difficulty": "Easy",
+    "description": "Find the row with maximum number of 1's in a binary matrix.",
+    "tags": [
+      "binary-search",
+      "matrix"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 3",
+    "topicTitle": "BS on 2D Arrays",
+    "slug": "search-in-2d-matrix",
+    "title": "Search in a 2 D matrix",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a 2D matrix.",
+    "tags": [
+      "binary-search",
+      "matrix"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 3",
+    "topicTitle": "BS on 2D Arrays",
+    "slug": "search-in-row-column-wise-sorted-matrix",
+    "title": "Search in a row and column wise sorted matrix",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a matrix sorted row-wise and column-wise.",
+    "tags": [
+      "binary-search",
+      "matrix"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 3",
+    "topicTitle": "BS on 2D Arrays",
+    "slug": "find-peak-element",
+    "title": "Find Peak Element (2D Matrix)",
+    "difficulty": "Hard",
+    "description": "Find a peak element in a 2D matrix.",
+    "tags": [
+      "binary-search",
+      "matrix"
+    ]
+  },
+  {
+    "id": 4,
+    "step": "Step 4",
+    "stepTitle": "Binary Search [1D, 2D Arrays, Search Space]",
+    "topic": "Lec 3",
+    "topicTitle": "BS on 2D Arrays",
+    "slug": "matrix-median",
+    "title": "Matrix Median",
+    "difficulty": "Hard",
+    "description": "Find the median of a matrix.",
+    "tags": [
+      "binary-search",
+      "math"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Recursion",
+    "slug": "fibonacci-1",
+    "title": "Fibonacci Sequence",
+    "difficulty": "Medium",
+    "description": "Find the nth Fibonacci number using recursion.",
+    "tags": [
+      "recursion",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "LinkedList",
+    "slug": "linked-list-basics-1",
+    "title": "Linked List Basics",
+    "difficulty": "Medium",
+    "description": "Search for a target value in a sorted array using binary search.",
+    "tags": [
+      "binary-search",
+      "divide-and-conquer"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Recursion",
+    "slug": "search-in-rotated-sorted-array-1",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "description": "Find the index of a target value in a rotated sorted array.",
+    "tags": [
+      "binary-search",
+      "array"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Bit Manipulation",
+    "slug": "bit-manipulation",
+    "title": "Bit Manipulation Basics",
+    "difficulty": "Medium",
+    "description": "Understand the basics of bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 9,
+    "step": "Step 9",
+    "stepTitle": "Stack and Queues [Learning, Pre-In-Post-fix, Monotonic Stack, Implementation]",
+    "topic": "Stack and Queues",
+    "slug": "kth-largest-element-in-an-array",
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "Medium",
+    "description": "Find the kth largest element in an unsorted array.",
+    "tags": [
+      "sorting",
+      "heap"
+    ]
+  }
+]
