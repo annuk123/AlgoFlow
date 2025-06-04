@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/nav/nav";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer/page";
+import WhyChooseUs from "@/components/whychooseus/choose";
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
     {
       title: "LeetCode Problem Practice",
       description: "Tackle real coding challenges with our integrated LeetCode problem set. Visualize solutions and track your progress effortlessly.",
-      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=tvxsdo63ztf9ck84u67t&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=j2fkfdymvdj0xqmj3fdk&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
       poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster2.png"
     },
     {
@@ -109,6 +110,7 @@ export default function Home() {
     allow="autoplay; fullscreen"
     className="w-full aspect-video object-cover"
   />
+      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 </div>
 
 
@@ -172,21 +174,29 @@ export default function Home() {
           </div>
 
           {/* Video with Poster Thumbnail */}
-          <div className="md:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl group relative transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
-  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+<div className="md:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl group relative transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
+  <div className="relative w-full aspect-video overflow-hidden">
+    {/* Video */}
+    <iframe
+      src={feature.video}
+      className="w-full h-full object-cover"
+      allow="autoplay; fullscreen"
+    />
 
-  <iframe
-    src={feature.video}
-    className="w-full aspect-video object-cover rounded-3xl z-0"
-    allow="autoplay; fullscreen"
-  />
+    {/* Bottom Fade Effect */}
+    <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
+  </div>
 </div>
+
 
         </motion.div>
       );
     })}
   </div>
 </section>
+{/* <!-- Call to Action Section --> */}
+<WhyChooseUs />
+
 
       {/* Footer */}
       <Footer />
