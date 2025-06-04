@@ -106,7 +106,7 @@ export default function Home() {
   <div className="relative z-10 max-w-5xl w-full rounded-3xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
   <iframe
-    src="https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=ryle30glfgbeawtdqqli&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false"
+    src="https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=jhoi6cbftm6rdmssnaiy&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false"
     allow="autoplay; fullscreen"
     className="w-full aspect-video object-cover"
   />
