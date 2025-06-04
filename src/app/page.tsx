@@ -19,19 +19,19 @@ export default function Home() {
     {
       title: "Interactive Algorithm Visualizations",
       description: "Watch algorithms come to life with step-by-step animations and intuitive controls. Perfect for visual learners and curious minds.",
-      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=tvxsdo63ztf9ck84u67t&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
       poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster1.png"
     },
     {
-      title: "Practice & Test Your Skills",
-      description: "Solve problems, get instant feedback, and track your progress. Practice makes perfect, and we make it fun.",
-      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      title: "LeetCode Problem Practice",
+      description: "Tackle real coding challenges with our integrated LeetCode problem set. Visualize solutions and track your progress effortlessly.",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=tvxsdo63ztf9ck84u67t&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
       poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster2.png"
     },
     {
-      title: "Learn With Real-World Examples",
-      description: "Explore how algorithms power real applications. Connect theory to practice with relatable scenarios.",
-      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      title: "Striver's A2Z DSA Problems",
+      description: "Master the fundamentals with Striver's A2Z DSA problems. Visualize each step and build a solid foundation in data structures and algorithms.",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=igr5dsg3bgkfyvwyomte&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
       poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster3.png"
     }
   ];
@@ -102,16 +102,15 @@ export default function Home() {
   <div className="absolute inset-0 z-0" />
 
   {/* Centered Video */}
-  <div className="relative z-10 max-w-5xl w-full rounded-2xl overflow-hidden shadow-2xl">
-    <video
-      src="https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4"
-      className="w-full h-auto object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    />
-  </div>
+  <div className="relative z-10 max-w-5xl w-full rounded-3xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
+  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
+  <iframe
+    src="https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=ryle30glfgbeawtdqqli&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false"
+    allow="autoplay; fullscreen"
+    className="w-full aspect-video object-cover"
+  />
+</div>
+
 
   {/* Optional Animation Styles */}
   <style jsx>{`
@@ -173,17 +172,16 @@ export default function Home() {
           </div>
 
           {/* Video with Poster Thumbnail */}
-          <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
-            <video
-              src={feature.video}
-              poster={feature.poster}
-              className="w-full h-auto object-cover rounded-xl"
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
-          </div>
+          <div className="md:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl group relative transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
+  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
+
+  <iframe
+    src={feature.video}
+    className="w-full aspect-video object-cover rounded-3xl z-0"
+    allow="autoplay; fullscreen"
+  />
+</div>
+
         </motion.div>
       );
     })}
