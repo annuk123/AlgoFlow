@@ -12,6 +12,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 
 
@@ -55,19 +56,38 @@ export function DropMenuMain() {
           <NavigationMenuContent>
           <ul className="grid gap-4 p-4 w-[80vw] md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
 
+
               <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <Link
-                    href="/"
-                    className="flex h-full w-full flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none transition hover:shadow-lg"
-                    >
-                    <div className="mb-2 mt-4 text-lg font-semibold">AlgoFlow</div>
-                    <p className="text-sm text-muted-foreground">
-                      A modern platform to visualize and master DSA algorithms with code.
-                    </p>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
+  <NavigationMenuLink asChild>
+    <Link
+      href="/"
+      className="relative flex h-full w-full flex-col justify-end rounded-2xl overflow-hidden shadow-md group transition-all duration-300 hover:scale-[1.02]"
+    >
+      {/* 🌄 Background Image */}
+     <Image
+  src="/algoflows.png"
+  alt="AlgoFlow Banner"
+  width={500} // You can adjust as needed
+  height={800}
+  className="absolute inset-0 w-full h-full object-cover z-0"
+/>
+
+      {/* 🎨 Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80 z-10" />
+
+      {/* ✨ Text Content */}
+      <div className="relative z-20 p-6 space-y-2">
+        <h2 className="text-3xl sm:text-2xl font-extrabold bg-gradient-to-r from-indigo-400 via-sky-500 to-emerald-400 bg-clip-text text-transparent animate-gradient">
+          Algo<span className="text-white">Flow</span>
+        </h2>
+        <p className="text-sm text-gray-300">
+          A modern platform to visualize and master DSA algorithms with code.
+        </p>
+      </div>
+    </Link>
+  </NavigationMenuLink>
+</li>
+
 
               <ListItem href="../../comingSoon" title="Introduction">
                 Get an overview of how AlgoFlow helps you master DSA visually.
@@ -91,7 +111,7 @@ export function DropMenuMain() {
                 <h3 className="mb-2 text-sm font-bold text-muted-foreground uppercase tracking-wide">Problem Visualizer</h3>
                 <ul className="grid gap-4">
                   {problemTopics.map((topic) => (
-                    <ListItem key={topic.title} title={topic.title} href={topic.href} className="block select-none space-y-1 rounded-md p-4 text-left leading-none no-underline outline-none transition hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground
+                    <ListItem key={topic.title} title={topic.title} href={topic.href} className="block select-none space-y-1 rounded-md p-4 text-left leading-none no-underline outline-none transition hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground bg-gradient-to-r from-indigo-400 via-sky-500 to-emerald-400 bg-clip-text text-transparent animate-gradient
 ">
                       {topic.description}
                     </ListItem>
@@ -128,7 +148,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
           )}
           {...props}
         >
-          <div className="text-base font-semibold leading-none">{title}</div>
+          <div className="text-base font-semibold leading-none bg-gradient-to-r from-indigo-400 via-sky-500 to-emerald-400 bg-clip-text text-transparent animate-gradient">{title}</div>
           <p className="line-clamp-2 text-sm text-muted-foreground">
             {children}
           </p>

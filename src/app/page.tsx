@@ -14,6 +14,28 @@ export default function Home() {
 
   if (!isMounted) return null; // 🛡️ Avoid SSR hydration issues
 
+  // Define the features array
+  const features = [
+    {
+      title: "Interactive Algorithm Visualizations",
+      description: "Watch algorithms come to life with step-by-step animations and intuitive controls. Perfect for visual learners and curious minds.",
+      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster1.png"
+    },
+    {
+      title: "Practice & Test Your Skills",
+      description: "Solve problems, get instant feedback, and track your progress. Practice makes perfect, and we make it fun.",
+      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster2.png"
+    },
+    {
+      title: "Learn With Real-World Examples",
+      description: "Explore how algorithms power real applications. Connect theory to practice with relatable scenarios.",
+      video: "https://res.cloudinary.com/dpiobntr2/video/upload/v1746568505/hgcfgtwqa2bgtq3wyyuu.mp4",
+      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster3.png"
+    }
+  ];
+
   return (
     <main className="flex z-10 flex-col min-h-screen bg-background text-foreground transition-colors duration-500">
       {/* Navbar */}
@@ -113,7 +135,7 @@ export default function Home() {
     }
   `}</style>
 </div>
-{/* 
+
 <section className="relative px-6 md:px-20 py-32 bg-background text-foreground">
   <motion.h2
     initial={{ opacity: 0, y: -40 }}
@@ -138,20 +160,20 @@ export default function Home() {
           transition={{ duration: 0.6, delay: index * 0.1 }}
           className={`flex flex-col-reverse md:flex-row ${
             isReversed ? "md:flex-row-reverse" : ""
-          } items-center gap-12`} */}
-        {/* > */}
+          } items-center gap-12`}
+         > 
           {/* Text */}
-          {/* <div className="md:w-1/2 text-center md:text-left space-y-4">
+          <div className="md:w-1/2 text-center md:text-left space-y-4">
             <h3 className="text-3xl font-semibold text-primary">
               {feature.title}
             </h3>
             <p className="text-muted-foreground text-lg">
               {feature.description}
             </p>
-          </div> */}
+          </div>
 
           {/* Video with Poster Thumbnail */}
-          {/* <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
+          <div className="md:w-1/2 w-full rounded-2xl overflow-hidden shadow-xl">
             <video
               src={feature.video}
               poster={feature.poster}
@@ -166,7 +188,7 @@ export default function Home() {
       );
     })}
   </div>
-</section> */}
+</section>
 
       {/* Footer */}
       <Footer />

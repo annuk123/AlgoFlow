@@ -45,6 +45,34 @@
 }
 
 
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-blur-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #4fd1c5);
+  background-size: 600% 600%;
+  animation: gradient-move 8s ease infinite;
+  filter: blur(24px);
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+
 /* Responsive text inside Accordion */
 .visualizer-accordion-content p,
 .visualizer-accordion-content ul,
