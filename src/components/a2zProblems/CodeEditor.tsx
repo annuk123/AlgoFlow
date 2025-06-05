@@ -1,5 +1,3 @@
-// components/a2zProblems/CodeEditor.tsx
-
 "use client";
 
 import Editor from "@monaco-editor/react";
