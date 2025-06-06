@@ -2,7 +2,7 @@
 
 **AlgoFlow** is an advanced, interactive platform designed to **visually simplify Data Structures and Algorithms (DSA)** for developers and learners at all levels. It bridges the gap between writing code and understanding it, offering an intuitive approach to problem-solving through **step-by-step visualizations, curated problems**, and **AI-powered insights** (coming soon).
 
-Crafted with cutting-edge technologies like **Next.js 14**, **TypeScript**, **Convex DB**, **Tailwind CSS**, **Framer Motion**, and **shadcn/ui**, AlgoFlow delivers a clean, responsive user experience with real-time filtering, problem routing, animations, and more.
+Crafted with cutting-edge technologies like **Next.js 15+**, **TypeScript**, **Convex DB**, **Tailwind CSS**, **Framer Motion**, and **shadcn/ui**, AlgoFlow delivers a clean, responsive user experience with real-time filtering, problem routing, animations, and more.
 
 ---
 
