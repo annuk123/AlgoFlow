@@ -7,6 +7,7 @@ import Footer from "@/components/Footer/page";
 import WhyChooseUs from "@/components/whychooseus/choose";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
+import FeedbackSection from "@/components/feedbackcompoent/feedback";
 
 
 export default function Home() {
@@ -17,7 +18,7 @@ const feedback = useQuery(api.feedback.getAllFeedback);
     setIsMounted(true); // run only on client
   }, []);
 
-  if (!isMounted) return null; // 🛡️ Avoid SSR hydration issues
+  if (!isMounted) return null; // Avoid SSR hydration issues
 
   // Define the features array
   const features = [
@@ -141,7 +142,7 @@ const feedback = useQuery(api.feedback.getAllFeedback);
   `}</style>
 </div>
 
-<section className="relative px-6 md:px-20 py-32 bg-background text-foreground">
+<section className="relative px-6 md:px-20 bg-background text-foreground">
   <motion.h2
     initial={{ opacity: 0, y: -40 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -149,7 +150,8 @@ const feedback = useQuery(api.feedback.getAllFeedback);
     transition={{ duration: 0.6 }}
     className="text-4xl md:text-5xl font-bold text-center mb-20"
   >
-    Unlock The <span className="text-primary">Full Potential</span> of AlgoFlow
+    Unlock The Full Potential of
+     <span className="tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient"> Algo</span><span className="text-foreground">Flow</span> 
   </motion.h2>
 
   <div className="flex flex-col gap-32">
@@ -163,13 +165,13 @@ const feedback = useQuery(api.feedback.getAllFeedback);
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: index * 0.1 }}
-          className={`flex flex-col-reverse md:flex-row ${
+          className={`flex flex-col-reverse  md:flex-row ${
             isReversed ? "md:flex-row-reverse" : ""
           } items-center gap-12`}
          > 
           {/* Text */}
           <div className="md:w-1/2 text-center md:text-left space-y-4">
-            <h3 className="text-3xl font-semibold text-primary">
+            <h3 className="text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
               {feature.title}
             </h3>
             <p className="text-muted-foreground text-lg">
@@ -201,16 +203,7 @@ const feedback = useQuery(api.feedback.getAllFeedback);
 {/* <!-- Call to Action Section --> */}
 <WhyChooseUs />
 
- <section className="max-w-4xl mx-auto p-6 space-y-4">
-      <h2 className="text-2xl font-semibold">💡 What people are saying</h2>
-      {feedback?.length === 0 && <p>No feedback yet. Be the first!</p>}
-      {feedback?.map((f) => (
-        <div key={f._id} className="p-4 rounded-lg border shadow-sm">
-          <p className="font-medium text-indigo-600">{f.name}</p>
-          <p className="text-gray-700">{f.message}</p>
-        </div>
-      ))}
-    </section>
+<FeedbackSection feedback={feedback ?? []} />
 
 
       {/* Footer */}

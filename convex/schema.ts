@@ -47,6 +47,7 @@ export default defineSchema({
   feedback: defineTable({
     name: v.string(),
     message: v.string(),
+    rating: v.number(), 
     createdAt: v.number(),
   }),
 
@@ -54,6 +55,7 @@ export default defineSchema({
     name: v.string(),
     email: v.string(),
     message: v.string(),
+    // Rating from 1 to 5
     createdAt: v.number(),
   }),
 
