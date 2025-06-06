@@ -17,22 +17,24 @@ export default function FeedbackPage() {
   const [loading, setLoading] = useState(false);
   const [honeypot, setHoneypot] = useState(""); // 🐝 Anti-spam field
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (honeypot !== "") return; // Bot detected
-    setLoading(true);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (honeypot !== "") return; // Bot detected
+  setLoading(true);
 
-    try {
-      await submitFeedback({ name, message });
-      toast.success("🎉 Thank you for your valuable feedback!");
-      setName("");
-      setMessage("");
-    } catch (err) {
-      toast.error("❌ Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    await submitFeedback({ name, message });
+    toast.success("🎉 Thank you for your valuable feedback!");
+    setName("");
+    setMessage("");
+  } catch (err) {
+    console.error(err);  // <-- Use the error so ESLint is happy
+    toast.error("❌ Something went wrong. Please try again.");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <section className="py-20 min-h-screen">

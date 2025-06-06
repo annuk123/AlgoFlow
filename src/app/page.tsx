@@ -8,11 +8,7 @@ import WhyChooseUs from "@/components/whychooseus/choose";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 
-type Feedback = {
-  _id: string;
-  name: string;
-  message: string;
-};
+
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
 const feedback = useQuery(api.feedback.getAllFeedback);
