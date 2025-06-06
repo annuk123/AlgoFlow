@@ -8,6 +8,7 @@ import WhyChooseUs from "@/components/whychooseus/choose";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import FeedbackSection from "@/components/feedbackcompoent/feedback";
+import FAQSection from "@/components/faq/faq";
 
 
 export default function Home() {
@@ -212,6 +213,7 @@ const feedback = useQuery(api.feedback.getAllFeedback);
   }
 />
 
+<FAQSection />
 
       {/* Footer */}
       <Footer />

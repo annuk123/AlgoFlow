@@ -42,17 +42,6 @@ function slugify(text: string): string {
 
 async function seed() {
   console.log("⏳ Seeding A2Z problems...");
-
-//   for (const [index, problem] of a2zProblems.entries()) {
-//     await convex.mutation(api.a2zProblems.insertA2ZProblem, {
-//       ...problem,
-//       link: "",
-//       createdAt: Date.now(),
-//       order: index,
-//       difficulty: (["Easy", "Medium", "Hard"].includes(problem.difficulty)
-//         ? problem.difficulty
-//         : "Easy") as "Easy" | "Medium" | "Hard",
-//     });
  const typedProblems: Problem[] = (a2zProblems as RawProblem[]).map((problem) => ({
     slug: slugify(problem.title),
     title: problem.title,

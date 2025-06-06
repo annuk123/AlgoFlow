@@ -35,8 +35,6 @@ export async function GET() {
         order: index,
       });
 
-      // Optional delay to avoid rate limiting
-      // await new Promise((res) => setTimeout(res, 50));
     }
 
     return new Response("A2Z Sheet seeded.", { status: 200 });

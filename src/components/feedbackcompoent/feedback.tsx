@@ -61,7 +61,7 @@ export default function FeedbackSection({ feedback }: { feedback: Feedback[] }) 
   }, []);
 
   return (
-    <section className="max-w-6xl mx-auto px-6 py-20 space-y-12">
+    <section className="max-w-6xl mx-auto px-6 py-20 space-y-12 ">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function FeedbackSection({ feedback }: { feedback: Feedback[] }) 
                     priority={true}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-indigo-700 dark:text-indigo-400">{f.name}</h3>
+                    <h3 className="text-lg font-semibold tracking-tight bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent animate-gradient">{f.name}</h3>
                     <StarRating rating={f.rating || 0} />
                   </div>
                 </div>

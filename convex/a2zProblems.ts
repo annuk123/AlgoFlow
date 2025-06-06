@@ -34,8 +34,6 @@ export const insertA2ZProblem = mutation({
       sampleInput: args.sampleInput,
       sampleOutput: args.sampleOutput,
       createdAt: args.createdAt,
-      // link: args.link, // Remove this line if 'link' is not in the schema
-      // order: args.order, // Remove this line if 'order' is not in the schema
     });
   },
 });

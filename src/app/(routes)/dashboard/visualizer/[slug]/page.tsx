@@ -49,11 +49,6 @@ export default function VisualizerPage() {
     );
   }
 
-  // if (slugStr === "merge-sort") {
-  //   return (
-  //     <SelectionSortVisualizer />
-  //   );
-  // }
 
   if (slugStr === "heap-sort") {
     return (

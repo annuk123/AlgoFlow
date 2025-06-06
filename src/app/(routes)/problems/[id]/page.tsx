@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
-import problems from "@/seed/rawProblems.json"; // 👈 Import local problems
+import problems from "@/seed/rawProblems.json"; 
 import { TimerDialog } from "@/components/problems/timer";
 
 
