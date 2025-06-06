@@ -186,14 +186,14 @@ export default function Navbar() {
         Home
       </Link>
       <Link
-        href="../../comingSoon"
+        href="../../feedback"
         onClick={() => setIsOpen(false)}
         className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-colors"
       >
         Feedback
       </Link>
       <Link
-        href="../../comingSoon"
+        href="../../contact"
         onClick={() => setIsOpen(false)}
         className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-colors"
       >
