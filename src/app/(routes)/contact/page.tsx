@@ -207,7 +207,7 @@ export default function ContactPage() {
   <br />
   Feel free to reach out with feedback, ideas, or collaborations!
   <br />
-  Email: <a href="mailto:support@algoflow.dev" className="text-indigo-500 hover:underline">support@algoflow.dev</a><br />
+  Email: <a href="mailto:anuk35168@gmail.com" className="text-indigo-500 hover:underline">anuk35168@gmail.com</a><br />
   Location: India (working remotely)
 </p>
 
