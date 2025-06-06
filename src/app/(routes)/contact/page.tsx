@@ -9,6 +9,15 @@ import { useMutation } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import { motion } from "framer-motion";
 import Navbar from "@/components/nav/nav";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaAndroid,
+  FaYoutube
+  // FaHashnode, // Removed as it is not a valid export
+} from "react-icons/fa";
 
 export default function ContactPage() {
   const submitContactMessage = useMutation(api.contact.submitContactMessage);
@@ -19,6 +28,39 @@ export default function ContactPage() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [honeyPot, setHoneyPot] = useState("");
+
+  const socials = [
+    {
+      name: "GitHub",
+      icon: <FaGithub />,
+      href: "https://github.com/annuk123",
+    },
+    {
+      name: "BioLink",
+      icon: <FaAndroid />, // Removed as it is not a valid export
+      href: "https://bio.link/annukumalu",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      href: "https://www.linkedin.com/in/annu-kumari-540337237/",
+    },
+    {
+      name: "Twitter",
+      icon: <FaTwitter />,
+      href: "https://x.com/Annu66126617",
+    },
+    {
+      name: "Instagram",
+      icon: <FaInstagram />,
+      href: "https://www.instagram.com/annuk987/",
+    },
+    {
+      name: "YouTube",
+      icon: <FaYoutube />,
+      href: "https://www.youtube.com/channel/UC3wYJlVEy9cMi5e_sZG-Q7Q",
+    },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -194,8 +236,35 @@ export default function ContactPage() {
         )}
       </motion.div>
 
+      {/* Socials */}
+<div className="fixed left-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-50 text-2xl">
+  {socials.map(({ name, icon, href }, i) => (
+    <motion.a
+      key={name}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition transform hover:scale-125"
+      whileHover={{ scale: 1.2 }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 15,
+        delay: i * 0.05
+      }}
+      aria-label={name}
+    >
+      {icon}
+    </motion.a>
+  ))}
+</div>
+
+
       {/* Map & Address Section */}
       <div className="rounded-lg p-4 text-center text-sm text-gray-400 italic mt-10">
+                      {/* <div className="flex gap-5 text-xl"> */}
+               
+              
         <p className="text-gray-500">
           I&apos;m a passionate indie developer building AlgoFlow to make DSA learning visual and fun.  
           <br />
