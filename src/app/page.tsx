@@ -7,7 +7,7 @@ import Footer from "@/components/Footer/page";
 import WhyChooseUs from "@/components/whychooseus/choose";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import FeedbackSection from "@/components/feedbackcompoent/feedback";
+import FeedbackSection from "@/components/feedbackcomponent/feedback";
 import FAQSection from "@/components/faq/faq";
 
 

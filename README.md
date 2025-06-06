@@ -1,134 +1,166 @@
-# 🔍 AlgoFlow
+# 🔍 AlgoFlow — Visualize. Solve. Learn.
 
-**AlgoFlow** is a modern, interactive platform built to **visualize Data Structures and Algorithms (DSA) step by step**, making learning and solving DSA problems easier, clearer, and more intuitive. The core idea behind AlgoFlow is to bridge the gap between writing code and actually understanding how it works under the hood — especially for beginners and intermediate learners preparing for coding interviews.
+**AlgoFlow** is an advanced, interactive platform designed to **visually simplify Data Structures and Algorithms (DSA)** for developers and learners at all levels. It bridges the gap between writing code and understanding it, offering an intuitive approach to problem-solving through **step-by-step visualizations, curated problems**, and **AI-powered insights** (coming soon).
 
-It features a clean, responsive UI with real-time search, tag-based filtering, and dynamic problem routing, all built using modern technologies like Next.js 14, TypeScript, Tailwind CSS, Framer Motion, and shadcn/ui. Users can explore curated problems by category (e.g., Arrays, Graphs, DP), search problems by keywords, and open detailed pages for each problem.
-
-AlgoFlow is designed not just as a problem list, but as a DSA learning companion — where the focus is on clarity, visual learning, and clean UX, making the complex process of solving algorithms more approachable and even enjoyable.
-
-
-Crafted with the latest frontend technologies like **Next.js**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**, AlgoFlow delivers a clean, responsive UI with real-time filtering, search, and beautiful animations.
-
-![AlgoFlow Screenshot](/public/image.png)
+Crafted with cutting-edge technologies like **Next.js 14**, **TypeScript**, **Convex DB**, **Tailwind CSS**, **Framer Motion**, and **shadcn/ui**, AlgoFlow delivers a clean, responsive user experience with real-time filtering, problem routing, animations, and more.
 
 ---
 
-## ✨ Key Features
+![AlgoFlow Screenshot](/public/image.png)
+![Mobile view](/public/image1.png)
+![feedback](/public/image9.png)
+![contact us](/public/image-1.png)
+![navbar](/public/image-2.png)
+![leetcode](/public/image-3.png)
+![algorithm](/public/image-4.png)
+![visualizer](/public/image-5.png)
+![striver'dsa](/public/image-6.png)
+![dsa problems](/public/image-7.png)
+---
 
-- 🧠 **Step-by-Step Code Visualization**  
-  Understand how DSA problems are solved with animated, interactive walkthroughs.
+## ⚡ Why AlgoFlow?
 
-- 🔎 **Real-time Search & Tag Filtering**  
-  Quickly find problems based on keywords and topic categories like `Array`, `Graph`, `DP`, etc.
+- 🔁 Go beyond static code — **understand algorithms visually**
+- 📚 Solve curated **LeetCode** and **Striver A2Z** problems
+- ⚙️ Gain insights into each step of your code execution
+- 🌐 All built in a blazing-fast, scalable web experience
 
-- 🎨 **Modern UI + Dark Mode Support**  
-  Elegant design with dark/light toggle powered by `next-themes`.
+---
 
-- 📱 **Mobile Responsive**  
-  Works beautifully on all screen sizes.
+## ✨ Core Features
 
-- ⚡ **Smooth Animations**  
-  Built with Framer Motion for seamless UI transitions and effects.
+- ✅ **DSA Problem Explorer**  
+  Explore handpicked DSA problems with filters by topic, difficulty, and status. Includes both LeetCode and Striver A2Z sheets.
 
-- 🧩 **Dynamic Routing**  
-  Every problem has its own dedicated page for focused learning.
+- 📊 **Interactive Algorithm Visualizer**  
+  Learn sorting and graph algorithms step-by-step with animation timelines and play/pause controls.
+
+- 🤖 **AI Insights (Coming Soon)**  
+  Receive automated explanations, complexity breakdowns, and smart hints from AI.
+
+- 💡 **Solution Cards & Live Editor**  
+  View optimized solutions in read-only mode or edit/practice in a live multi-language editor (C++, Java, JavaScript).
+
+- 🧠 **Feedback Console**  
+  Write and validate your code with test cases and get real-time feedback on outputs.
+
+- 📁 **Striver A2Z Sheet Visualizer**  
+  Solve problems step-by-step based on the well-known DSA roadmap by Striver.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Technology     | Purpose                          |
-|----------------|----------------------------------|
-| **Next.js 14** | App routing, server/client logic |
-| **TypeScript** | Strong typing, cleaner code      |
-| **Tailwind CSS** | Utility-first styling framework |
-| **shadcn/ui**  | Polished, accessible UI components |
-| **Framer Motion** | Rich animations                |
-| **Lucide Icons** | Minimal, scalable icons        |
+| Layer        | Technology Stack                                  |
+| ------------ | ------------------------------------------------- |
+| **Frontend** | Next.js 14, TypeScript, Tailwind CSS, shadcn/ui   |
+| **Backend**  | Convex Database                                   |
+| **Animations** | Framer Motion                                   |
+| **UX Enhancements** | GSAP, Sonner, Formspree                    |
 
 ---
 
-## 📁 Folder Structure
+## 🧩 Project Structure (Simplified)
 
 ```
-.
-├── app/
-│   ├── page.tsx             # Home: Filter + Problem List
-│   ├── problems/[slug]/     # Dynamic problem detail pages
-│   └── components/
-│       └── navbar/          # Navbar with search + filter
-├── data/
-│   └── problems.ts          # All problem metadata
-├── public/
-│   └── preview.png          # Optional UI screenshot
-└── README.md
-```
 
----
+/components
+│   ├── a2zProblems/
+│   ├── dashboard/
+│   ├── dropdown/
+│   ├── faq/
+│   ├── feedbackcomponent/
+│   ├── footer/
+│   ├── nav/ & navbar/
+│   ├── problems/           # ProblemCards, Filters, Visualizer
+│   ├── providers/
+│   ├── themeToggle/
+│   ├── ui/                 # shadcn/ui Components
+│   ├── visualizerLayout/
+│   └── whychooseus/
 
-## 📈 What's Coming Next?
+/app
+│   ├── a2zProblems/
+│   ├── about/
+│   ├── contact/
+│   ├── dashboard/visualizer/ & \[slug]/
+│   ├── feedback/
+│   ├── problems/
+│   ├── api/
+│   └── comingSoon/
 
-- 🟡 Interactive code visualizations with animations and step transitions
-- 🟢 Code editor with explanation tabs
-- 🟢 Problem difficulty filters
-- 🟢 "Mark as Solved" or "Save for Later"
-- 🟢 Backend integration via **Convex** or **Firebase**
-- 🟢 User profiles and dashboard
+/data
+/hooks
+/lib
+/script
+/seed                  # Convex DB Functions
+/styles
+/types
+
+````
 
 ---
 
 ## 🚀 Getting Started
 
-### Clone the Repository
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/your-username/algoflow.git
 cd algoflow
-```
+````
 
-### Install Dependencies
+### 2. Install Dependencies
+
 ```bash
-npm install
-# or
-yarn install
+pnpm install
 ```
 
-### Run the Development Server
+### 3. Setup Environment Variables
+
 ```bash
-npm run dev
-# or
-yarn dev
+# .env.local
+NEXT_PUBLIC_CONVEX_URL=your_convex_project_url
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) to see AlgoFlow in action.
+### 4. Run the Development Server
+
+```bash
+pnpm dev
+```
 
 ---
 
-## 🧠 Why AlgoFlow?
+## 📬 Contact & Feedback
 
-There are many DSA resources, but few that **visually explain** the code. AlgoFlow focuses on **bridging that gap** — giving users both problem statements and **interactive visual code flow** so that they not only solve problems but deeply understand *how* they’re solved.
+Have suggestions or want to get in touch?
+
+📩 Email: [support@algoflow.dev](mailto:support@algoflow.dev)
+💬 Or use the [Contact Us](https://algoflow.dev/contact) page on the site.
 
 ---
 
 ## 🤝 Contributing
 
-We welcome all ideas, issues, and pull requests!  
-Want to add a new feature, fix a bug, or improve the UI? Fork the repo and get started!
+We’re working toward open-sourcing AlgoFlow soon.
+Stay tuned for contribution guidelines and GitHub project boards.
+
+---
+
+## 🌍 Follow the Journey
+
+AlgoFlow is crafted by an indie developer passionate about education, dev tools, and open knowledge.
+Your support, feedback, and ideas are always welcome!
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+Licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
 
 ---
 
-## 👨‍💻 Author
+> ⚡ Ready to master DSA with the power of visuals?
+> Try AlgoFlow today and experience algorithms like never before.
 
-Built with 💻 & 💙 by **Annu Kumari**  
-🔗 [Portfolio](https://bio.link/annukumalu) • 🐦 [Twitter](https://x.com/Annu66126617) • 🐙 [GitHub](https://github.com/annuk123)
 
----
-
-> Empowering developers to learn DSA with clarity, simplicity, and style.
-
-> **AlgoFlow** — Learn DSA like never before with clear, visual, and interactive problem solving.
