@@ -203,7 +203,14 @@ const feedback = useQuery(api.feedback.getAllFeedback);
 {/* <!-- Call to Action Section --> */}
 <WhyChooseUs />
 
-<FeedbackSection feedback={feedback ?? []} />
+<FeedbackSection
+  feedback={
+    (feedback ?? []).map(fb => ({
+      ...fb,
+      createdAt: String(fb.createdAt),
+    }))
+  }
+/>
 
 
       {/* Footer */}

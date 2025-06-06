@@ -4,6 +4,13 @@ import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+export interface Feedback {
+  _id?: string; // Optional unique identifier
+  name: string;
+  message: string;
+  rating: number; // Rating from 1 to 5
+  createdAt: string; // or Date
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -45,7 +52,7 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function FeedbackSection({ feedback }: { feedback: any[] }) {
+export default function FeedbackSection({ feedback }: { feedback: Feedback[] }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
