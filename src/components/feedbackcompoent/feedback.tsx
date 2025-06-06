@@ -104,7 +104,7 @@ export default function FeedbackSection({ feedback }: { feedback: Feedback[] }) 
               initial="hidden"
               animate="visible"
               variants={fadeUp}
-              className="rounded-3xl border border-gray-200 dark:border-gray-700 bg-white/90 dark:bg-gray-900/80 backdrop-blur-lg shadow-xl p-7 flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
+              className="rounded-3xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-purple-500/20 transition bg-white/90 dark:bg-gray-900/80 backdrop-blur-lg p-7 flex flex-col justify-between hover:shadow-2xl duration-300"
             >
               <div>
                 <div className="flex items-center gap-4 mb-4">

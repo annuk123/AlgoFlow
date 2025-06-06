@@ -89,7 +89,7 @@ export function DropMenuMain() {
 </li>
 
 
-              <ListItem href="../../comingSoon" title="Introduction">
+              <ListItem href="../../about" title="Introduction">
                 Get an overview of how AlgoFlow helps you master DSA visually.
               </ListItem>
               <ListItem href="../dashboard/visualizer" title="Algorithm Visualizer">
