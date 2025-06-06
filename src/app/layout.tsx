@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
-
-
-
-
+import { Toaster } from "sonner";
+import { ConvexClientProvider } from "@/components/providers/ConvexClientProvider"; // ✅
 
 export const metadata: Metadata = {
   title: "AlgoFlow",
@@ -26,7 +24,10 @@ export default function RootLayout({
           disableTransitionOnChange
           storageKey="theme"
         >
-        {children}
+          <ConvexClientProvider>
+            {children}
+          </ConvexClientProvider>
+          <Toaster position="top-right" />
         </ThemeProvider>
       </body>
     </html>

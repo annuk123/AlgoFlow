@@ -86,7 +86,7 @@ export default function Navbar() {
 
           {/* Feedback */}
           <Link
-          href={"../../comingSoon"}
+          href={"../../feedback"}
           className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             FeedBack
@@ -94,7 +94,7 @@ export default function Navbar() {
 
           {/* Contact */}
           <Link
-          href={"../../comingSoon"}
+          href={"../../contact"}
           // href={"/contact"}
           className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >

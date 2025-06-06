@@ -5,9 +5,17 @@ import Navbar from "@/components/nav/nav";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer/page";
 import WhyChooseUs from "@/components/whychooseus/choose";
+import { useQuery } from "convex/react";
+import { api } from "../../convex/_generated/api";
 
+type Feedback = {
+  _id: string;
+  name: string;
+  message: string;
+};
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
+const feedback = useQuery(api.feedback.getAllFeedback);
 
   useEffect(() => {
     setIsMounted(true); // run only on client
@@ -197,9 +205,21 @@ export default function Home() {
 {/* <!-- Call to Action Section --> */}
 <WhyChooseUs />
 
+ <section className="max-w-4xl mx-auto p-6 space-y-4">
+      <h2 className="text-2xl font-semibold">💡 What people are saying</h2>
+      {feedback?.length === 0 && <p>No feedback yet. Be the first!</p>}
+      {feedback?.map((f) => (
+        <div key={f._id} className="p-4 rounded-lg border shadow-sm">
+          <p className="font-medium text-indigo-600">{f.name}</p>
+          <p className="text-gray-700">{f.message}</p>
+        </div>
+      ))}
+    </section>
+
 
       {/* Footer */}
       <Footer />
     </main>
   );
 }
+

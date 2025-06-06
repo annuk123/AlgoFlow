@@ -44,4 +44,17 @@ export default defineSchema({
 }).index("by_user", ["userId"])
   .index("by_problem", ["problemId"]),
 
+  feedback: defineTable({
+    name: v.string(),
+    message: v.string(),
+    createdAt: v.number(),
+  }),
+
+  contactMessages: defineTable({
+    name: v.string(),
+    email: v.string(),
+    message: v.string(),
+    createdAt: v.number(),
+  }),
+
 })
