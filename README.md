@@ -135,8 +135,8 @@ pnpm dev
 
 Have suggestions or want to get in touch?
 
-📩 Email: [support@algoflow.dev](mailto:support@algoflow.dev)
-💬 Or use the [Contact Us](https://algoflow.dev/contact) page on the site.
+📩 Email: [support@algoflow.dev](mailto:anuk35168@gmail.com)
+💬 Or use the [Contact Us](https://algoflow-three.vercel.app/contact) page on the site.
 
 ---
 

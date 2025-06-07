@@ -1,4 +1,3 @@
-// scripts/seed.ts
 import problems from "../seed/rawProblems.json";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api";

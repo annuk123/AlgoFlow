@@ -88,7 +88,7 @@ export default function A2ZProblemScreen() {
     >
       {/* Close Button */}
       <button
-        className="absolute top-4 right-4 p-2 rounded-full bg-white/80 hover:bg-red-500 hover:text-white transition"
+        className="absolute top-4 right-4 p-2 rounded-full bg-white/50  hover:bg-red-500 hover:text-white transition"
         onClick={() => {
           setActiveStep(null);
           setActiveTopic(null);
@@ -99,7 +99,7 @@ export default function A2ZProblemScreen() {
 
       {/* Step Title */}
       <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent animate-gradient">
-        Topics in {activeStep}
+        Topicwise Problems in {activeStep}
       </h2>
 
       {/* Topics */}
@@ -117,13 +117,13 @@ export default function A2ZProblemScreen() {
               px-5 py-3 rounded-xl min-w-[180px] text-center shadow-md transition duration-300 border-2 font-semibold
               ${
                 activeTopic === topic
-                  ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white border-none scale-105"
-                  : "bg-white dark:bg-zinc-900 hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-800 dark:text-gray-200"
+                  ? "bg-gradient-to-r from-green-500 to-emerald-600  border-none text-gray-800 scale-105"
+                  : "bg-white dark:bg-zinc-900 hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-800 dark:text-sky-500"
               }
             `}
           >
             <p className="text-md">{topic}</p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">{topicTitle}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-200">{topicTitle}</p>
           </motion.button>
         ))}
       </div>

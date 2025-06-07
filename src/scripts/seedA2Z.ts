@@ -11,7 +11,7 @@ type Problem = {
   constraints: string[];
   sampleInput: string;
   sampleOutput: string;
-  slug: string; // ✅ Add slug here for seeding
+  slug: string; //  Add slug here for seeding
 };
 
 type RawProblem = {
@@ -66,7 +66,7 @@ async function seed() {
     // Optional: await new Promise(res => setTimeout(res, 50));
   for (const problem of typedProblems) {
       await convex.mutation(api.problems.insertProblem, {
-        slug: problem.slug, // ✅ use slug here, not id
+        slug: problem.slug, // use slug here, not id
         title: problem.title,
         topic: problem.topic,
         difficulty: problem.difficulty,
