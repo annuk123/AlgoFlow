@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "combine-a2z": "node src/scripts/combineStepsRunner.cjs",
     "seed:a2z": "NODE_OPTIONS='--loader ts-node/esm' ts-node src/scripts/seedA2Z.ts"
   },
   "dependencies": {

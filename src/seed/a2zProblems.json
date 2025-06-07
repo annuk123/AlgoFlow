@@ -460,7 +460,133 @@
       "hashmap"
     ]
   },
- 
+  {
+    "id": 10,
+    "step": "Step 10",
+    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
+    "topic": "Graph",
+    "slug": "graph-representation",
+    "title": "Graph Representation",
+    "difficulty": "Easy",
+    "description": "Understand how to represent graphs using adjacency lists and matrices.",
+    "tags": [
+      "graph",
+      "data-structure"
+    ]
+  },
+  {
+    "id": 11,
+    "step": "Step 11",
+    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
+    "topic": "Graph",
+    "slug": "bfs-and-dfs",
+    "title": "BFS and DFS",
+    "difficulty": "Medium",
+    "description": "Implement breadth-first search and depth-first search algorithms.",
+    "tags": [
+      "graph",
+      "bfs",
+      "dfs"
+    ]
+  },
+  {
+    "id": 12,
+    "step": "Step 12",
+    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
+    "topic": "Dynamic Programming",
+    "slug": "dynamic-programming-introduction",
+    "title": "Dynamic Programming Introduction",
+    "difficulty": "Medium",
+    "description": "Understand the principles of dynamic programming.",
+    "tags": [
+      "dynamic-programming",
+      "optimization"
+    ]
+  },
+  {
+    "id": 13,
+    "step": "Step 13",
+    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "coin-change",
+    "title": "Coin Change Problem",
+    "difficulty": "Medium",
+    "description": "Find the minimum number of coins needed to make a target amount.",
+    "tags": [
+      "dynamic-programming",
+      "greedy"
+    ]
+  },
+  {
+    "id": 14,
+    "step": "Step 14",
+    "stepTitle": "Binary Search Trees [Concept and Problems]",
+    "topic": "Greedy Algorithms",
+    "slug": "activity-selection",
+    "title": "Activity Selection Problem",
+    "difficulty": "Medium",
+    "description": "Select the maximum number of activities that don't overlap.",
+    "tags": [
+      "greedy",
+      "optimization"
+    ]
+  },
+  {
+    "id": 15,
+    "step": "Step 15",
+    "stepTitle": "Graphs [Concepts & Problems]",
+    "topic": "Graphs",
+    "slug": "minimum-spanning-tree",
+    "title": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
+    "tags": [
+      "greedy",
+      "graph"
+    ]
+  },
+  {
+    "id": 16,
+    "step": "Step 16",
+    "stepTitle": "Dynamic Programming [Patterns and Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "n-queens",
+    "title": "N-Queens Problem",
+    "difficulty": "Hard",
+    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 17,
+    "step": "Step 17",
+    "stepTitle": "Tries",
+    "topic": "Backtracking",
+    "slug": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "difficulty": "Hard",
+    "description": "Solve a Sudoku puzzle using backtracking.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 18,
+    "step": "Step 18",
+    "stepTitle": "Strings",
+    "topic": "Strings",
+    "slug": "bitwise-operations",
+    "title": "Bitwise Operations",
+    "difficulty": "Medium",
+    "description": "Understand basic bitwise operations and their applications.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
   {
     "id": 2,
     "step": "Step 2",
@@ -2966,133 +3092,6 @@
     "tags": [
       "sorting",
       "heap"
-    ]
-  },
-   {
-    "id": 10,
-    "step": "Step 10",
-    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
-    "topic": "Graph",
-    "slug": "graph-representation",
-    "title": "Graph Representation",
-    "difficulty": "Easy",
-    "description": "Understand how to represent graphs using adjacency lists and matrices.",
-    "tags": [
-      "graph",
-      "data-structure"
-    ]
-  },
-  {
-    "id": 11,
-    "step": "Step 11",
-    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
-    "topic": "Graph",
-    "slug": "bfs-and-dfs",
-    "title": "BFS and DFS",
-    "difficulty": "Medium",
-    "description": "Implement breadth-first search and depth-first search algorithms.",
-    "tags": [
-      "graph",
-      "bfs",
-      "dfs"
-    ]
-  },
-  {
-    "id": 12,
-    "step": "Step 12",
-    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
-    "topic": "Dynamic Programming",
-    "slug": "dynamic-programming-introduction",
-    "title": "Dynamic Programming Introduction",
-    "difficulty": "Medium",
-    "description": "Understand the principles of dynamic programming.",
-    "tags": [
-      "dynamic-programming",
-      "optimization"
-    ]
-  },
-  {
-    "id": 13,
-    "step": "Step 13",
-    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
-    "topic": "Dynamic Programming",
-    "slug": "coin-change",
-    "title": "Coin Change Problem",
-    "difficulty": "Medium",
-    "description": "Find the minimum number of coins needed to make a target amount.",
-    "tags": [
-      "dynamic-programming",
-      "greedy"
-    ]
-  },
-  {
-    "id": 14,
-    "step": "Step 14",
-    "stepTitle": "Binary Search Trees [Concept and Problems]",
-    "topic": "Greedy Algorithms",
-    "slug": "activity-selection",
-    "title": "Activity Selection Problem",
-    "difficulty": "Medium",
-    "description": "Select the maximum number of activities that don't overlap.",
-    "tags": [
-      "greedy",
-      "optimization"
-    ]
-  },
-  {
-    "id": 15,
-    "step": "Step 15",
-    "stepTitle": "Graphs [Concepts & Problems]",
-    "topic": "Graphs",
-    "slug": "minimum-spanning-tree",
-    "title": "Minimum Spanning Tree",
-    "difficulty": "Medium",
-    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
-    "tags": [
-      "greedy",
-      "graph"
-    ]
-  },
-  {
-    "id": 16,
-    "step": "Step 16",
-    "stepTitle": "Dynamic Programming [Patterns and Problems]",
-    "topic": "Dynamic Programming",
-    "slug": "n-queens",
-    "title": "N-Queens Problem",
-    "difficulty": "Hard",
-    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
-    "tags": [
-      "backtracking",
-      "recursion"
-    ]
-  },
-  {
-    "id": 17,
-    "step": "Step 17",
-    "stepTitle": "Tries",
-    "topic": "Backtracking",
-    "slug": "sudoku-solver",
-    "title": "Sudoku Solver",
-    "difficulty": "Hard",
-    "description": "Solve a Sudoku puzzle using backtracking.",
-    "tags": [
-      "backtracking",
-      "recursion"
-    ]
-  },
-  {
-    "id": 18,
-    "step": "Step 18",
-    "stepTitle": "Strings",
-    "topic": "Strings",
-    "slug": "bitwise-operations",
-    "title": "Bitwise Operations",
-    "difficulty": "Medium",
-    "description": "Understand basic bitwise operations and their applications.",
-    "tags": [
-      "bit-manipulation",
-      "math"
     ]
   }
 ]

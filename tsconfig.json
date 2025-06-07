@@ -22,6 +22,10 @@
       "@/*": ["./src/*"]
     }
   },
+
+  "ts-node": {
+    "esm": true
+  },
   "include": ["next-env.d.ts", "/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/api/a2zSeed/route.ts", "src/types/**/*.d.ts"],
   "exclude": ["node_modules"]
 }
