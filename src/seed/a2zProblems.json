@@ -461,6 +461,133 @@
     ]
   },
   {
+    "id": 10,
+    "step": "Step 10",
+    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
+    "topic": "Graph",
+    "slug": "graph-representation",
+    "title": "Graph Representation",
+    "difficulty": "Easy",
+    "description": "Understand how to represent graphs using adjacency lists and matrices.",
+    "tags": [
+      "graph",
+      "data-structure"
+    ]
+  },
+  {
+    "id": 11,
+    "step": "Step 11",
+    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
+    "topic": "Graph",
+    "slug": "bfs-and-dfs",
+    "title": "BFS and DFS",
+    "difficulty": "Medium",
+    "description": "Implement breadth-first search and depth-first search algorithms.",
+    "tags": [
+      "graph",
+      "bfs",
+      "dfs"
+    ]
+  },
+  {
+    "id": 12,
+    "step": "Step 12",
+    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
+    "topic": "Dynamic Programming",
+    "slug": "dynamic-programming-introduction",
+    "title": "Dynamic Programming Introduction",
+    "difficulty": "Medium",
+    "description": "Understand the principles of dynamic programming.",
+    "tags": [
+      "dynamic-programming",
+      "optimization"
+    ]
+  },
+  {
+    "id": 13,
+    "step": "Step 13",
+    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "coin-change",
+    "title": "Coin Change Problem",
+    "difficulty": "Medium",
+    "description": "Find the minimum number of coins needed to make a target amount.",
+    "tags": [
+      "dynamic-programming",
+      "greedy"
+    ]
+  },
+  {
+    "id": 14,
+    "step": "Step 14",
+    "stepTitle": "Binary Search Trees [Concept and Problems]",
+    "topic": "Greedy Algorithms",
+    "slug": "activity-selection",
+    "title": "Activity Selection Problem",
+    "difficulty": "Medium",
+    "description": "Select the maximum number of activities that don't overlap.",
+    "tags": [
+      "greedy",
+      "optimization"
+    ]
+  },
+  {
+    "id": 15,
+    "step": "Step 15",
+    "stepTitle": "Graphs [Concepts & Problems]",
+    "topic": "Graphs",
+    "slug": "minimum-spanning-tree",
+    "title": "Minimum Spanning Tree",
+    "difficulty": "Medium",
+    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
+    "tags": [
+      "greedy",
+      "graph"
+    ]
+  },
+  {
+    "id": 16,
+    "step": "Step 16",
+    "stepTitle": "Dynamic Programming [Patterns and Problems]",
+    "topic": "Dynamic Programming",
+    "slug": "n-queens",
+    "title": "N-Queens Problem",
+    "difficulty": "Hard",
+    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 17,
+    "step": "Step 17",
+    "stepTitle": "Tries",
+    "topic": "Backtracking",
+    "slug": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "difficulty": "Hard",
+    "description": "Solve a Sudoku puzzle using backtracking.",
+    "tags": [
+      "backtracking",
+      "recursion"
+    ]
+  },
+  {
+    "id": 18,
+    "step": "Step 18",
+    "stepTitle": "Strings",
+    "topic": "Strings",
+    "slug": "bitwise-operations",
+    "title": "Bitwise Operations",
+    "difficulty": "Medium",
+    "description": "Understand basic bitwise operations and their applications.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
     "id": 2,
     "step": "Step 2",
     "stepTitle": "Learn Important Sorting Techniques",
@@ -1622,23 +1749,295 @@
     "id": 5,
     "step": "Step 5",
     "stepTitle": "Strings [Basic and Medium]",
-    "topic": "Recursion",
-    "slug": "fibonacci-1",
-    "title": "Fibonacci Sequence",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "remove-outermost-parentheses",
+    "title": "Remove outermost parentheses",
+    "difficulty": "Easy",
+    "description": "Remove the outermost parentheses of a given string.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "reverse-words",
+    "title": "Reverse words in a given string/palindrome Check",
+    "difficulty": "Easy",
+    "description": "Reverse the words in a given string.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "largest-odd-number-in-string",
+    "title": "Largest odd number in a string",
+    "difficulty": "Easy",
+    "description": "Find the largest odd number in a given string.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "longest-common-prefix",
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "description": "Find the longest common prefix among an array of strings.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "isomorphic-string",
+    "title": "Isomorphic String",
+    "difficulty": "Easy",
+    "description": "Check if two strings are isomorphic.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "check-rotation",
+    "title": "check whether one string is a rotation of another",
     "difficulty": "Medium",
-    "description": "Find the nth Fibonacci number using recursion.",
+    "description": "Check whether one string is a rotation of another.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 1",
+    "topicTitle": "Basic and Easy String Problems",
+    "slug": "check-anagram",
+    "title": "Check if two strings are anagram of each other",
+    "difficulty": "Medium",
+    "description": "Check if two strings are anagram of each other.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "sort-characters-by-frequency",
+    "title": "Sort Characters by frequency",
+    "difficulty": "Medium",
+    "description": "Sort characters in a string by their frequency.",
     "tags": [
       "recursion",
       "dynamic-programming"
     ]
   },
   {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "maximum-nesting-depth-of-parenthesis",
+    "title": "Maximum Nesting Depth of Parenthesis",
+    "difficulty": "Medium",
+    "description": "Find the maximum nesting depth of parentheses in a given string.",
+    "tags": [
+      "recursion",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "roman-number-to-integer",
+    "title": "Roman Number to Integer and vice versa",
+    "difficulty": "Medium",
+    "description": "Convert a Roman numeral to an integer and vice versa.",
+    "tags": [
+      "recursion",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "implement-atoi",
+    "title": "Implement Atoi",
+    "difficulty": "Medium",
+    "description": "Implement the Atoi (ASCII to Integer) function.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "count-number-of-substrings",
+    "title": "Count Number of Substrings",
+    "difficulty": "Medium",
+    "description": "Find the count of all substrings in a given string.",
+    "tags": [
+      "recursion",
+      "dynamic-programming"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "longest-palindromic-substring",
+    "title": "Longest Palindromic Substring[Do it without DP]",
+    "difficulty": "Medium",
+    "description": "Find the longest palindromic substring in a given string without using dynamic programming.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "sum-beauty-of-all-substring",
+    "title": "Sum of Beauty of all substring",
+    "difficulty": "Medium",
+    "description": "Find the sum of beauty of all substrings in a given string.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 5,
+    "step": "Step 5",
+    "stepTitle": "Strings [Basic and Medium]",
+    "topic": "Lec 2",
+    "topicTitle": "Medium String Problems",
+    "slug": "reverse-every-word-in-a-string",
+    "title": "Reverse Every Word in A String",
+    "difficulty": "Medium",
+    "description": "Reverse every word in a given string.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
     "id": 6,
     "step": "Step 6",
     "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
-    "topic": "LinkedList",
-    "slug": "linked-list-basics-1",
-    "title": "Linked List Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Learn 1D LinkedList",
+    "slug": "introduction-to-linkedlist",
+    "title": "Introduction to LinkedList, learn about struct, and how is node represented",
+    "difficulty": "Medium",
+    "description": "Introduction to LinkedList, learn about struct, and how is node represented.",
+    "tags": [
+      "linked-list",
+      "introduction"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn 1D LinkedList",
+    "slug": "insert-a-node-in-linkedlist",
+    "title": "Inserting a node in LinkedList",
+    "difficulty": "Medium",
+    "description": "Insert a new node into the linked list.",
+    "tags": [
+      "linked-list",
+      "insertion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn 1D LinkedList",
+    "slug": "delete-a-node-in-linkedlist",
+    "title": "Deleting a node in LinkedList",
+    "difficulty": "Medium",
+    "description": "Delete a node from the linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn 1D LinkedList",
+    "slug": "find-the-length-of-the-linkedlist",
+    "title": "Find the length of the linkedlist [learn traversal]",
+    "difficulty": "Medium",
+    "description": "Find the length of the linked list.",
+    "tags": [
+      "linked-list",
+      "traversal"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn 1D LinkedList",
+    "slug": "search-an-element-in-the-ll",
+    "title": "Search an element in the LL",
     "difficulty": "Medium",
     "description": "Search for a target value in a sorted array using binary search.",
     "tags": [
@@ -1647,28 +2046,1035 @@
     ]
   },
   {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Learn Doubly LinkedList",
+    "slug": "introduction-to-dll",
+    "title": "Introduction to DLL, learn about struct, and how is node represented",
+    "difficulty": "Medium",
+    "description": "Introduction to DLL, learn about struct, and how is node represented.",
+    "tags": [
+      "linked-list",
+      "introduction"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Learn Doubly LinkedList",
+    "slug": "insert-a-node-in-dll",
+    "title": "Insert a node in DLL",
+    "difficulty": "Medium",
+    "description": "Insert a new node into the doubly linked list.",
+    "tags": [
+      "linked-list",
+      "insertion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Learn Doubly LinkedList",
+    "slug": "delete-a-node-in-dll",
+    "title": "Delete a node in DLL",
+    "difficulty": "Medium",
+    "description": "Delete a node from the doubly linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Learn Doubly LinkedList",
+    "slug": "reverse-a-dll",
+    "title": "Reverse a DLL",
+    "difficulty": "Medium",
+    "description": "Reverse a doubly linked list.",
+    "tags": [
+      "linked-list",
+      "reversal"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "middle-of-a-ll-tortoise-hare",
+    "title": "Middle of a LinkedList [TortoiseHare Method]",
+    "difficulty": "Medium",
+    "description": "Find the middle node of a linked list using the Tortoise and Hare method.",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "reverse-a-ll-iterative",
+    "title": "Reverse a LinkedList [Iterative]",
+    "difficulty": "Medium",
+    "description": "Reverse a linked list using iteration.",
+    "tags": [
+      "linked-list",
+      "reversal"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "reverse-a-ll-recursive",
+    "title": "Reverse a LL [Recursive]",
+    "difficulty": "Medium",
+    "description": "Reverse a linked list using recursion.",
+    "tags": [
+      "linked-list",
+      "reversal"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "detect-a-loop-in-ll",
+    "title": "Detect a loop in LL",
+    "difficulty": "Medium",
+    "description": "Detect a loop in a linked list.",
+    "tags": [
+      "linked-list",
+      "loop"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "find-the-starting-point-in-ll",
+    "title": "Find the starting point in LL",
+    "difficulty": "Medium",
+    "description": "Find the starting point of a loop in a linked list.",
+    "tags": [
+      "linked-list",
+      "loop"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "length-of-loop-in-ll",
+    "title": "Length of Loop in LL",
+    "difficulty": "Medium",
+    "description": "Find the length of a loop in a linked list.",
+    "tags": [
+      "linked-list",
+      "loop"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "check-if-ll-is-palindrome-or-not",
+    "title": "Check if LL is palindrome or not",
+    "difficulty": "Medium",
+    "description": "Check if a linked list is a palindrome.",
+    "tags": [
+      "linked-list",
+      "palindrome"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "segregate-odd-and-even-nodes-in-ll",
+    "title": "Segregate odd and even nodes in LL",
+    "difficulty": "Medium",
+    "description": "Segregate odd and even nodes in a linked list.",
+    "tags": [
+      "linked-list",
+      "segregation"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "remove-nth-node-from-the-back-of-the-ll",
+    "title": "Remove Nth node from the back of the LL",
+    "difficulty": "Medium",
+    "description": "Remove the Nth node from the end of a linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "delete-the-middle-node-of-ll",
+    "title": "Delete the middle node of LL",
+    "difficulty": "Medium",
+    "description": "Delete the middle node of a linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "sort-ll",
+    "title": "Sort LL",
+    "difficulty": "Medium",
+    "description": "Sort a linked list.",
+    "tags": [
+      "linked-list",
+      "sorting"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "sort-a-ll-of-0s-1s-and-2s-by-changing-links",
+    "title": "Sort a LL of 0's 1's and 2's by changing links",
+    "difficulty": "Medium",
+    "description": "Sort a linked list of 0's, 1's, and 2's by changing links.",
+    "tags": [
+      "linked-list",
+      "sorting"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "find-the-intersection-point-of-y-lls",
+    "title": "Find the intersection point of Y LLs",
+    "difficulty": "Medium",
+    "description": "Find the intersection point of two linked lists.",
+    "tags": [
+      "linked-list",
+      "intersection"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "add-one-to-a-number-represented-by-ll",
+    "title": "Add 1 to a number represented by LL",
+    "difficulty": "Medium",
+    "description": "Add one to a number represented by a linked list.",
+    "tags": [
+      "linked-list",
+      "addition"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Medium Problems of LL",
+    "slug": "add-two-numbers-in-ll",
+    "title": "Add 2 numbers in LL",
+    "difficulty": "Medium",
+    "description": "Add two numbers represented by linked lists.",
+    "tags": [
+      "linked-list",
+      "addition"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 4",
+    "topicTitle": "Medium Problems of DLL",
+    "slug": "delete-all-occurrences-of-a-key-in-dll",
+    "title": "Delete all occurrences of a key in DLL",
+    "difficulty": "Medium",
+    "description": "Delete all occurrences of a given key in a doubly linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 4",
+    "topicTitle": "Medium Problems of DLL",
+    "slug": "find-pairs-with-given-sum-in-dll",
+    "title": "Find pairs with given sum in DLL",
+    "difficulty": "Medium",
+    "description": "Find all pairs in a sorted doubly linked list that sum up to a given value.",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 4",
+    "topicTitle": "Medium Problems of DLL",
+    "slug": "remove-duplicates-from-sorted-dll",
+    "title": "Remove duplicates from sorted DLL",
+    "difficulty": "Medium",
+    "description": "Remove duplicates from a sorted doubly linked list.",
+    "tags": [
+      "linked-list",
+      "deletion"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 5",
+    "topicTitle": "Hard Problems of LL",
+    "slug": "reverse-ll-in-group-of-given-size-k",
+    "title": "Reverse LL in group of given size K",
+    "difficulty": "Medium",
+    "description": "Reverse a linked list in groups of given size K.",
+    "tags": [
+      "linked-list",
+      "reversal"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 5",
+    "topicTitle": "Hard Problems of LL",
+    "slug": "rotate-a-ll",
+    "title": "Rotate a LL",
+    "difficulty": "Medium",
+    "description": "Rotate a linked list.",
+    "tags": [
+      "linked-list",
+      "rotation"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 5",
+    "topicTitle": "Hard Problems of LL",
+    "slug": "flattening-of-ll",
+    "title": "Flattening of LL",
+    "difficulty": "Medium",
+    "description": "Flatten a multilevel linked list.",
+    "tags": [
+      "linked-list",
+      "flattening"
+    ]
+  },
+  {
+    "id": 6,
+    "step": "Step 6",
+    "stepTitle": "Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+    "topic": "Lec 5",
+    "topicTitle": "Hard Problems of LL",
+    "slug": "clone-linked-list-with-random-pointer",
+    "title": "Clone a Linked List with random and next pointer",
+    "difficulty": "Medium",
+    "description": "Clone a linked list with random and next pointers.",
+    "tags": [
+      "linked-list",
+      "cloning"
+    ]
+  },
+  {
     "id": 7,
     "step": "Step 7",
     "stepTitle": "Recursion [PatternWise]",
-    "topic": "Recursion",
-    "slug": "search-in-rotated-sorted-array-1",
-    "title": "Search in Rotated Sorted Array",
+    "topic": "Lec 1",
+    "topicTitle": "Get a Strong Hold",
+    "slug": "recursive-implementation-of-atoi",
+    "title": "Recursive Implementation of atoi()",
     "difficulty": "Medium",
-    "description": "Find the index of a target value in a rotated sorted array.",
+    "description": "Implement a recursive version of the atoi() function.",
+    "tags": [
+      "string",
+      "recursion"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 1",
+    "topicTitle": "Get a Strong Hold",
+    "slug": "pow-x-n",
+    "title": "Pow(x, n)",
+    "difficulty": "Medium",
+    "description": "Implement pow(x, n), which calculates x raised to the power n.",
+    "tags": [
+      "math",
+      "recursion"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 1",
+    "topicTitle": "Get a Strong Hold",
+    "slug": "count-good-numbers",
+    "title": "Count Good numbers",
+    "difficulty": "Medium",
+    "description": "Count the numbers with even digits in a given range.",
+    "tags": [
+      "counting",
+      "digits"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 1",
+    "topicTitle": "Get a Strong Hold",
+    "slug": "sort-a-stack-using-recursion",
+    "title": "Sort a stack using recursion",
+    "difficulty": "Medium",
+    "description": "Sort a stack using recursion.",
+    "tags": [
+      "stack",
+      "recursion"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 1",
+    "topicTitle": "Get a Strong Hold",
+    "slug": "reverse-a-stack-using-recursion",
+    "title": "Reverse a stack using recursion",
+    "difficulty": "Medium",
+    "description": "Reverse a stack using recursion.",
+    "tags": [
+      "stack",
+      "recursion"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "generate-all-binary-strings",
+    "title": "Generate all binary strings",
+    "difficulty": "Medium",
+    "description": "Generate all binary strings of a given length.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "generate-parentheses",
+    "title": "Generate Parentheses",
+    "difficulty": "Medium",
+    "description": "Generate all combinations of well-formed parentheses.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "print-all-subsequences-power-set",
+    "title": "Print all subsequences/Power Set",
+    "difficulty": "Medium",
+    "description": "Print all subsequences (power set) of a given array.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "learn-all-patterns-of-subsequences-theory",
+    "title": "Learn All Patterns of Subsequences (Theory)",
+    "difficulty": "Medium",
+    "description": "Understand the different patterns of subsequences and how to approach them.",
+    "tags": [
+      "dynamic-programming",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "count-all-subsequences-with-sum-k",
+    "title": "Count all subsequences with sum K",
+    "difficulty": "Medium",
+    "description": "Count all subsequences of the array that add up to a target sum K.",
     "tags": [
       "binary-search",
       "array"
     ]
   },
   {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "check-if-there-exists-a-subsequence-with-sum-k",
+    "title": "Check if there exists a subsequence with sum K",
+    "difficulty": "Medium",
+    "description": "Check if there exists a subsequence of the array that adds up to a target sum K.",
+    "tags": [
+      "binary-search",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "difficulty": "Medium",
+    "description": "Find all unique combinations of numbers that add up to a target number.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "combination-sum-ii",
+    "title": "Combination Sum-II",
+    "difficulty": "Medium",
+    "description": "Find all unique combinations of numbers that add up to a target number, allowing each number to be used only once.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "subset-sum-i",
+    "title": "Subset Sum-I",
+    "difficulty": "Medium",
+    "description": "Find all subsets of a set of numbers that sum up to a target value.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "subset-sum-ii",
+    "title": "Subset Sum-II",
+    "difficulty": "Medium",
+    "description": "Find all unique subsets of a set of numbers that sum up to a target value.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "combination-sum-iii",
+    "title": "Combination Sum - III",
+    "difficulty": "Medium",
+    "description": "Find all unique combinations of k numbers that add up to a target number.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 2",
+    "topicTitle": "Subsequences Pattern",
+    "slug": "letter-combinations-of-a-phone-number",
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "Medium",
+    "description": "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "palindrome-partitioning",
+    "title": "Palindrome Partitioning",
+    "difficulty": "Medium",
+    "description": "Given a string s, partition s such that every substring is a palindrome.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "word-search",
+    "title": "Word Search",
+    "difficulty": "Medium",
+    "description": "Given a 2D board and a word, find if the word exists in the grid.",
+    "tags": [
+      "binary-search",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "n-queens",
+    "title": "N Queens",
+    "difficulty": "Medium",
+    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "rat-in-a-maze",
+    "title": "Rat in a Maze",
+    "difficulty": "Medium",
+    "description": "Find a path from the top-left corner to the bottom-right corner of a maze.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "word-break",
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "description": "Determine if a string can be segmented into a space-separated sequence of one or more dictionary words.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "m-coloring-problem",
+    "title": "M Coloring Problem",
+    "difficulty": "Medium",
+    "description": "Given a graph and a number m, determine if the graph can be colored with m colors such that no two adjacent vertices share the same color.",
+    "tags": [
+      "backtracking",
+      "graph"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "sudoku-solver",
+    "title": "Sudoku Solver",
+    "difficulty": "Medium",
+    "description": "Solve a Sudoku puzzle by filling the empty cells.",
+    "tags": [
+      "backtracking",
+      "array"
+    ]
+  },
+  {
+    "id": 7,
+    "step": "Step 7",
+    "stepTitle": "Recursion [PatternWise]",
+    "topic": "Lec 3",
+    "topicTitle": "Trying out all Combos / Hard",
+    "slug": "expression-add-operators",
+    "title": "Expression Add Operators",
+    "difficulty": "Medium",
+    "description": "Given a string containing digits and operators, add the operators in such a way that the expression evaluates to a target value.",
+    "tags": [
+      "backtracking",
+      "string"
+    ]
+  },
+  {
     "id": 8,
     "step": "Step 8",
     "stepTitle": "Bit Manipulation [Concepts & Problems]",
-    "topic": "Bit Manipulation",
-    "slug": "bit-manipulation",
-    "title": "Bit Manipulation Basics",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "introduction-to-bit-manipulation-theory",
+    "title": "Introduction to Bit Manipulation [Theory]",
     "difficulty": "Medium",
-    "description": "Understand the basics of bit manipulation.",
+    "description": "Learn the basics of bit manipulation, including how to represent numbers in binary and perform basic operations.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "check-if-the-i-th-bit-is-set-or-not",
+    "title": "Check if the i-th bit is set or not",
+    "difficulty": "Medium",
+    "description": "Check if the i-th bit of a number is set (1) or not (0) using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "check-if-a-number-is-even-or-not",
+    "title": "Check if a number is odd or not",
+    "difficulty": "Medium",
+    "description": "Check if a number is odd or not using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "check-if-a-number-is-power-of-2-or-not",
+    "title": "Check if a number is power of 2 or not",
+    "difficulty": "Medium",
+    "description": "Check if a number is a power of 2 using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "bit-manipulation",
+    "title": "Count the number of set bits",
+    "difficulty": "Medium",
+    "description": "Count the number of set bits in a binary representation of a number.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "set-unset-the-rightmost-unset-bit",
+    "title": "Set/Unset the rightmost unset bit",
+    "difficulty": "Medium",
+    "description": "Set or unset the rightmost unset bit in a number using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "swap-two-numbers",
+    "title": "Swap two numbers",
+    "difficulty": "Medium",
+    "description": "Swap two numbers using bit manipulation without using a temporary variable.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 1",
+    "topicTitle": "Learn Bit Manipulation",
+    "slug": "divdide-two-integers-without-using-multiplication-division-and-mod-operator",
+    "title": "Divide two integers without using multiplication, division and mod operator",
+    "difficulty": "Medium",
+    "description": "Divide two integers without using multiplication, division, and mod operator.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Interview Problems",
+    "slug": "count-number-of-bits-to-be-flipped-to-convert-A-to-B",
+    "title": "Count number of bits to be flipped to convert A to B",
+    "difficulty": "Medium",
+    "description": "Count the number of bits that need to be flipped to convert integer A to integer B.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Interview Problems",
+    "slug": "find-unique-number-in-array",
+    "title": "Find the number that appears odd number of times",
+    "difficulty": "Medium",
+    "description": "Find the unique number in an array where every other number appears an even number of times.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Interview Problems",
+    "slug": "find-unique-number-in-array",
+    "title": "Power Set",
+    "difficulty": "Medium",
+    "description": "Find all subsets of a set using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Interview Problems",
+    "slug": "find-xor-of-numbers-from-1-to-n",
+    "title": "Find xor of numbers from L to R",
+    "difficulty": "Medium",
+    "description": "Find the XOR of all numbers from L to R.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 2",
+    "topicTitle": "Interview Problems",
+    "slug": "find-two-numbers-appearing-odd-number-of-times",
+    "title": "Find the two numbers appearing odd number of times",
+    "difficulty": "Medium",
+    "description": "Find the two numbers in an array that appear an odd number of times.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Advanced Maths",
+    "slug": "print-prime-factors-of-a-number",
+    "title": "Print Prime Factors of a Number",
+    "difficulty": "Medium",
+    "description": "Print all prime factors of a given number.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Advanced Maths",
+    "slug": "all-divisors-of-a-number",
+    "title": "All Divisors of a Number",
+    "difficulty": "Medium",
+    "description": "Find all divisors of a number using bit manipulation.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Advanced Maths",
+    "slug": "sieve-of-eratosthenes",
+    "title": "Sieve of Eratosthenes",
+    "difficulty": "Medium",
+    "description": "Find all prime numbers up to a given limit using the Sieve of Eratosthenes.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Advanced Maths",
+    "slug": "find-prime-factorisation-of-number-using-sieve",
+    "title": "Find Prime Factorisation of a Number using Sieve",
+    "difficulty": "Medium",
+    "description": "Find the prime factorization of a number using the Sieve of Eratosthenes.",
+    "tags": [
+      "bit-manipulation",
+      "math"
+    ]
+  },
+  {
+    "id": 8,
+    "step": "Step 8",
+    "stepTitle": "Bit Manipulation [Concepts & Problems]",
+    "topic": "Lec 3",
+    "topicTitle": "Advanced Maths",
+    "slug": "power-n-x",
+    "title": "Power(n, x)",
+    "difficulty": "Medium",
+    "description": "Calculate power using bit manipulation.",
     "tags": [
       "bit-manipulation",
       "math"
@@ -1686,133 +3092,6 @@
     "tags": [
       "sorting",
       "heap"
-    ]
-  },
-    {
-    "id": 10,
-    "step": "Step 10",
-    "stepTitle": "Sliding Window & Two Pointer Combined Problems",
-    "topic": "Graph",
-    "slug": "graph-representation",
-    "title": "Graph Representation",
-    "difficulty": "Easy",
-    "description": "Understand how to represent graphs using adjacency lists and matrices.",
-    "tags": [
-      "graph",
-      "data-structure"
-    ]
-  },
-  {
-    "id": 11,
-    "step": "Step 11",
-    "stepTitle": "Heaps [Learning, Medium, Hard Problems]",
-    "topic": "Graph",
-    "slug": "bfs-and-dfs",
-    "title": "BFS and DFS",
-    "difficulty": "Medium",
-    "description": "Implement breadth-first search and depth-first search algorithms.",
-    "tags": [
-      "graph",
-      "bfs",
-      "dfs"
-    ]
-  },
-  {
-    "id": 12,
-    "step": "Step 12",
-    "stepTitle": "Greedy Algorithms [Easy, Medium/Hard] ",
-    "topic": "Dynamic Programming",
-    "slug": "dynamic-programming-introduction",
-    "title": "Dynamic Programming Introduction",
-    "difficulty": "Medium",
-    "description": "Understand the principles of dynamic programming.",
-    "tags": [
-      "dynamic-programming",
-      "optimization"
-    ]
-  },
-  {
-    "id": 13,
-    "step": "Step 13",
-    "stepTitle": "Binary Trees [Traversals, Medium and Hard Problems]",
-    "topic": "Dynamic Programming",
-    "slug": "coin-change",
-    "title": "Coin Change Problem",
-    "difficulty": "Medium",
-    "description": "Find the minimum number of coins needed to make a target amount.",
-    "tags": [
-      "dynamic-programming",
-      "greedy"
-    ]
-  },
-  {
-    "id": 14,
-    "step": "Step 14",
-    "stepTitle": "Binary Search Trees [Concept and Problems]",
-    "topic": "Greedy Algorithms",
-    "slug": "activity-selection",
-    "title": "Activity Selection Problem",
-    "difficulty": "Medium",
-    "description": "Select the maximum number of activities that don't overlap.",
-    "tags": [
-      "greedy",
-      "optimization"
-    ]
-  },
-  {
-    "id": 15,
-    "step": "Step 15",
-    "stepTitle": "Graphs [Concepts & Problems]",
-    "topic": "Graphs",
-    "slug": "minimum-spanning-tree",
-    "title": "Minimum Spanning Tree",
-    "difficulty": "Medium",
-    "description": "Find the minimum spanning tree of a graph using Prim's or Kruskal's algorithm.",
-    "tags": [
-      "greedy",
-      "graph"
-    ]
-  },
-  {
-    "id": 16,
-    "step": "Step 16",
-    "stepTitle": "Dynamic Programming [Patterns and Problems]",
-    "topic": "Dynamic Programming",
-    "slug": "n-queens",
-    "title": "N-Queens Problem",
-    "difficulty": "Hard",
-    "description": "Place N queens on an N×N chessboard so that no two queens threaten each other.",
-    "tags": [
-      "backtracking",
-      "recursion"
-    ]
-  },
-  {
-    "id": 17,
-    "step": "Step 17",
-    "stepTitle": "Tries",
-    "topic": "Backtracking",
-    "slug": "sudoku-solver",
-    "title": "Sudoku Solver",
-    "difficulty": "Hard",
-    "description": "Solve a Sudoku puzzle using backtracking.",
-    "tags": [
-      "backtracking",
-      "recursion"
-    ]
-  },
-  {
-    "id": 18,
-    "step": "Step 18",
-    "stepTitle": "Strings",
-    "topic": "Strings",
-    "slug": "bitwise-operations",
-    "title": "Bitwise Operations",
-    "difficulty": "Medium",
-    "description": "Understand basic bitwise operations and their applications.",
-    "tags": [
-      "bit-manipulation",
-      "math"
     ]
   }
 ]

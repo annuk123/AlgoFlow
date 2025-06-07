@@ -1,7 +1,7 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path")
 
-// ✅ Define a type for each problem
+// Define a type for each problem
 type A2ZProblem = {
   title: string;
   slug: string;
