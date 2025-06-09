@@ -15,6 +15,7 @@ import type {
 } from "convex/server";
 import type * as a2zProblems from "../a2zProblems.js";
 import type * as a2zProgress from "../a2zProgress.js";
+import type * as algorithms from "../algorithms.js";
 import type * as contact from "../contact.js";
 import type * as feedback from "../feedback.js";
 import type * as problems from "../problems.js";
@@ -32,6 +33,7 @@ import type * as progress_saveProgess from "../progress/saveProgess.js";
 declare const fullApi: ApiFromModules<{
   a2zProblems: typeof a2zProblems;
   a2zProgress: typeof a2zProgress;
+  algorithms: typeof algorithms;
   contact: typeof contact;
   feedback: typeof feedback;
   problems: typeof problems;

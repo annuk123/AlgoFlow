@@ -4,79 +4,157 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Navbar from "@/components/navbar/page";
-
-const algorithms = [
-  { name: "Bubble Sort", slug: "../dashboard/visualizer/bubble-sort", description: "Visualize Bubble Sort step by step", isNew: false },
-  { name: "Insertion Sort", slug: "../dashboard/visualizer/insertion-sort", description: "Learn how Insertion Sort works", isNew: false },
-  { name: "Selection Sort", slug: "../dashboard/visualizer/selection-sort", description: "Watch Selection Sort find the minimum element", isNew: false },
-  { name: "Merge Sort", slug: "../dashboard/visualizer/merge-sort", description: "Visualize the divide and conquer approach of Merge Sort", isNew: true },
-  { name: "Quick Sort", slug: "../dashboard/visualizer/quick-sort", description: "Watch Quick Sort in action", isNew: true },
-  { name: "Heap Sort", slug: "../dashboard/visualizer/heap-sort", description: "Learn how Heap Sort builds a heap and sorts", isNew: true },
-  { name: "Radix Sort", slug: "../dashboard/visualizer/radix-sort", description: "Visualize sorting by individual digit positions", isNew: true },
-  { name: "Counting Sort", slug: "../dashboard/visualizer/counting-sort", description: "Learn how Counting Sort works with integers", isNew: true },
-  { name: "Bucket Sort", slug: "../dashboard/visualizer/bucket-sort", description: "Visualize Bucket Sort for efficient sorting", isNew: true },
-];
+import algorithms from "@/seed/algorithms.json";
+import { Sidebar } from "@/components/dashboard/sidebar";
+import { SlidersHorizontal, X } from "lucide-react";
+import { topicGroups } from "@/data/algo";
 
 export default function VisualizerDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProblems, setFilteredProblems] = useState(algorithms);
+  const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      const query = searchQuery.toLowerCase();
-      const filtered = algorithms.filter((algorithm) => {
-        const matchesQuery = algorithm.name.toLowerCase().includes(query); // Filter only by name
-        return matchesQuery ;
-      });
-      setFilteredProblems(filtered);
-    }, 300);
+// Toggle selected topic
+const toggleTopic = (topic: string) => {
+  setSelectedTopics((prev) => {
+    const newSet = new Set(prev);
+    if (newSet.has(topic)) {
+      newSet.delete(topic);
+    } else {
+      newSet.add(topic);
+    }
+    return newSet;
+  });
+};
 
-    return () => clearTimeout(timeout);
-  }, [searchQuery]);
+const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+  handleResize(); // set initially
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+
+const filteredAlgorithms = algorithms.filter((algo) => {
+  const topic = algo.topic?.trim(); // Trim whitespace just in case
+  const matchesTopic =
+    selectedTopics.size === 0 || (topic && selectedTopics.has(topic));
+
+  const matchesSearch = algo.name
+    .toLowerCase()
+    .includes(searchQuery.toLowerCase());
+
+  return matchesTopic && matchesSearch;
+});
+
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-background">
-      <Navbar
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      {/* Main Content */}
-      <motion.h1 
-          initial={{ opacity: 0, y: -60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
+
+<section className="relative flex flex-col md:flex-row bg-background min-h-screen overflow-hidden">
+  {/* Navbar */}
+  <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
+  {/* Mobile Sidebar Toggle Button */}
+  <button
+    onClick={() => setSidebarOpen(!sidebarOpen)}
+    className="md:hidden fixed top-20 left-4 z-50 bg-white dark:bg-black p-2 rounded-md shadow-md"
+  >
+    <SlidersHorizontal className="h-5 w-5" />
+  </button>
+
+  {/* Mobile Backdrop */}
+  {sidebarOpen && (
+    <div
+      className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
+      onClick={() => setSidebarOpen(false)}
+    />
+  )}
+
+  {/* Sidebar */}
+    <motion.aside
+      initial={{ x: "-100%" }}
+      animate={{ x: sidebarOpen || !isMobile ? 0 : "-100%" }}
+      transition={{ duration: 0.3 }}
+      className={`md:static fixed top-0 left-0 z-50 h-full max-h-screen w-64 p-4 border-r bg-background shadow-md transition-transform duration-300 overflow-y-auto custom-scroll scrollbar-hide`}
+    >
+    {/* Close Button (Mobile) */}
+    <div className="md:hidden flex justify-end mb-4">
+      <button
+        onClick={() => setSidebarOpen(false)}
+        className="p-2 rounded-md bg-muted hover:bg-muted/70 transition"
       >
-        <span className="block text-center">
-          Choose Your
-        </span>
-        <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
-          Algorithm to Visualize
-        </span>
-      </motion.h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full">
-        {filteredProblems.map((algorithm, index) => (
-          <motion.div
-            key={`${algorithm.slug}-${algorithm.name}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <Link href={`/visualizer/${algorithm.slug}`} >
-              <div className="relative border border-border rounded-2xl p-6 hover:shadow-xl hover:scale-[1.03] transition cursor-pointer flex flex-col items-center text-center">
-                {/* New label */}
-                {algorithm.isNew && (
-                  <div className="absolute -top-2 -right-1 bg-gray-300 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient text-xs font-semibold py-1 px-2 rounded-lg">
-                    New
-                  </div>
-                )}
-                <h2 className="text-2xl font-bold mb-2">{algorithm.name}</h2>
-                <p className="text-muted-foreground">{algorithm.description}</p>
-              </div>
-            </Link>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+        <X className="h-5 w-5 text-muted-foreground" />
+      </button>
+    </div>
+
+    <Sidebar
+      topicsGroups={topicGroups}
+      selectedTopics={selectedTopics}
+      toggleTopic={toggleTopic}
+    />
+  </motion.aside>
+
+  {/* Main Content */}
+  <main className="flex-1 px-4 sm:px-6 md:px-8 py-24 flex flex-col items-center relative z-10">
+    {/* Hero Heading */}
+    <motion.h1
+      initial={{ opacity: 0, y: -60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center leading-tight mb-12 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
+    >
+      Choose Your
+      <br />
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+        Algorithm to Visualize
+      </span>
+    </motion.h1>
+
+    {/* Grid of Algorithms */}
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0.08,
+          },
+        },
+      }}
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl w-full"
+    >
+      {filteredAlgorithms.map((algorithm) => (
+        <motion.div
+          key={`${algorithm.slug}-${algorithm.name}`}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            show: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+        >
+          <Link href={`/visualizer/${algorithm.slug}`}>
+            <div className="relative border border-border rounded-2xl p-6 hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 cursor-pointer flex flex-col items-center text-center bg-card/40 backdrop-blur-md">
+              {algorithm.isNew && (
+                <div className="absolute -top-2 -right-1 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 text-transparent bg-clip-text text-xs font-semibold py-1 px-2 rounded-lg animate-pulse">
+                  New
+                </div>
+              )}
+              <h2 className="text-xl font-bold mb-2">{algorithm.name}</h2>
+              <p className="text-muted-foreground text-sm line-clamp-3">
+                {algorithm.description}
+              </p>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+    </motion.div>
+  </main>
+</section>
+
   );
 }

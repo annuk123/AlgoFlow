@@ -53,7 +53,15 @@ export default defineSchema({
     name: v.string(),
     email: v.string(),
     message: v.string(),
-    // Rating from 1 to 5
+    createdAt: v.number(),
+  }),
+
+    algorithms: defineTable({
+    name: v.string(),
+    topic: v.string(),
+    slug: v.string(),
+    description: v.string(),
+    isNew: v.boolean(),
     createdAt: v.number(),
   }),
 

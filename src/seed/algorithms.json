@@ -1,0 +1,108 @@
+[
+  { 
+    "topic": "Sorting Algorithms",
+    "name": "Bubble Sort", 
+    "slug": "../dashboard/visualizer/bubble-sort", 
+    "description": "Visualize Bubble Sort step by step", 
+    "isNew": false
+  },
+  { 
+    "topic": "Sorting Algorithms",
+    "name": "Insertion Sort", 
+    "slug": "../dashboard/visualizer/insertion-sort", 
+    "description": "Learn how Insertion Sort works", 
+    "isNew": false
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Selection Sort",
+    "slug": "../dashboard/visualizer/selection-sort",
+    "description": "Watch Selection Sort find the minimum element",
+    "isNew": false
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Merge Sort",
+    "slug": "../dashboard/visualizer/merge-sort",
+    "description": "Visualize the divide and conquer approach of Merge Sort", 
+    "isNew": true
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Quick Sort",
+    "slug": "../dashboard/visualizer/quick-sort", 
+    "description": "Watch Quick Sort in action", 
+    "isNew": true
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Heap Sort",
+    "slug": "../dashboard/visualizer/heap-sort",
+    "description": "Learn how Heap Sort builds a heap and sorts",
+    "isNew": true
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Radix Sort",
+    "slug": "../dashboard/visualizer/radix-sort",
+    "description": "Visualize sorting by individual digit positions", 
+    "isNew": true
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Counting Sort",
+    "slug": "../dashboard/visualizer/counting-sort",
+    "description": "Learn how Counting Sort works with integers",
+    "isNew": true
+  },
+  {
+    "topic": "Sorting Algorithms",
+    "name": "Bucket Sort",
+    "slug": "../dashboard/visualizer/bucket-sort",
+    "description": "Visualize Bucket Sort for efficient sorting",
+    "isNew": true
+  },
+    {
+    "topic": "Array",
+    "name": "Array Visualization",
+    "slug": "../dashboard/array-visualizer",
+    "description": "Visualize array operations and manipulations",
+    "isNew": true
+  },
+      {
+    "topic": "Strings",
+    "name": "String Visualization",
+    "slug": "../dashboard/string-visualizer",
+    "description": "Visualize string operations and manipulations",
+    "isNew": true
+  },
+        {
+    "topic": "Linked List",
+    "name": "Linked List Visualization",
+    "slug": "../dashboard/linked-list-visualizer",
+    "description": "Visualize linked list operations and manipulations",
+    "isNew": true
+  },
+          {
+    "topic": "Stack",
+    "name": "Stack Visualization",
+    "slug": "../dashboard/stack-visualizer",
+    "description": "Visualize stack operations and manipulations",
+    "isNew": true
+  },
+           {
+    "topic": "Queue",
+    "name": "Queue Visualization",
+    "slug": "../dashboard/queue-visualizer",
+    "description": "Visualize queue operations and manipulations",
+    "isNew": true
+  },
+             {
+    "topic": "Hashing",
+    "name": "Hash Table Visualization",
+    "slug": "../dashboard/hash-table-visualizer",
+    "description": "Visualize hash table operations and manipulations",
+    "isNew": true
+  }
+  
+]

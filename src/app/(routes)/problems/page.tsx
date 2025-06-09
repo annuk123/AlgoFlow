@@ -23,7 +23,7 @@ type Problem = {
 export default function ProblemsPage() {
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
-  const [sidebarOpen, setSidebarOpen] = useState(false); // 👈 sidebar visibility
+  const [sidebarOpen, setSidebarOpen] = useState(false); 
 
 const toggleTopic = (topic: string) => {
   setSelectedTopics((prev) => {
@@ -56,7 +56,7 @@ const toggleTopic = (topic: string) => {
 {/* Mobile Filter Button */}
 <button
   onClick={() => setSidebarOpen(!sidebarOpen)}
-  className="md:hidden fixed top-20 left-4 z-50 bg-white dark:bg-black p-2 rounded-md shadow-md"
+  className="md:hidden fixed top-20  z-50 bg-white dark:bg-black p-2 rounded-md shadow-md"
 >
   <SlidersHorizontal className="h-5 w-5" />
 </button>
