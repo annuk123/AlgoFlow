@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { ProblemCard } from "@/components/problems/problemCard";
 import problems from "@/seed/rawProblems.json";
