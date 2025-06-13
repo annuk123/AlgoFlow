@@ -1,12 +1,13 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useQuery } from "convex/react";
+import { api } from "../../../../../convex/_generated/api";
 import { Badge } from "@/components/ui/badge";
 import { Clock } from "lucide-react";
-import problems from "@/seed/rawProblems.json"; 
 import { TimerDialog } from "@/components/problems/timer";
-
-
+import SolutionPage from "@/components/solution/page";
+import Navbar from "@/components/nav/nav";
 
 const getAutoEstimatedTime = (difficulty: string) => {
   switch (difficulty.toLowerCase()) {
@@ -22,11 +23,24 @@ const getAutoEstimatedTime = (difficulty: string) => {
 };
 
 export default function ProblemPage() {
-const params = useParams();
-const problemId = params.id as string;
-const problem = problems.find((p) => p.title === problemId || p.topic === problemId || p.slug === problemId);
-// const problem = problems.find((p) => p.slug === problemId);
+  const params = useParams();
+  const slug = params.id as string;
 
+  // ✅ Fetch problem from Convex
+  const problem = useQuery(api.problems.getBySlug, { slug });
+
+//   const solutions = useQuery(
+//   api.solutions.getSolutionsByProblemId,
+//   problem ? { problemId: problem._id } : "skip"
+// );
+
+  if (problem === undefined) {
+    return (
+      <div className="max-w-2xl mx-auto px-6 py-20 text-center text-xl">
+        Loading...
+      </div>
+    );
+  }
 
   if (!problem) {
     return (
@@ -36,10 +50,16 @@ const problem = problems.find((p) => p.title === problemId || p.topic === proble
     );
   }
 
+  // ✅ Fetch solutions for this problem (only when problem is loaded)
+
+
+
   const estimatedTime = getAutoEstimatedTime(problem.difficulty);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
+    <div className="max-w-4xl mx-auto px-6 py-26 space-y-8">
+      {/* Navbar */}
+      <Navbar />
       {/* Header */}
       <div className="flex justify-between items-start gap-4 mb-6">
         <div>
@@ -66,7 +86,7 @@ const problem = problems.find((p) => p.title === problemId || p.topic === proble
         </div>
 
         {/* Timer Modal */}
- <TimerDialog />
+        <TimerDialog />
       </div>
 
       {/* Description */}
@@ -74,19 +94,26 @@ const problem = problems.find((p) => p.title === problemId || p.topic === proble
         <p>{problem.description}</p>
       </div>
 
+      {/* Constraints */}
+      <div className="prose prose-sm prose-muted max-w-none mb-6">
+        <h3 className="font-semibold mb-2">Constraints:</h3>
+        <ul className="list-disc list-inside">
+          {problem.constraints.map((constraint, index) => (
+            <li key={index}>{constraint}</li>
+          ))}
+        </ul>
+      </div>
+
       {/* Tags */}
-      <div className="flex flex-wrap gap-2">
-        {problem.tags.map((tag) => (
+      <div className="flex flex-wrap gap-2 ">
+        {problem.tags?.map((tag: string) => (
           <Badge key={tag} variant="secondary" className="rounded-full text-xs">
             {tag}
           </Badge>
         ))}
       </div>
 
-      {/* Placeholder */}
-      <div className="mt-10 border rounded-md p-6 text-center text-muted-foreground">
-        Code Editor + Visualizer Coming Soon 🚀
-      </div>
+      <SolutionPage />
     </div>
   );
 }

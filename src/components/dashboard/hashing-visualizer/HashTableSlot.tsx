@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 interface HashTableSlotProps {
   index: number;
   keys: (string | number)[];
-  highlight?: boolean; // Highlight during search/probing
-  probing?: boolean; // Temporary highlight for probing step
-  collisionMethod: "chaining" | "linear" | "quadratic" | "doubleHashing"; // To decide rendering style
+  highlight?: boolean; 
+  probing?: boolean; 
+  collisionMethod: "chaining" | "linear" | "quadratic" | "doubleHashing"; 
 }
 
 export default function HashTableSlot({

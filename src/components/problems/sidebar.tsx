@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 interface SidebarProps {
-  topicsGroups: { title: string; topics: string[] }[];
+  topicsGroups: { topics: { name: string; count: number }[] }[];
   selectedTopics: Set<string>;
   toggleTopic: (topic: string) => void;
 }
@@ -32,34 +32,33 @@ export const Sidebar = ({
 }: SidebarProps) => {
   return (
     <div className="space-y-4">
-      {/* <h2 className="text-lg font-semibold text-foreground">📚 Topics</h2> */}
+      <h2 className="text-lg font-semibold text-foreground">📚 Topics</h2>
 
-
-      {topicsGroups.map(
-        ({ title, topics }: { title: string; topics: string[] }) => (
-          <div key={title}>
-            <h3 className="mb-2 text-xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">{title}</h3>
-            <div className="space-y-2">
-              {topics.map((topic: string) => (
-                <button
-                  key={topic}
-                  onClick={() => toggleTopic(topic)}
-                  className={cn(
-                    "flex items-center gap-2 w-full text-left px-3 py-2 rounded-md transition hover:bg-muted",
-                    selectedTopics.has(topic)
-                      ? "bg-primary/10 text-primary font-medium"
-                      : "text-muted-foreground"
-                  )}
-                >
-                  {topicIcons[topic] ?? " "} {topic}
-                </button>
-              ))}
-            </div>
+      {topicsGroups.map(({ topics }, groupIdx) => (
+        <div key={groupIdx}>
+          <div className="space-y-2">
+            {topics.map((topicObj) => (
+              <button
+                key={topicObj.name}
+                onClick={() => toggleTopic(topicObj.name)}
+                className={cn(
+                  "flex items-center justify-between gap-2 w-full text-left px-3 py-2 rounded-md transition hover:bg-muted",
+                  selectedTopics.has(topicObj.name)
+                    ? "bg-primary/10 text-primary font-medium"
+                    : "text-muted-foreground"
+                )}
+              >
+                <div className="flex items-center gap-2">
+                  {topicIcons[topicObj.name] ?? " "} {topicObj.name}
+                </div>
+                <span className="text-xs bg-muted text-foreground px-2 py-0.5 rounded-full">
+  {topicObj.count}
+</span>
+              </button>
+            ))}
           </div>
-        )
-      )}
-
-     
+        </div>
+      ))}
     </div>
   );
 };

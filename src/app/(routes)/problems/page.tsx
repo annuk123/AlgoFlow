@@ -8,6 +8,7 @@ import { topicGroups } from "@/data/page";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Navbar from "@/components/nav/nav";
 import { SlidersHorizontal, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 // Define the Problem type
 type Problem = {
@@ -24,6 +25,9 @@ export default function ProblemsPage() {
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false); 
+
+const topicCounts: Record<string, number> = {};
+
 
 const toggleTopic = (topic: string) => {
   setSelectedTopics((prev) => {
@@ -46,6 +50,12 @@ const toggleTopic = (topic: string) => {
           tag.toLowerCase().includes(searchQuery.toLowerCase())
         ))
   );
+
+  problems.forEach((problem) => {
+  topicCounts[problem.topic] = (topicCounts[problem.topic] || 0) + 1;
+});
+
+
 
   return (
     <section className="py-20">
@@ -87,19 +97,36 @@ const toggleTopic = (topic: string) => {
   </div>
 
   {/* Actual Sidebar Content */}
-  <Sidebar
-    topicsGroups={topicGroups}
-    selectedTopics={selectedTopics}
-    toggleTopic={toggleTopic}
-  />
+<Sidebar
+  topicsGroups={topicGroups.map(group => ({
+    ...group,
+    topics: group.topics.map(topic =>
+      typeof topic === "string"
+        ? { name: topic, count: topicCounts[topic] || 0 } 
+        : topic
+    ),
+  }))}
+  selectedTopics={selectedTopics}
+  toggleTopic={toggleTopic}
+/>
+
 </aside>
 
 
         {/* Main Content */}
-        <main className="flex-1 overflow-y-auto p-6 mt-4 md:mt-0">
-          <h1 className="text-2xl md:text-3xl font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
-            Explore Leetcode Problems
-          </h1>
+        <main className="flex-1 overflow-y-auto p-6 mt-4 md:mt-0 scrollbar-hide">
+          <motion.h1
+            initial={{ opacity: 0, y: -60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center leading-tight mb-12 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
+          >
+                Explore Leetcode
+                <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
+                  Problems to Visualize
+                </span>
+             </motion.h1>
 
           <input
             type="text"

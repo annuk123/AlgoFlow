@@ -21,6 +21,7 @@ import type * as feedback from "../feedback.js";
 import type * as problems from "../problems.js";
 import type * as progress_getProgress from "../progress/getProgress.js";
 import type * as progress_saveProgess from "../progress/saveProgess.js";
+import type * as solutions from "../solutions.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -39,6 +40,7 @@ declare const fullApi: ApiFromModules<{
   problems: typeof problems;
   "progress/getProgress": typeof progress_getProgress;
   "progress/saveProgess": typeof progress_saveProgess;
+  solutions: typeof solutions;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,

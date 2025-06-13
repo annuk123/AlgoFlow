@@ -6,35 +6,36 @@ import { api } from "../../convex/_generated/api";
 type Problem = {
   title: string;
   topic: string;
+  tags: string[];
   difficulty: "Easy" | "Medium" | "Hard";
   description: string;
   constraints: string[];
   sampleInput: string;
   sampleOutput: string;
-  slug: string; // ✅ Add slug here for seeding
+  slug: string;
+  explanation: string;
 };
 
-// Replace this with your actual deployment URL
 const CONVEX_DEPLOYMENT = process.env.CONVEX_DEPLOYMENT_URL || "https://bold-barracuda-592.convex.cloud";
 const convex = new ConvexHttpClient(CONVEX_DEPLOYMENT);
 
-// Slugify helper for generating unique slug from title
 function slugify(text: string): string {
   return text
     .toString()
     .toLowerCase()
-    .replace(/\s+/g, '-')     // Replace spaces with -
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-')   // Replace multiple - with single -
-    .replace(/^-+/, '')       // Trim - from start
-    .replace(/-+$/, '');      // Trim - from end
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-')
+    .replace(/^-+/, '')
+    .replace(/-+$/, '');
 }
 
 async function seedProblems() {
   const typedProblems: Problem[] = (problems as Problem[]).map((problem) => ({
-    slug: slugify(problem.title), // ✅ Add slug to the object
+    slug: slugify(problem.title),
     title: problem.title,
     topic: problem.topic,
+    tags: Array.isArray(problem.tags) ? problem.tags : [],
     difficulty:
       problem.difficulty === "Easy" ||
       problem.difficulty === "Medium" ||
@@ -49,18 +50,30 @@ async function seedProblems() {
         : [],
     sampleInput: problem.sampleInput,
     sampleOutput: problem.sampleOutput,
+    explanation: problem.explanation || "No explanation provided yet.",
   }));
 
   for (const problem of typedProblems) {
+    // ✅ Check if the problem already exists
+    const existing = await convex.query(api.problems.getProblemBySlug, { slug: problem.slug });
+
+    if (existing) {
+      console.log(`⚠️ Problem already exists: ${problem.title} (${problem.slug})`);
+      continue; // Skip insertion
+    }
+
+    // ✅ Insert if not existing
     await convex.mutation(api.problems.insertProblem, {
-      slug: problem.slug, // ✅ use slug here, not id
+      slug: problem.slug,
       title: problem.title,
       topic: problem.topic,
+      tags: problem.tags,
       difficulty: problem.difficulty,
       description: problem.description,
       constraints: problem.constraints,
       sampleInput: problem.sampleInput,
       sampleOutput: problem.sampleOutput,
+      explanation: problem.explanation,
       createdAt: Date.now(),
     });
 
