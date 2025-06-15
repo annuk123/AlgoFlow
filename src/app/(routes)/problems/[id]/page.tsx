@@ -27,7 +27,7 @@ export default function ProblemPage() {
   const slug = params.id as string;
 
   // ✅ Fetch problem from Convex
-  const problem = useQuery(api.problems.getBySlug, { slug });
+  const problem = useQuery(api.problems.getProblemBySlug, { slug });
 
 //   const solutions = useQuery(
 //   api.solutions.getSolutionsByProblemId,

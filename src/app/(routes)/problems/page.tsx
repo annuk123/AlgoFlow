@@ -15,7 +15,7 @@ type Problem = {
   id?: string;
   title: string;
   description: string;
-  topic: string;
+  topic: string[];
   difficulty: string;
   tags?: string[];
 };
@@ -43,15 +43,24 @@ const toggleTopic = (topic: string) => {
 
   const filteredProblems = problems.filter(
     (p) =>
-      (selectedTopics.size === 0 || selectedTopics.has(p.topic)) &&
+      (selectedTopics.size === 0 ||
+        (Array.isArray(p.topic)
+          ? p.topic.some((t) => selectedTopics.has(t))
+          : selectedTopics.has(p.topic))) &&
       (p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags?.some((tag) =>
           tag.toLowerCase().includes(searchQuery.toLowerCase())
         ))
   );
 
-  problems.forEach((problem) => {
-  topicCounts[problem.topic] = (topicCounts[problem.topic] || 0) + 1;
+problems.forEach((problem) => {
+  if (Array.isArray(problem.topic)) {
+    problem.topic.forEach((t) => {
+      topicCounts[t] = (topicCounts[t] || 0) + 1;
+    });
+  } else {
+    topicCounts[problem.topic] = (topicCounts[problem.topic] || 0) + 1;
+  }
 });
 
 
@@ -149,6 +158,7 @@ const toggleTopic = (topic: string) => {
                 problems={filteredProblems.map((p) => ({
                   ...p,
                   id: p.id?.toString(),
+                  topic: Array.isArray(p.topic) ? p.topic : [p.topic],
                 }))}
               />
             </TabsContent>
@@ -156,21 +166,23 @@ const toggleTopic = (topic: string) => {
               <ProblemGrid
                 problems={filteredProblems
                   .filter((p) => p.difficulty.toLowerCase() === "easy")
-                  .map((p) => ({ ...p, id: p.id?.toString() }))}
-              />
-            </TabsContent>
-            <TabsContent value="medium">
-              <ProblemGrid
-                problems={filteredProblems
-                  .filter((p) => p.difficulty.toLowerCase() === "medium")
-                  .map((p) => ({ ...p, id: p.id?.toString() }))}
+                  .map((p) => ({
+                    ...p,
+                    id: p.id?.toString(),
+                    topic: Array.isArray(p.topic) ? p.topic : [p.topic],
+                  }))}
+                 
               />
             </TabsContent>
             <TabsContent value="hard">
               <ProblemGrid
                 problems={filteredProblems
                   .filter((p) => p.difficulty.toLowerCase() === "hard")
-                  .map((p) => ({ ...p, id: p.id?.toString() }))}
+                  .map((p) => ({
+                    ...p,
+                    id: p.id?.toString(),
+                    topic: Array.isArray(p.topic) ? p.topic : [p.topic],
+                  }))}
               />
             </TabsContent>
           </Tabs>

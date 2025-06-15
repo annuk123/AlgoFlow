@@ -16,7 +16,10 @@ export default function ProblemEditorPage() {
   const problemId = params.id as string;
 
   const problem = problems.find(
-    (p) => p.title === problemId || p.topic === problemId || p.slug === problemId
+    (p) =>
+      p.title === problemId ||
+      (Array.isArray(p.topic) ? p.topic.includes(problemId) : p.topic === problemId) ||
+      p.slug === problemId
   );
 
   const [code, setCode] = useState<string>(

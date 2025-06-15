@@ -5,7 +5,7 @@ export default defineSchema({
 problems: defineTable({
   slug: v.string(),
   title: v.string(),
-  topic: v.string(),
+  topic: v.array(v.string()),
   explanation: v.optional(v.string()),
   tags: v.array(v.string()),
   difficulty: v.union(
@@ -16,20 +16,8 @@ problems: defineTable({
   description: v.string(),
   constraints: v.array(v.string()),
 
-  sampleInput: v.union(
-    v.string(),
-    v.object({
-      nums: v.array(v.number()),
-      target: v.number(),
-    })
-  ),
-
-  sampleOutput: v.union(
-    v.array(v.number()),
-    v.array(v.string()),
-    v.string(),
-    v.number()
-  ),
+sampleInput: v.any(),
+sampleOutput: v.any(),
 
   createdAt: v.number(),
 })

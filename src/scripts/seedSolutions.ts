@@ -9,7 +9,7 @@ async function seedSolutions() {
   for (const item of solutions) {
     const { slug, solutions: languageSolutions } = item;
 
-    const problem = await convex.query(api.problems.getBySlug, { slug });
+    const problem = await convex.query(api.problems.getProblemBySlug, { slug });
     const problemId = problem?._id;
 
     if (!problemId) {
@@ -23,11 +23,16 @@ async function seedSolutions() {
     for (const solution of languageSolutions) {
       const { language, code, explanation } = solution;
 
+      if (!language || !code) {
+        console.error(`❌ Missing language or code for solution in problem "${slug}". Skipping this solution...`);
+        continue;
+      }
+
       await convex.mutation(api.solutions.insertSolution, {
         problemId,
         language,
         code,
-        explanation,
+        explanation: explanation || "No explanation provided yet.",
         createdAt: Date.now(),
       });
 

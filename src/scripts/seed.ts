@@ -5,13 +5,13 @@ import { api } from "../../convex/_generated/api";
 // Define the Problem type
 type Problem = {
   title: string;
-  topic: string;
+  topic: string[];
   tags: string[];
   difficulty: "Easy" | "Medium" | "Hard";
   description: string;
   constraints: string[];
-  sampleInput: string;
-  sampleOutput: string;
+  sampleInput: any;
+  sampleOutput: any;
   slug: string;
   explanation: string;
 };
@@ -31,22 +31,19 @@ function slugify(text: string): string {
 }
 
 async function seedProblems() {
-  const typedProblems: Problem[] = (problems as Problem[]).map((problem) => ({
+  const typedProblems: Problem[] = (problems as Array<any>).map((problem) => ({
     slug: slugify(problem.title),
     title: problem.title,
     topic: problem.topic,
     tags: Array.isArray(problem.tags) ? problem.tags : [],
-    difficulty:
-      problem.difficulty === "Easy" ||
-      problem.difficulty === "Medium" ||
-      problem.difficulty === "Hard"
-        ? problem.difficulty
-        : "Easy",
+    difficulty: ["Easy", "Medium", "Hard"].includes(problem.difficulty)
+      ? problem.difficulty
+      : "Easy",
     description: problem.description,
     constraints: Array.isArray(problem.constraints)
       ? problem.constraints
       : typeof problem.constraints === "string"
-        ? (problem.constraints as string).split('\n')
+        ? problem.constraints.split('\n')
         : [],
     sampleInput: problem.sampleInput,
     sampleOutput: problem.sampleOutput,
@@ -54,33 +51,35 @@ async function seedProblems() {
   }));
 
   for (const problem of typedProblems) {
-    // ✅ Check if the problem already exists
-    const existing = await convex.query(api.problems.getProblemBySlug, { slug: problem.slug });
+    try {
+      const existing = await convex.query(api.problems.getProblemBySlug, { slug: problem.slug });
 
-    if (existing) {
-      console.log(`⚠️ Problem already exists: ${problem.title} (${problem.slug})`);
-      continue; // Skip insertion
+      if (existing) {
+        console.log(`⚠️ Problem already exists: ${problem.title} (${problem.slug})`);
+        continue;
+      }
+
+      await convex.mutation(api.problems.insertProblem, {
+        slug: problem.slug,
+        title: problem.title,
+        topic: problem.topic,
+        tags: problem.tags,
+        difficulty: problem.difficulty,
+        description: problem.description,
+        constraints: problem.constraints,
+        sampleInput: problem.sampleInput,
+        sampleOutput: problem.sampleOutput,
+        explanation: problem.explanation,
+        createdAt: Date.now(),
+      });
+
+      console.log(`✅ Seeded: ${problem.title}`);
+    } catch (error) {
+      console.error(`❌ Failed to seed problem: ${problem.title}`, error);
     }
-
-    // ✅ Insert if not existing
-    await convex.mutation(api.problems.insertProblem, {
-      slug: problem.slug,
-      title: problem.title,
-      topic: problem.topic,
-      tags: problem.tags,
-      difficulty: problem.difficulty,
-      description: problem.description,
-      constraints: problem.constraints,
-      sampleInput: problem.sampleInput,
-      sampleOutput: problem.sampleOutput,
-      explanation: problem.explanation,
-      createdAt: Date.now(),
-    });
-
-    console.log(`✅ Seeded: ${problem.title}`);
   }
 }
 
 seedProblems()
   .then(() => console.log("🚀 All problems seeded!"))
-  .catch((err) => console.error("❌ Seeding failed:", err));
+  .catch((err) => console.error("❌ Seeding process failed:", err));

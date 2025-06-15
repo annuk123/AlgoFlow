@@ -18,17 +18,20 @@ import {
 import { Copy, Edit, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import TwoSumApproaches from "@/components/problems/visualizer/TwoSumVisualizer/Approaches";
+import Add2NumVisualizer from "../problems/visualizer/AddTwoNumbers/Visualizer";
+import AddTwoNumbersApproach from "../problems/visualizer/AddTwoNumbers/approach";
 
 export default function SolutionPage() {
   const params = useParams();
   const router = useRouter();
   const problemId = params.id as string;
 
-  const problem = useQuery(api.problems.getBySlug, { slug: problemId });
-  const solutions = useQuery(
-    api.solutions.getSolutionsByProblemId,
-    problem ? { problemId: problem._id } : "skip"
-  );
+  const problem = useQuery(api.problems.getProblemBySlug, { slug: problemId });
+const solutions = useQuery(
+  api.solutions.getSolutionsByProblemId,
+  problem?._id ? { problemId: problem._id } : "skip"
+);
+
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [showExplanation, setShowExplanation] = useState(false);
@@ -155,6 +158,18 @@ export default function SolutionPage() {
           <TwoSumVisualizer />
           <TwoSumApproaches />
         </div>
+      )}
+            {problem?.slug === "add-two-numbers" && (
+<div>
+  <div className="my-8">
+    {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
+            <h1 className="text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-10 mb-4">Add Two Numbers Visualizer</h1>
+    <Add2NumVisualizer />
+  </div>
+  <div>
+    <AddTwoNumbersApproach />
+  </div>
+</div>
       )}
 
       <ExplanationDrawer
