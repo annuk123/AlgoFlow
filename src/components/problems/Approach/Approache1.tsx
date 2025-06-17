@@ -1,4 +1,4 @@
-import ProblemApproach from "../problemApproach";
+import ProblemApproach from "../visualizer/problemApproach";
 
 export default function TwoSumApproachPage() {
   const twoSumApproach = {
@@ -11,27 +11,32 @@ export default function TwoSumApproachPage() {
     steps: [
       {
         title: "Step 1: Prepare a Hash Map",
-        description: "Create an empty hash map to store each number and its corresponding index. This will help us quickly check if the complement of the current number exists.",
+        description:
+          "Create an empty hash map to store each number and its corresponding index. This will help us quickly check if the complement of the current number exists.",
         code: "// Example structure:\n// { number: index }\nconst map = new Map();",
       },
       {
         title: "Step 2: Iterate Through the Array",
-        description: "Loop through each element and calculate the complement required to reach the target sum.",
+        description:
+          "Loop through each element and calculate the complement required to reach the target sum.",
         code: "const complement = target - nums[i];",
       },
       {
         title: "Step 3: Check for Complement",
-        description: "If the complement exists in the map, we’ve found the solution. Return the indices of the complement and the current number.",
+        description:
+          "If the complement exists in the map, we’ve found the solution. Return the indices of the complement and the current number.",
         code: "if (map.has(complement)) return [map.get(complement), i];",
       },
       {
         title: "Step 4: Store Current Element",
-        description: "If the complement is not found, store the current number and its index in the map for future reference.",
+        description:
+          "If the complement is not found, store the current number and its index in the map for future reference.",
         code: "map.set(nums[i], i);",
       },
       {
         title: "Step 5: Solution Always Exists",
-        description: "The problem guarantees that a valid pair exists, so this approach will always find a solution without needing extra checks.",
+        description:
+          "The problem guarantees that a valid pair exists, so this approach will always find a solution without needing extra checks.",
       },
     ],
     dryRun: `Input: nums = [2, 7, 11, 15], target = 9

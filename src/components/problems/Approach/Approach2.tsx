@@ -1,4 +1,4 @@
-import ProblemApproach from "../problemApproach";
+import ProblemApproach from "../visualizer/problemApproach";
 
 export default function AddTwoNumbersApproach() {
   const addTwoNumbersApproach = {
@@ -11,14 +11,16 @@ export default function AddTwoNumbersApproach() {
     steps: [
       {
         title: "Step 1: Initialize Pointers and Carry",
-        description: "Set up a dummy head for the result linked list, pointers for traversal, and a carry variable starting at 0.",
+        description:
+          "Set up a dummy head for the result linked list, pointers for traversal, and a carry variable starting at 0.",
         code: `let dummyHead = new ListNode(0);
 let current = dummyHead;
 let carry = 0;`,
       },
       {
         title: "Step 2: Traverse Both Linked Lists",
-        description: "While either list has nodes, add the corresponding values and the carry. If one list is shorter, use 0 for missing nodes.",
+        description:
+          "While either list has nodes, add the corresponding values and the carry. If one list is shorter, use 0 for missing nodes.",
         code: `while (l1 !== null || l2 !== null) {
     let x = (l1 !== null) ? l1.val : 0;
     let y = (l2 !== null) ? l2.val : 0;
@@ -27,20 +29,23 @@ let carry = 0;`,
       },
       {
         title: "Step 3: Handle Carry and Create New Node",
-        description: "Calculate the new digit and update the carry. Create a new node with the digit and move the current pointer forward.",
+        description:
+          "Calculate the new digit and update the carry. Create a new node with the digit and move the current pointer forward.",
         code: `carry = Math.floor(sum / 10);
 current.next = new ListNode(sum % 10);
 current = current.next;`,
       },
       {
         title: "Step 4: Move Input Pointers",
-        description: "Advance the input pointers if they are not null to process the next digits.",
+        description:
+          "Advance the input pointers if they are not null to process the next digits.",
         code: `if (l1 !== null) l1 = l1.next;
 if (l2 !== null) l2 = l2.next;`,
       },
       {
         title: "Step 5: Handle Remaining Carry",
-        description: "After the loop, if there is a remaining carry, add it as a new node at the end of the list.",
+        description:
+          "After the loop, if there is a remaining carry, add it as a new node at the end of the list.",
         code: `if (carry > 0) {
     current.next = new ListNode(carry);
 }`,
@@ -71,7 +76,8 @@ Step 5: Both lists are exhausted, carry = 0 -> Finished.
 Final Result: 7 -> 0 -> 8 (represents 807)`,
     complexities: {
       time: "O(max(m, n)) — Where m and n are the lengths of the two lists.",
-      space: "O(max(m, n)) — The result list stores the sum, one node per digit.",
+      space:
+        "O(max(m, n)) — The result list stores the sum, one node per digit.",
     },
     comparisons: [
       {

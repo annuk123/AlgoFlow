@@ -17,9 +17,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Copy, Edit, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
-import TwoSumApproaches from "@/components/problems/visualizer/TwoSumVisualizer/Approaches";
+import TwoSumApproaches from "@/components/problems/Approach/Approache1";
 import Add2NumVisualizer from "../problems/visualizer/AddTwoNumbers/Visualizer";
-import AddTwoNumbersApproach from "../problems/visualizer/AddTwoNumbers/approach";
+import AddTwoNumbersApproach from "../problems/Approach/Approach2";
+import LongestSubstringApproach from "../problems/Approach/Approach3";
+import MedianOfTwoSortedArraysApproach from "../problems/Approach/Apporach4";
 
 export default function SolutionPage() {
   const params = useParams();
@@ -27,11 +29,10 @@ export default function SolutionPage() {
   const problemId = params.id as string;
 
   const problem = useQuery(api.problems.getProblemBySlug, { slug: problemId });
-const solutions = useQuery(
-  api.solutions.getSolutionsByProblemId,
-  problem?._id ? { problemId: problem._id } : "skip"
-);
-
+  const solutions = useQuery(
+    api.solutions.getSolutionsByProblemId,
+    problem?._id ? { problemId: problem._id } : "skip"
+  );
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("");
   const [showExplanation, setShowExplanation] = useState(false);
@@ -81,102 +82,116 @@ const solutions = useQuery(
   );
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
-      {/* <Navbar /> */}
-      <h1 className="text-center text-3xl font-bold text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent mb-4">
-        {problem?.title} - Solutions
-      </h1>
+<div className="max-w-4xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8">
+  {/* <Navbar /> */}
+  <h1 className="text-center text-2xl sm:text-3xl font-bold text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent mb-4">
+    {problem?.title} - Solutions
+  </h1>
 
-      <div className="flex justify-between items-center mb-4">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="flex items-center gap-2">
-              {selectedLanguage || "Select Language"} <ChevronDown size={16} />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            {languages.map((lang) => (
-              <DropdownMenuItem
-                key={lang}
-                onClick={() => setSelectedLanguage(lang)}
-              >
-                {lang}
-              </DropdownMenuItem>
-            ))}
-          </DropdownMenuContent>
-        </DropdownMenu>
+  <div className="flex flex-wrap gap-4 justify-between items-center mb-4">
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" className="flex items-center gap-2">
+          {selectedLanguage || "Select Language"} <ChevronDown size={16} />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        {languages.map((lang) => (
+          <DropdownMenuItem key={lang} onClick={() => setSelectedLanguage(lang)}>
+            {lang}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
 
-        {currentSolution && (
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => handleCopy(currentSolution.code)}
-            >
-              <Copy size={16} className="mr-1" /> Copy
-            </Button>
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => handleEdit(currentSolution._id)}
-            >
-              <Edit size={16} className="mr-1" /> Edit/Practice
-            </Button>
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => setShowExplanation(true)}
-            >
-              Explanation
-            </Button>
-          </div>
-        )}
+    {currentSolution && (
+      <div className="flex flex-wrap gap-2">
+        <Button variant="outline" size="sm" onClick={() => handleCopy(currentSolution.code)}>
+          <Copy size={16} className="mr-1" /> Copy
+        </Button>
+        <Button variant="default" size="sm" onClick={() => handleEdit(currentSolution._id)}>
+          <Edit size={16} className="mr-1" /> Edit/Practice
+        </Button>
+        <Button variant="default" size="sm" onClick={() => setShowExplanation(true)}>
+          Explanation
+        </Button>
       </div>
-
-      {currentSolution ? (
-        <div className="border p-4 rounded-lg bg-muted/50">
-          <h4 className="font-medium mb-4">{currentSolution.language}</h4>
-          <SyntaxHighlighter
-            language={currentSolution.language.toLowerCase()}
-            style={dracula}
-            showLineNumbers
-            wrapLongLines
-          >
-            {currentSolution.code}
-          </SyntaxHighlighter>
-        </div>
-      ) : (
-        <p className="text-muted-foreground">
-          No solution available for the selected language.
-        </p>
-      )}
-
-      {problem?.slug === "two-sum" && (
-        <div className="my-8">
-          {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
-
-          <TwoSumVisualizer />
-          <TwoSumApproaches />
-        </div>
-      )}
-            {problem?.slug === "add-two-numbers" && (
-<div>
-  <div className="my-8">
-    {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
-            <h1 className="text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-10 mb-4">Add Two Numbers Visualizer</h1>
-    <Add2NumVisualizer />
+    )}
   </div>
-  <div>
-    <AddTwoNumbersApproach />
-  </div>
-</div>
-      )}
 
-      <ExplanationDrawer
-        isOpen={showExplanation}
-        explanation={currentSolution?.explanation ?? ""}
-        onClose={() => setShowExplanation(false)}
-      />
+  {currentSolution ? (
+    <div className="border p-4 rounded-lg bg-muted/50 overflow-x-auto">
+      <h4 className="font-medium mb-4">{currentSolution.language}</h4>
+      <SyntaxHighlighter
+        language={currentSolution.language.toLowerCase()}
+        style={dracula}
+        showLineNumbers
+        wrapLongLines
+      >
+        {currentSolution.code}
+      </SyntaxHighlighter>
     </div>
+  ) : (
+    <p className="text-muted-foreground">No solution available for the selected language.</p>
+  )}
+
+  {problem?.slug === "two-sum" && (
+    <div className="my-8">
+      {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
+      <TwoSumVisualizer />
+      <TwoSumApproaches />
+    </div>
+  )}
+
+  {problem?.slug === "add-two-numbers" && (
+    <div>
+      <div className="my-8">
+        {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
+        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
+          Add Two Numbers Visualizer
+        </h1>
+        <Add2NumVisualizer />
+      </div>
+      <div>
+        <AddTwoNumbersApproach />
+      </div>
+    </div>
+  )}
+
+  {problem?.slug === "3-longest-substring-without-repeating-characters" && (
+    <div>
+      <div className="my-8">
+        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
+          Longest Substring Visualizer
+        </h1>
+        {/* <LongestSubstringVisualizer /> */}
+      </div>
+      <div>
+        <LongestSubstringApproach />
+      </div>
+    </div>
+  )}
+
+  {problem?.slug === "4-median-of-two-sorted-arrays" && (
+    <div>
+      <div className="my-8">
+        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
+          Median of Two Sorted Arrays Visualizer
+        </h1>
+        {/* <LongestSubstringVisualizer /> */}
+      </div>
+      <div>
+        <MedianOfTwoSortedArraysApproach />
+      </div>
+    </div>
+  )}
+
+  <ExplanationDrawer
+    isOpen={showExplanation}
+    explanation={currentSolution?.explanation ?? ""}
+    onClose={() => setShowExplanation(false)}
+  />
+</div>
+
   );
 }

@@ -84,29 +84,40 @@ export default function Add2NumVisualizer() {
 
   if (!l1 || !l2) {
     return (
-      <div className="p-8">
+      <div className="p-4 sm:p-8 max-w-4xl mx-auto w-full">
         <InputLists onSubmit={handleInputSubmit} />
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-6 sm:gap-8 p-4 sm:p-8 max-w-4xl mx-auto w-full">
+      {/* Carry Display */}
       <CarryDisplay carry={carry} />
+
+      {/* Addition Step */}
       <AdditionStep l1Val={l1Val} l2Val={l2Val} carry={carry} />
+
+      {/* Result List */}
       <ResultList result={result} currentIndex={result.length - 1} />
 
-      <Controls
-        isPlaying={isPlaying}
-        onNext={handleNextStep}
-        onPrevious={handlePreviousStep}
-        onPlayPause={() => setIsPlaying((prev) => !prev)}
-        onReset={handleReset}
-        speed={speed}
-        onSpeedChange={(newSpeed) => setSpeed(newSpeed)}
-      />
+      {/* Controls (Next, Previous, Play, Reset, Speed Control) */}
+      <div className="w-full">
+        <Controls
+          isPlaying={isPlaying}
+          onNext={handleNextStep}
+          onPrevious={handlePreviousStep}
+          onPlayPause={() => setIsPlaying((prev) => !prev)}
+          onReset={handleReset}
+          speed={speed}
+          onSpeedChange={(newSpeed) => setSpeed(newSpeed)}
+        />
+      </div>
 
-      <StepLog steps={steps} currentStep={currentIndex} />
+      {/* Step Log */}
+      <div className="w-full">
+        <StepLog steps={steps} currentStep={currentIndex} />
+      </div>
     </div>
   );
 }

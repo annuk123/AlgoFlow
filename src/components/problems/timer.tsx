@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState, useRef } from "react";
 import {
   Dialog,
@@ -22,32 +23,30 @@ export function TimerDialog() {
 
   const totalSeconds = minutes * 60 + seconds;
 
-  // Countdown logic
-useEffect(() => {
-  if (active && !isPaused) {
-    intervalRef.current = setInterval(() => {
-      setSeconds((prevSec) => {
-        if (prevSec === 0) {
-          if (minutes === 0) {
-            clearInterval(intervalRef.current!);
-            setActive(false);
-            setTimeUp(true);
-            return 0;
+  useEffect(() => {
+    if (active && !isPaused) {
+      intervalRef.current = setInterval(() => {
+        setSeconds((prevSec) => {
+          if (prevSec === 0) {
+            if (minutes === 0) {
+              clearInterval(intervalRef.current!);
+              setActive(false);
+              setTimeUp(true);
+              return 0;
+            } else {
+              setMinutes((m) => m - 1);
+              return 59;
+            }
           } else {
-            setMinutes((m) => m - 1);
-            return 59;
+            return prevSec - 1;
           }
-        } else {
-          return prevSec - 1;
-        }
-      });
-    }, 1000);
-  }
+        });
+      }, 1000);
+    }
 
-  return () => clearInterval(intervalRef.current!);
-}, [active, isPaused, minutes]);
+    return () => clearInterval(intervalRef.current!);
+  }, [active, isPaused, minutes]);
 
-  // Reset timer
   const handleReset = () => {
     setActive(false);
     setIsPaused(false);
@@ -57,31 +56,27 @@ useEffect(() => {
     setTimeUp(false);
   };
 
-  // Start timer
   const handleStart = () => {
     if (totalSeconds > 0) {
       setActive(true);
       setIsPaused(false);
       setTimeUp(false);
-      setOpen(false); // auto-close dialog
+      setOpen(false);
     }
   };
 
-  // Pause or Resume
   const handlePauseResume = () => {
     setIsPaused(!isPaused);
   };
 
   return (
-    <>
-    <div className="flex items-center gap-6 justify-center mt-6">
+    <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 mt-4">
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <Button variant="outline" size="sm" className="flex items-center gap-1 ml-20">
+          <Button variant="outline" size="sm" className="flex items-center gap-1">
             <Timer size={16} />
             Set Timer
           </Button>
-          
         </DialogTrigger>
 
         <DialogContent className="sm:max-w-[425px]">
@@ -142,16 +137,15 @@ useEffect(() => {
       </Dialog>
 
       {/* Timer display outside Dialog */}
-    <div className="text-2xl font-mono">
-    {timeUp ? (
-      <p className="text-red-600 font-bold animate-pulse">⏰ Time&apos;s Up!</p>
-    ) : (
-      <p>
-        ⏳ {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
-      </p>
-    )}
-  </div>
-  </div>
-    </>
+      <div className="text-xl sm:text-2xl font-mono text-center sm:text-left">
+        {timeUp ? (
+          <p className="text-red-600 font-bold animate-pulse">⏰ Time&apos;s Up!</p>
+        ) : (
+          <p>
+            ⏳ {String(minutes).padStart(2, "0")}:{String(seconds).padStart(2, "0")}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }

@@ -174,6 +174,17 @@ problems.forEach((problem) => {
                  
               />
             </TabsContent>
+            <TabsContent value="medium">
+              <ProblemGrid
+                problems={filteredProblems
+                  .filter((p) => p.difficulty.toLowerCase() === "medium")
+                  .map((p) => ({
+                    ...p,
+                    id: p.id?.toString(),
+                    topic: Array.isArray(p.topic) ? p.topic : [p.topic],
+                  }))}
+              />
+            </TabsContent>
             <TabsContent value="hard">
               <ProblemGrid
                 problems={filteredProblems

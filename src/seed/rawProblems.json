@@ -43,7 +43,7 @@
     "slug": "3-longest-substring-without-repeating-characters",
     "title": "3. Longest Substring Without Repeating Characters",
     "tags": ["HashMap", "Sliding Window"],
-    "topic": ["String", "Sliding Window"],
+    "topic": ["Hash Table", "Strings", "Sliding Window"],
     "difficulty": "Medium",
     "description": "Given a string s, find the length of the longest substring without repeating characters.",
     "constraints": [
@@ -60,7 +60,7 @@
     "slug": "4-median-of-two-sorted-arrays",
     "title": "4. Median of Two Sorted Arrays",
     "tags": ["Binary Search", "Divide and Conquer"],
-    "topic": ["Array", "Binary Search"],
+    "topic": ["Array", "Binary Search", "Divide and Conquer"],
     "difficulty": "Hard",
     "description": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\n\nThe overall run time complexity should be O(log (m+n)).",
     "constraints": [
@@ -81,7 +81,7 @@
     "slug": "5-longest-palindromic-substring",
     "title": "5. Longest Palindromic Substring",
     "tags": ["Dynamic Programming", "String"],
-    "topic": ["String", "Dynamic Programming"],
+    "topic": ["Strings", "Dynamic Programming", "Two Pointers"],
     "difficulty": "Medium",
     "description": "Given a string s, return the longest palindromic substring in s.",
     "constraints": [
@@ -98,7 +98,7 @@
     "slug": "6-zigzag-conversion",
     "title": "6. Zigzag Conversion",
     "tags": ["String", "Simulation"],
-    "topic": ["String"],
+    "topic": ["Strings"],
     "difficulty": "Medium",
     "description": "The string \"PAYPALISHIRING\" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)\n\nP   A   H   N\nA P L S I I G\nY   I   R\n\nAnd then read line by line: \"PAHNAPLSIIGYIR\".\n\nWrite the code that will take a string and make this conversion given a number of rows:\n\nstring convert(string s, int numRows);\n\nExample 1:\nInput: s = \"PAYPALISHIRING\", numRows = 3\nOutput: \"PAHNAPLSIIGYIR\"\n",
     "constraints": [
@@ -133,7 +133,7 @@
     "slug": "8-string-to-integer-atoi",
     "title": "8. String to Integer (atoi)",
     "tags": ["String", "Math"],
-    "topic": ["String"],
+    "topic": ["Strings"],
     "difficulty": "Medium",
     "description": "Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).\n\nThe algorithm for myAtoi(string s) is as follows:\n1. Read in and ignore any leading whitespace.\n2. Check if the next character (if not already at the end of the string) is '-' or '+'. Read this character in if it is either. This determines if the final result is negative or positive respectively. Assume the result is positive if neither is present.\n3. Read in next the characters until the next non-digit character or the end of the input is reached. The rest of the string is ignored.\n4. Convert these digits into an integer (i.e. \"123\" -> 123, \"0032\" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).\n5. If the integer is out of the 32-bit signed integer range [-2³¹, 2³¹ - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -2³¹ should be clamped to -2³¹, and integers greater than 2³¹ - 1 should be clamped to 2³¹ - 1.\n6. Return the integer as the final result.",
     "constraints": [
@@ -166,8 +166,8 @@
     "id": 10,
     "slug": "10-regular-expression-matching",
     "title": "10. Regular Expression Matching",
-    "tags": ["Dynamic Programming", "String"],
-    "topic": ["String", "Dynamic Programming"],
+    "tags": ["Dynamic Programming", "String", "Recursion"],
+    "topic": ["Strings", "Dynamic Programming", "Recursion"],
     "difficulty": "Hard",
     "description": "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*'.\n\n'.' Matches any single character.\n'*' Matches zero or more of the preceding element.\nThe matching should cover the entire input string (not partial).",
     "constraints": [
@@ -187,7 +187,7 @@
     "slug": "11-container-with-most-water",
     "title": "11. Container With Most Water",
     "tags": ["Two Pointers", "Greedy"],
-    "topic": ["Array", "Two Pointers"],
+    "topic": ["Array", "Two Pointers", "Greedy"],
     "difficulty": "Medium",
     "description": "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water.\n\nReturn the maximum amount of water a container can store.",
     "constraints": [
@@ -205,7 +205,7 @@
     "slug": "12-integer-to-roman",
     "title": "12. Integer to Roman",
     "tags": ["Math", "String"],
-    "topic": ["Math", "String"],
+    "topic": ["Math", "Strings", "Hash Table"],
     "difficulty": "Medium",
     "description": "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.\n\nFor example, 2 is written as II in Roman numeral, just two one's added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:\n\n- I can be placed before V (5) and X (10) to make 4 and 9.\n- X can be placed before L (50) and C (100) to make 40 and 90.\n- C can be placed before D (500) and M (1000) to make 400 and 900.\n\nGiven an integer, convert it to a roman numeral.",
     "constraints": [
@@ -221,7 +221,7 @@
     "slug": "13-roman-to-integer",
     "title": "13. Roman to Integer",
     "tags": ["Math", "String"],
-    "topic": ["Math", "String"],
+    "topic": ["Hash Table", "Math", "Strings"],
     "difficulty": "Easy",
     "description": "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.\n\nFor example, 2 is written as II in Roman numeral, just two one's added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.\n\nRoman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:\n\n- I can be placed before V (5) and X (10) to make 4 and 9.\n- X can be placed before L (50) and C (100) to make 40 and 90.\n- C can be placed before D (500) and M (1000) to make 400 and 900.\n\nGiven a roman numeral, convert it to an integer.",
     "constraints": [
@@ -239,7 +239,7 @@
     "slug": "14-longest-common-prefix",
     "title": "14. Longest Common Prefix",
     "tags": ["String"],
-    "topic": ["String"],
+    "topic": ["Strings", "Trie"],
     "difficulty": "Easy",
     "description": "Write a function to find the longest common prefix string amongst an array of strings.\n\nIf there is no common prefix, return an empty string \"\".",
     "constraints": [
@@ -257,7 +257,7 @@
     "slug": "15-3sum",
     "title": "15. 3Sum",
     "tags": ["Array", "Two Pointers"],
-    "topic": ["Array", "Two Pointers"],
+    "topic": ["Array", "Two Pointers", "Sorting"],
     "difficulty": "Medium",
     "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.",
     "constraints": [
@@ -274,7 +274,7 @@
     "slug": "16-3sum-closest",
     "title": "16. 3Sum Closest",
     "tags": ["Array", "Two Pointers"],
-    "topic": ["Array", "Two Pointers"],
+    "topic": ["Array", "Two Pointers", "Sorting"],
     "difficulty": "Medium",
     "description": "Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.\n\nReturn the sum of the three integers. You may assume that each input would have exactly one solution.",
     "constraints": [
@@ -293,7 +293,7 @@
     "slug": "17-letter-combinations-of-a-phone-number",
     "title": "17. Letter Combinations of a Phone Number",
     "tags": ["Backtracking", "String"],
-    "topic": ["String", "Backtracking"],
+    "topic": ["Strings", "Backtracking", "Hash Table"],
     "difficulty": "Medium",
     "description": "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.\n\nA mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.",
     "constraints": [
@@ -349,7 +349,7 @@
     "slug": "20-valid-parentheses",
     "title": "20. Valid Parentheses",
     "tags": ["Stack", "String"],
-    "topic": ["String", "Stack"],
+    "topic": ["Strings", "Stack"],
     "difficulty": "Easy",
     "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n- Open brackets must be closed by the same type of brackets.\n- Open brackets must be closed in the correct order.",
     "constraints": [
@@ -366,7 +366,7 @@
     "slug": "21-merge-two-sorted-lists",
     "title": "21. Merge Two Sorted Lists",
     "tags": ["Linked List", "Recursion"],
-    "topic": ["Linked List"],
+    "topic": ["Linked List", "Recursion"],
     "difficulty": "Easy",
     "description": "Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.",
     "constraints": [
@@ -384,7 +384,7 @@
     "slug": "22-generate-parentheses",
     "title": "22. Generate Parentheses",
     "tags": ["Backtracking", "String"],
-    "topic": ["String", "Backtracking"],
+    "topic": ["Strings", "Backtracking", "Dynamic Programming"],
     "difficulty": "Medium",
     "description": "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
     "constraints": [
@@ -418,7 +418,7 @@
     "slug": "24-swap-nodes-in-pairs",
     "title": "24. Swap Nodes in Pairs",
     "tags": ["Linked List", "Recursion"],
-    "topic": ["Linked List"],
+    "topic": ["Linked List", "Recursion"],
     "difficulty": "Medium",
     "description": "Given a linked list, swap every two adjacent nodes and return its head.\n\nYou may not modify the values in the list's nodes, only nodes themselves may be changed.",
     "constraints": [
@@ -435,7 +435,7 @@
     "slug": "25-reverse-nodes-in-k-group",
     "title": "25. Reverse Nodes in k-Group",
     "tags": ["Linked List", "Recursion"],
-    "topic": ["Linked List"],
+    "topic": ["Linked List", "Recursion"],
     "difficulty": "Hard",
     "description": "Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.\n\nk is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.",
     "constraints": [
@@ -491,7 +491,7 @@
     "slug": "28-implement-strstr",
     "title": "28. Implement strStr()",
     "tags": ["String"],
-    "topic": ["String"],
+    "topic": ["Strings"],
     "difficulty": "Easy",
     "description": "Implement strStr() function.\n\nGiven two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.",
     "constraints": [
@@ -509,7 +509,7 @@
     "slug": "29-divide-two-integers",
     "title": "29. Divide Two Integers",
     "tags": ["Math", "Bit Manipulation"],
-    "topic": ["Math"],
+    "topic": ["Math", "Bit Manipulation"],
     "difficulty": "Medium",
     "description": "Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.\n\nThe integer division should truncate toward zero, which means losing its fractional part. For example, 8.345 would be truncated to 8, and -2.7335 would be truncated to -2.",
     "constraints": [
@@ -527,7 +527,7 @@
     "slug": "30-substring-with-concatenation-of-all-words",
     "title": "30. Substring with Concatenation of All Words",
     "tags": ["HashMap", "String", "Sliding Window"],
-    "topic": ["String", "Sliding Window"],
+    "topic": ["Strings", "Sliding Window", "Hash Table"],
     "difficulty": "Hard",
     "description": "You are given a string s and an array of strings words of the same length. Return all starting indices of substring(s) in s that is a concatenation of each word in words exactly once, without any intervening characters.\n\nYou can return the answer in any order.",
     "constraints": [
@@ -564,7 +564,7 @@
     "slug": "32-longest-valid-parentheses",
     "title": "32. Longest Valid Parentheses",
     "tags": ["Stack", "Dynamic Programming"],
-    "topic": ["String", "Stack"],
+    "topic": ["Strings", "Stack", "Dynamic Programming"],
     "difficulty": "Hard",
     "description": "Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.",
     "constraints": [
@@ -713,7 +713,7 @@
     "slug": "38-count-and-say",
     "title": "38. Count and Say",
     "tags": ["String"],
-    "topic": ["String"],
+    "topic": ["Strings"],
     "difficulty": "Medium",
     "description": "The count-and-say sequence is a sequence of digit strings defined by the recursive formula:\n- countAndSay(1) = \"1\"\n- countAndSay(n) is the way you would \"say\" the digit string from countAndSay(n-1), which is then converted into a different digit string.\n\nTo generate the next term in the sequence, we read the previous term and count the number of digits in groups of the same digit, then say the digit followed by the count.\n\nFor example, the sequence is as follows:\n- 1\n- 11 (one 1)\n- 21 (two 1s)\n- 1211 (one 2, then one 1)\n- 111221 (one 1, one 2, then two 1s)\n- 312211 (three 1s, two 2s, then one 1)\n\nGiven an integer n, return the nth term of the count-and-say sequence.",
     "constraints": [
@@ -785,7 +785,7 @@
     "slug": "42-trapping-rain-water",
     "title": "42. Trapping Rain Water",
     "tags": ["Array", "Two Pointers", "Dynamic Programming"],
-    "topic": ["Array", "Two Pointers"],
+    "topic": ["Array", "Two Pointers", "Dynamic Programming"],
     "difficulty": "Hard",
     "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
     "constraints": [
@@ -803,7 +803,7 @@
     "slug": "43-multiply-strings",
     "title": "43. Multiply Strings",
     "tags": ["Math", "String"],
-    "topic": ["Math", "String"],
+    "topic": ["Math", "Strings"],
     "difficulty": "Medium",
     "description": "Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.\n\nNote: You must not use any built-in BigInteger library or convert the inputs to integer directly.",
     "constraints": [
@@ -822,7 +822,7 @@
     "slug": "44-wildcard-matching",
     "title": "44. Wildcard Matching",
     "tags": ["String", "Dynamic Programming"],
-    "topic": ["String", "Dynamic Programming"],
+    "topic": ["Strings", "Dynamic Programming"],
     "difficulty": "Hard",
     "description": "Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*'.\n\n- '?' Matches any single character.\n- '*' Matches any sequence of characters (including the empty sequence).\n\nThe matching should cover the entire input string (not partial).",
     "constraints": [
@@ -921,7 +921,7 @@
     "slug": "49-group-anagrams",
     "title": "49. Group Anagrams",
     "tags": ["HashMap", "String"],
-    "topic": ["String", "HashMap"],
+    "topic": ["Strings", "HashMap"],
     "difficulty": "Medium",
     "description": "Given an array of strings strs, group the anagrams together. You can return the answer in any order.\n\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
     "constraints": [
