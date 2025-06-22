@@ -63,7 +63,7 @@ export default function Navbar({
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <span className="font-extrabold text-2xl sm:text-3xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
-            Algo<span className="text-foreground">Flow</span>
+            Algo<span className="text-foreground">Flux</span>
           </span>
         </Link>
 

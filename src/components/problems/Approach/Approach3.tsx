@@ -1,91 +1,109 @@
-import ProblemApproach from "../visualizer/problemApproach";
+import ProblemApproach from "./ProblemApproach/problemApproach";
 
 export default function LongestSubstringApproach() {
   const longestSubstringApproach = {
-    title: "Optimal Approach for Longest Substring Without Repeating Characters",
+    title: "Optimal Hash Map Sliding Window Approach for Longest Substring Without Repeating Characters",
     overview: [
-      "This problem uses the Sliding Window technique to find the longest substring without repeating characters efficiently.",
-      "We use a Set to quickly check if a character already exists in our current window (substring).",
-      "The solution is highly efficient: O(n) time and O(min(n, m)) space, where n is the string length and m is the character set size.",
+      "This problem is best solved using the Sliding Window technique combined with a Hash Map to track the last seen index of characters.",
+      "The Hash Map allows us to instantly 'jump' the left pointer forward, making this solution more efficient than the basic Sliding Window with a Set.",
+      "The solution runs in O(n) time and O(min(n, m)) space, where n is the string length and m is the character set size."
     ],
     concepts: [
       {
         title: "Sliding Window Technique",
-        definition: "A method where we maintain a window (a range) over a part of the data and slide it to explore different sections without restarting.",
+        definition:
+          "A method where we use two pointers to create a dynamic window that grows and shrinks efficiently to maintain a desired condition over a sequence."
       },
       {
-        title: "Set Data Structure",
-        definition: "A collection of unique elements that allows O(1) average time complexity for checking if an element exists.",
+        title: "Hash Map Data Structure",
+        definition:
+          "A key-value store that allows O(1) average time complexity for insertion, lookup, and update, making it perfect for tracking character positions quickly."
       },
       {
         title: "Two Pointer Technique",
-        definition: "We use two indices (left and right) to dynamically track the current window size and position.",
-      },
+        definition:
+          "Two indices (left and right) are used to dynamically manage the current window. The right pointer explores new characters while the left pointer skips duplicates."
+      }
     ],
     steps: [
       {
-        title: "Step 1: Initialize Pointers and Tracking Set",
-        description:
-          "Start with both left and right pointers at the beginning. Use a Set to track characters in the current window.",
-        code: `let left = 0, right = 0, maxLength = 0;\nconst seen = new Set();`,
+        title: "Step 1: Handle Edge Case",
+        description: "If the string is empty, return 0 immediately since there are no substrings.",
+        code: `if (s.length === 0) return 0;`
       },
       {
-        title: "Step 2: Expand the Window (Move Right Pointer)",
+        title: "Step 2: Initialize Pointers and Hash Map",
         description:
-          "Move the right pointer to include new characters. If the character is not in the Set, add it and update maxLength.",
-        code: `while (right < s.length) {\n  if (!seen.has(s[right])) {\n    seen.add(s[right]);\n    maxLength = Math.max(maxLength, right - left + 1);\n    right++;\n  }`,
+          "Start with both pointers (left and right) at the beginning. Use a Hash Map to store the last seen index of each character.",
+        code: `let left = 0, maxLength = 0;\nconst charIndexMap = new Map();`
       },
       {
-        title: "Step 3: Shrink the Window on Duplicate (Move Left Pointer)",
+        title: "Step 3: Expand the Window (Move Right Pointer)",
         description:
-          "If a duplicate is found, remove the leftmost character from the Set and move the left pointer to shrink the window.",
-        code: `else {\n  seen.delete(s[left]);\n  left++;\n}`,
+          "Iterate through each character using the right pointer. If the character is already in the Hash Map and its last seen index is within the current window, move the left pointer directly to skip the duplicate.",
+        code: `for (let right = 0; right < s.length; right++) {\n  if (charIndexMap.has(s[right]) && charIndexMap.get(s[right]) >= left) {\n    left = charIndexMap.get(s[right]) + 1;\n  }\n  charIndexMap.set(s[right], right);\n  maxLength = Math.max(maxLength, right - left + 1);\n}`
       },
       {
-        title: "Step 4: Track Maximum Length",
-        description:
-          "Continue expanding and shrinking the window as needed. Keep updating maxLength throughout the process.",
-      },
+        title: "Step 4: Final Result",
+        description: "Return maxLength, which holds the length of the longest substring without repeating characters.",
+        code: `return maxLength;`
+      }
     ],
     dryRun: `Example: s = "abcabcbb"
 
-Step 1: left = 0, right = 0, maxLength = 0, seen = {}
+Step 1: Initialize -> left = 0, maxLength = 0, charIndexMap = {}
 
-Step 2: right = 0, s[right] = 'a' -> add 'a' to seen, maxLength = 1
+Step 2: right = 0, s[right] = 'a' -> Add 'a': index 0 -> maxLength = 1
+right = 1, s[right] = 'b' -> Add 'b': index 1 -> maxLength = 2
+right = 2, s[right] = 'c' -> Add 'c': index 2 -> maxLength = 3
 
-Step 3: right = 1, s[right] = 'b' -> add 'b' to seen, maxLength = 2
+Step 3: right = 3, s[right] = 'a' -> Duplicate found at index 0
+Move left = index 0 + 1 = 1
+Update 'a' in map -> maxLength remains 3
 
-Step 4: right = 2, s[right] = 'c' -> add 'c' to seen, maxLength = 3
-
-Step 5: right = 3, s[right] = 'a' -> 'a' is duplicate -> remove s[left] = 'a', left = 1
-
-Continue this process.
+Continue process...
 
 Final Answer: maxLength = 3`,
     complexities: {
-      time: "O(n) — We visit each character at most twice (once by right, once by left).",
-      space: "O(min(n, m)) — m is the character set size. Example: 26 for lowercase English letters.",
+      time: "O(n) — Each character is visited at most once by the right pointer and skipped at most once by the left pointer.",
+      space: "O(min(n, m)) — Where m is the character set size. Example: 26 for lowercase English letters, 128 for ASCII."
     },
     comparisons: [
       {
         title: "Brute Force (Check All Substrings)",
         time: "O(n²)",
         space: "O(n)",
-        notes: ["Very inefficient. Checks all possible substrings and verifies uniqueness each time."],
+        notes: [
+          "Inefficient: Tries every substring and checks uniqueness each time.",
+          "Extremely slow for large strings."
+        ]
       },
       {
-        title: "Sliding Window with Set (Optimal)",
+        title: "Sliding Window with Set",
         time: "O(n)",
         space: "O(min(n, m))",
-        notes: ["Best solution using fast character tracking with a Set."],
+        notes: [
+          "Efficient but slower than Hash Map approach.",
+          "Shrinks the window by one character at a time on duplicates, which can be a waste if duplicates are far apart."
+        ]
       },
+      {
+        title: "Sliding Window with Hash Map (Optimal)",
+        time: "O(n)",
+        space: "O(min(n, m))",
+        notes: [
+          "Most optimal: Uses the last seen index to 'jump' the left pointer directly to the right position, skipping unnecessary steps.",
+          "Best when dealing with large strings or when duplicates are far apart."
+        ]
+      }
     ],
     notes: [
-      "Sliding Window is one of the most powerful techniques for substring and subarray problems.",
-      "When dealing with a limited character set (like lowercase English letters), you can use a fixed-size array instead of a Set for even faster lookups.",
-      "You can also use a Hash Map to track the last seen index of each character to further optimize in some variations.",
-      "This problem is a classic combination of the Two Pointer and Sliding Window patterns.",
-    ],
+      "Why Hash Map Sliding Window is More Optimal: Unlike the Set approach which removes characters one by one when a duplicate is found, the Hash Map approach directly skips to the correct window position using the last seen index. This saves multiple operations when duplicates are far apart.",
+      "When to Use Hash Map Sliding Window: Use it when you need to track the last seen index of elements efficiently, especially when the problem requires skipping large parts of the string quickly on duplicates.",
+      "When the Set-based Sliding Window is Good: It's acceptable when the duplicates are frequent and close together, but it is generally slower than the Hash Map approach.",
+      "Character Set Size Optimization: If you know the character set is limited (like only lowercase English letters), you can replace the Hash Map with a fixed-size array for even faster constant-time lookups.",
+      "Edge Case: Always handle the empty string scenario at the beginning."
+    ]
   };
 
   return <ProblemApproach approach={longestSubstringApproach} />;

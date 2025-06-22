@@ -1,6 +1,7 @@
 
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   FaGithub,
   FaLinkedin,
@@ -10,6 +11,7 @@ import {
   FaYoutube
   // FaHashnode, // Removed as it is not a valid export
 } from "react-icons/fa";
+
 
 const socials = [
   {
@@ -55,10 +57,19 @@ export default function Footer() {
         viewport={{ once: true }}
       >
         <p className="text-center sm:text-left text-muted-foreground">
-          © {new Date().getFullYear()} AlgoFlows — Built with ❤️ using Next.js
+          © {new Date().getFullYear()} AlgoFlux — Built with ❤️ using Next.js by
+          <Link
+            href="https://projexio-annu-kumari.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            {" "}
+            Annu Kumari
+          </Link>
         </p>
               {/* <p className="py-6 text-center text-xs text-muted-foreground">
-        © 2025 AlgoFlow. Built with ❤️
+        © 2025 AlgoFlux. Built with ❤️
       </p> */}
 
         <div className="flex gap-5 text-xl">

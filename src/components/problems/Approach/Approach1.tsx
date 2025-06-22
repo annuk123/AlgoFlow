@@ -1,4 +1,4 @@
-import ProblemApproach from "../visualizer/problemApproach";
+import ProblemApproach from "./ProblemApproach/problemApproach";
 
 export default function TwoSumApproachPage() {
   const twoSumApproach = {

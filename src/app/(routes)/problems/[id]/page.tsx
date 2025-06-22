@@ -54,30 +54,31 @@ export default function ProblemPage() {
       {/* Header */}
 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
   {/* Left Section: Title + Meta Info */}
-  <div className="flex flex-col sm:flex-row sm:items-center sm:gap-6 w-full sm:w-auto">
-    <h1 className="text-2xl sm:text-3xl font-bold text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent">
-      {problem.title}
-    </h1>
+<div className="flex flex-col sm:items-start w-full sm:w-auto">
+  <h1 className="text-2xl sm:text-3xl font-bold text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent">
+    {problem.title}
+  </h1>
 
-    {/* Difficulty + Time */}
-    <div className="flex flex-wrap items-center gap-3 mt-2 sm:mt-0 text-muted-foreground text-sm">
-      <Badge
-        className={`text-xs px-2 py-1 rounded-full ${
-          problem.difficulty === "Easy"
-            ? "border-green-600 text-green-700"
-            : problem.difficulty === "Medium"
-            ? "border-yellow-600 text-yellow-700"
-            : "border-red-600 text-red-700"
-        }`}
-        variant="outline"
-      >
-        {problem.difficulty}
-      </Badge>
-      <span className="flex items-center gap-1">
-        <Clock size={16} /> {estimatedTime}
-      </span>
-    </div>
+  {/* Difficulty + Time */}
+  <div className="flex flex-wrap items-start gap-2 mt-2 text-muted-foreground text-sm">
+    <Badge
+      className={`text-xs px-2 py-1 rounded-full ${
+        problem.difficulty === "Easy"
+          ? "border-green-600 text-green-700"
+          : problem.difficulty === "Medium"
+          ? "border-yellow-600 text-yellow-700"
+          : "border-red-600 text-red-700"
+      }`}
+      variant="outline"
+    >
+      {problem.difficulty}
+    </Badge>
+    <span className="flex items-center gap-1">
+      <Clock size={16} /> {estimatedTime}
+    </span>
   </div>
+</div>
+
 
   {/* Right Section: Timer */}
   <div className="flex items-center">
