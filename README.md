@@ -1,4 +1,4 @@
-# 🔍 AlgoFlow — Visualize. Solve. Learn.
+# AlgoFlow — Visualize. Solve. Learn.
 
 **AlgoFlow** is an advanced, interactive platform designed to **visually simplify Data Structures and Algorithms (DSA)** for developers and learners at all levels. It bridges the gap between writing code and understanding it, offering an intuitive approach to problem-solving through **step-by-step visualizations, curated problems**, and **AI-powered insights** (coming soon).
 
@@ -18,49 +18,49 @@ Crafted with cutting-edge technologies like **Next.js 15+**, **TypeScript**, **C
 ![dsa problems](/public/image-7.png)
 ---
 
-## ⚡ Why AlgoFlow?
+## Why AlgoFlow?
 
-- 🔁 Go beyond static code — **understand algorithms visually**
-- 📚 Solve curated **LeetCode** and **Striver A2Z** problems
-- ⚙️ Gain insights into each step of your code execution
-- 🌐 All built in a blazing-fast, scalable web experience
+- Go beyond static code — **understand algorithms visually**
+- Solve curated **LeetCode** and **Striver A2Z** problems
+- Gain insights into each step of your code execution
+- All built in a blazing-fast, scalable web experience
 
 ---
 
-## ✨ Core Features
+## Core Features
 
-- ✅ **DSA Problem Explorer**  
+- **DSA Problem Explorer**  
   Explore handpicked DSA problems with filters by topic, difficulty, and status. Includes both LeetCode and Striver A2Z sheets.
 
-- 📊 **Interactive Algorithm Visualizer**  
+- **Interactive Algorithm Visualizer**  
   Learn sorting and graph algorithms step-by-step with animation timelines and play/pause controls.
 
-- 🤖 **AI Insights (Coming Soon)**  
+- **AI Insights (Coming Soon)**  
   Receive automated explanations, complexity breakdowns, and smart hints from AI.
 
-- 💡 **Solution Cards & Live Editor**  
+- **Solution Cards & Live Editor**  
   View optimized solutions in read-only mode or edit/practice in a live multi-language editor (C++, Java, JavaScript).
 
-- 🧠 **Feedback Console**  
+- **Feedback Console**  
   Write and validate your code with test cases and get real-time feedback on outputs.
 
-- 📁 **Striver A2Z Sheet Visualizer**  
+- **Striver A2Z Sheet Visualizer**  
   Solve problems step-by-step based on the well-known DSA roadmap by Striver.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer        | Technology Stack                                  |
 | ------------ | ------------------------------------------------- |
-| **Frontend** | Next.js 14, TypeScript, Tailwind CSS, shadcn/ui   |
+| **Frontend** | Next.js 15, TypeScript, Tailwind CSS, shadcn/ui   |
 | **Backend**  | Convex Database                                   |
 | **Animations** | Framer Motion                                   |
 | **UX Enhancements** | GSAP, Sonner, Formspree                    |
 
 ---
 
-## 🧩 Project Structure (Simplified)
+## Project Structure (Simplified)
 
 ```
 
@@ -101,7 +101,7 @@ Crafted with cutting-edge technologies like **Next.js 15+**, **TypeScript**, **C
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -131,36 +131,36 @@ pnpm dev
 
 ---
 
-## 📬 Contact & Feedback
+## Contact & Feedback
 
 Have suggestions or want to get in touch?
 
-📩 Email: [support@algoflow.dev](mailto:anuk35168@gmail.com)
-💬 Or use the [Contact Us](https://algoflow-three.vercel.app/contact) page on the site.
+Email: [support@algoflow.dev](mailto:anuk35168@gmail.com)
+Or use the [Contact Us](https://algoflow-three.vercel.app/contact) page on the site.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We’re working toward open-sourcing AlgoFlow soon.
 Stay tuned for contribution guidelines and GitHub project boards.
 
 ---
 
-## 🌍 Follow the Journey
+##  Follow the Journey
 
 AlgoFlow is crafted by an indie developer passionate about education, dev tools, and open knowledge.
 Your support, feedback, and ideas are always welcome!
 
 ---
 
-## 📄 License
+##  License
 
 Licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
 
 ---
 
-> ⚡ Ready to master DSA with the power of visuals?
+> Ready to master DSA with the power of visuals?
 > Try AlgoFlow today and experience algorithms like never before.
 
 

@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
 extend: {
+screens: {
+        xs: "480px",
+      },
+
     animation: {
       gradient: 'gradient 4s ease infinite',
     },

@@ -34,13 +34,35 @@ export default function HashingControlPanel({
     setInputKey(e.target.value);
   };
 
+  const trimmedKey = inputKey.trim();
+
+  const handleInsert = () => {
+    if (!trimmedKey) return;
+    onInsert(trimmedKey);
+    setInputKey("");
+  };
+
+  const handleSearch = () => {
+    if (!trimmedKey) return;
+    onSearch(trimmedKey);
+    setInputKey("");
+  };
+
+  const handleDelete = () => {
+    if (!trimmedKey) return;
+    onDelete(trimmedKey);
+    setInputKey("");
+  };
+
   return (
     <motion.div
-      className="p-4 bg-white dark:bg-gray-900 rounded-2xl shadow-lg space-y-6"
+      className="p-4 bg-white dark:bg-gray-900 rounded-2xl shadow-lg space-y-6 w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-2">Hashing Control Panel</h2>
+      <h2 className="text-3xl font-bold text-center text-indigo-600 mb-2">
+        Hashing Control Panel
+      </h2>
 
       {/* Hash Function Selection */}
       <div className="space-y-2">
@@ -74,24 +96,37 @@ export default function HashingControlPanel({
         </Select>
       </div>
 
-      {/* Insert, Search, Delete */}
-      <div className="flex flex-col md:flex-row items-center gap-4">
+      {/* Input + Action Buttons */}
+      <div className="flex flex-col gap-3">
         <Input
           type="text"
           placeholder="Enter key (number or string)"
           value={inputKey}
           onChange={handleInputChange}
-          className="flex-1"
+          className="w-full"
         />
-        <Button onClick={() => { onInsert(inputKey); setInputKey(""); }}>
-          Insert
-        </Button>
-        <Button onClick={() => { onSearch(inputKey); setInputKey(""); }} variant="outline">
-          Search
-        </Button>
-        <Button onClick={() => { onDelete(inputKey); setInputKey(""); }} variant="destructive">
-          Delete
-        </Button>
+
+        <div className="flex flex-col w-full gap-4">
+          {/* First Row: Insert + Search */}
+          <div className="flex flex-col sm:flex-row w-full gap-3">
+            <Button className="w-full sm:w-1/2" onClick={handleInsert}>
+              Insert
+            </Button>
+            <Button className="w-full sm:w-1/2" onClick={handleSearch} variant="outline">
+              Search
+            </Button>
+          </div>
+
+          {/* Second Row: Delete + Clear */}
+          <div className="flex flex-col sm:flex-row w-full gap-3">
+            <Button className="w-full sm:w-1/2" onClick={handleDelete} variant="destructive">
+              Delete
+            </Button>
+            <Button className="w-full sm:w-1/2" onClick={onClear} variant="secondary">
+              Clear
+            </Button>
+          </div>
+        </div>
       </div>
 
       {/* Load Factor */}
@@ -103,15 +138,14 @@ export default function HashingControlPanel({
         <Progress value={loadFactor * 100} className="h-2" />
       </div>
 
-      {/* Rehash and Clear */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <Button onClick={onRehash} className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
-          Rehash Table
-        </Button>
-        <Button onClick={onClear} className="w-full bg-red-500 hover:bg-red-600 text-white">
-          Clear Hash Table
-        </Button>
-      </div>
+      {/* Rehash Button */}
+      <Button
+        onClick={onRehash}
+        disabled={loadFactor === 0}
+        className="w-full bg-yellow-500 hover:bg-yellow-600 text-white disabled:opacity-50"
+      >
+        Rehash Table
+      </Button>
     </motion.div>
   );
 }

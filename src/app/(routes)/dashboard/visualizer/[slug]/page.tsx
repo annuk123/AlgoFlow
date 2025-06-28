@@ -75,3 +75,4 @@ export default function VisualizerPage() {
   }
   return <div className="text-center mt-10 text-xl">Invalid visualizer selected.</div>;
 }
+

@@ -28,7 +28,7 @@ export default function ControlPanel({
   isAnimating,
 }: ControlPanelProps) {
   const pushLabel = mode === "stack" ? "Push" : "Enqueue";
-  const popLabel = mode === "stack" ? "Pop" : "Dequeue";
+  const popLabel = mode === "queue" ? "Dequeue" : "Pop";
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-6 border p-4 rounded-lg shadow-sm bg-white dark:bg-gray-800">

@@ -16,12 +16,12 @@ const sidebarItems = [
   },
   {
     title: "String Operations",
-    content: `✅ Access individual characters by index.
-✅ Concatenation: Joining two or more strings.
-✅ Substrings: Extract parts of a string.
-✅ Search: Find if a string contains another string.
-✅ Replace: Change part of a string.
-✅ Split: Divide a string based on a delimiter.`,
+    content: ` > Access individual characters by index.
+ > Concatenation: Joining two or more strings.
+ > Substrings: Extract parts of a string.
+ > Search: Find if a string contains another string.
+ > Replace: Change part of a string.
+ > Split: Divide a string based on a delimiter.`,
   },
   {
     title: "Common String Algorithms",
@@ -34,9 +34,9 @@ const sidebarItems = [
   },
   {
     title: "When to Use Strings",
-    content: `✅ When storing text data (names, sentences, etc.).
-✅ When performing text processing (parsing, searching, formatting).
-✅ When handling user input, logs, files, URLs, etc.`,
+    content: `> When storing text data (names, sentences, etc.).
+> When performing text processing (parsing, searching, formatting).
+> When handling user input, logs, files, URLs, etc.`,
   },
   {
     title: "Real-World Examples",

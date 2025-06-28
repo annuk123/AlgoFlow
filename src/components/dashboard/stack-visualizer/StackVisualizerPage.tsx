@@ -63,35 +63,14 @@ export default function StackVisualizerPage() {
 
   return (
     <main className="flex flex-col md:flex-row p-6 max-w-7xl mx-auto space-y-8 md:space-y-0 md:space-x-8">
-        {/* Sidebar: Stack Type Selection */}
-              <div className="w-full md:w-80 ml-7">
-                <StackSidebar />
-              </div>
+
       {/* Stack Visualizer */}
       <section className="flex-1 space-y-6">
-        <h2 className="text-2xl font-bold text-center">Stack Visualizer</h2>
-        <p className="text-center text-gray-500 dark:text-gray-400">
-          Visualize stack operations ({stackType}) in real-time.
-        </p>
 
-        {/* Select Stack Type */}
-        <div className="flex justify-center space-x-4 mb-4">
-          <label className="font-semibold">Select Stack Type:</label>
-          <select
-            value={stackType}
-            onChange={(e) => {
-              setStackType(e.target.value as StackType);
-              handleReset();
-            }}
-            className="border rounded px-2 py-1"
-          >
-            <option value="LIFO">LIFO (Stack)</option>
-            <option value="FIFO">FIFO (Queue)</option>
-          </select>
-        </div>
+{/* Control Panel */}
 
         <ControlPanel
-          mode={stackType === "LIFO" ? "stack" : "queue"}
+          mode="stack"
           onPushOrEnqueue={handlePushOrEnqueue}
           onPopOrDequeue={handlePopOrDequeue}
           onReset={handleReset}
@@ -110,6 +89,11 @@ export default function StackVisualizerPage() {
       <aside className="md:w-1/3">
         <OperationLog log={log} />
       </aside>
+
+              {/* Sidebar: Stack Type Selection */}
+              <div className="w-full md:w-80 px-5">
+                <StackSidebar />
+              </div>
     </main>
   );
 }

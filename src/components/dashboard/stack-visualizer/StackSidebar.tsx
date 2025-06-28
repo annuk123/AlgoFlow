@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 
 const sidebarItems = [
   {
-    title: "🔍 Core Concepts",
+    title: "Core Concepts",
     content: `LIFO (Last In, First Out): Used in Stacks. The last element added is removed first.
 FIFO (First In, First Out): Used in Queues. The first element added is removed first.
 Stack: Think of a stack of plates. Push adds to the top, Pop removes from the top.
@@ -15,7 +15,7 @@ Peek/Top/Front: Access the next removable element without removing it.
 Empty State: Critical edge case — check before Pop or Peek to avoid errors.`,
   },
   {
-    title: "⚙️ When to Use Stack vs Queue",
+    title: "When to Use Stack vs Queue",
     content: `Use Stack (LIFO) when:
 - You need to backtrack (e.g. undo operations, browser history).
 - Implementing Depth-First Search (DFS) or recursive algorithms.
@@ -30,7 +30,7 @@ Use Deque for:
 - Bi-directional access, like palindromic checks, sliding window problems.`,
   },
   {
-    title: "🛠️ Supported Operations",
+    title: "Supported Operations",
     content: `Push / Enqueue: Add element (top for Stack, rear for Queue).
 Pop / Dequeue: Remove element (top for Stack, front for Queue).
 Peek / Front / Top: Inspect next element to be removed.
@@ -39,7 +39,7 @@ Clear: Reset or empty the structure.
 Traversal (optional): Iterate through elements for visualization or logic.`,
   },
   {
-    title: "💡 Advanced Tips & Best Practices",
+    title: " Advanced Tips & Best Practices",
     content: `- Use Stacks for recursive logic, expression parsing, and memory-efficient DFS.
 - Use Queues for fair processing (round-robin, task queues).
 - Handle empty state checks diligently to avoid runtime errors.

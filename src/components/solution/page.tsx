@@ -8,7 +8,6 @@ import { useQuery } from "convex/react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ExplanationDrawer from "@/components/problems/ExplanationDrawer";
-import TwoSumVisualizer from "../problems/visualizer/TwoSumVisualizer/TwoSumVisualizer";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,18 +16,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Copy, Edit, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
-import TwoSumApproaches from "@/components/problems/Approach/Approach1";
-import Add2NumVisualizer from "../problems/visualizer/AddTwoNumbers/Visualizer";
-import AddTwoNumbersApproach from "../problems/Approach/Approach2";
-import LongestSubstringApproach from "../problems/Approach/Approach3";
-import MedianOfTwoSortedArraysApproach from "../problems/Approach/Approach4";
-import LongestPalindromeApproach from "../problems/Approach/Approach5";
-import ZigzagConversionApproach from "../problems/Approach/Approach6";
-import ReverseIntegerApproach from "../problems/Approach/Approach7";
-import AtoiApproach from "../problems/Approach/Approach8";
-import PalindromeApproach from "../problems/Approach/Approach9";
-import RegularExpressionApproach from "../problems/Approach/Approach10";
-import ContainerWithMostWaterApproach from "../problems/Approach/Approach11";
+import ApproachesPage from "./components/page";
 
 export default function SolutionPage() {
   const params = useParams();
@@ -142,154 +130,8 @@ export default function SolutionPage() {
     <p className="text-muted-foreground">No solution available for the selected language.</p>
   )}
 
-  {problem?.slug === "two-sum" && (
-    <div className="my-8">
-      {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
-      <TwoSumVisualizer />
-      <TwoSumApproaches />
-    </div>
-  )}
-
-  {problem?.slug === "add-two-numbers" && (
-    <div>
-      <div className="my-8">
-        {/* <VisualizerRenderer params={{ id: problem?.slug }} /> */}
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Add Two Numbers Visualizer
-        </h1>
-        <Add2NumVisualizer />
-      </div>
-      <div>
-        <AddTwoNumbersApproach />
-      </div>
-    </div>
-  )}
-
-  {problem?.slug === "3-longest-substring-without-repeating-characters" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Longest Substring Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <LongestSubstringApproach />
-      </div>
-    </div>
-  )}
-
-  {problem?.slug === "4-median-of-two-sorted-arrays" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Median of Two Sorted Arrays Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <MedianOfTwoSortedArraysApproach />
-      </div>
-    </div>
-  )}
-
-    {problem?.slug === "5-longest-palindromic-substring" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Longest Palindromic Substring Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <LongestPalindromeApproach />
-      </div>
-    </div>
-  )}
-
-      {problem?.slug === "6-zigzag-conversion" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Zigzag Conversion Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <ZigzagConversionApproach />
-      </div>
-    </div>
-  )}
-
-        {problem?.slug === "7-reverse-integer" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Reverse Integer Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <ReverseIntegerApproach />
-      </div>
-    </div>
-  )}
-
-          {problem?.slug === "8-string-to-integer-atoi" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          String to Integer (Atoi) Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <AtoiApproach />
-      </div>
-    </div>
-  )}
-
-            {problem?.slug === "9-palindrome-number" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Palindrome Number Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <PalindromeApproach />
-      </div>
-    </div>
-  )}
-
-              {problem?.slug === "10-regular-expression-matching" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Regular Expression Matching Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <RegularExpressionApproach />
-      </div>
-    </div>
-  )}
-
-                {problem?.slug === "11-container-with-most-water" && (
-    <div>
-      <div className="my-8">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center text-gradient bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 bg-clip-text text-transparent py-6 sm:py-10 mb-4">
-          Container With Most Water Visualizer
-        </h1>
-        {/* <LongestSubstringVisualizer /> */}
-      </div>
-      <div>
-        <ContainerWithMostWaterApproach />
-      </div>
-    </div>
-  )}
+<ApproachesPage />
+ 
 
   <ExplanationDrawer
     isOpen={showExplanation}

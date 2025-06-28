@@ -36,7 +36,7 @@ const sidebarItems = [
   },
   {
     title: "When to Use Each Type",
-    content: `✅ Singly: When memory is tight, and you mostly insert/delete at the head.\n✅ Doubly: When you need fast traversal in both directions.\n✅ Circular: For continuous data flow like buffering or cycling through items.`,
+    content: `> Singly: When memory is tight, and you mostly insert/delete at the head.\n> Doubly: When you need fast traversal in both directions.\n> Circular: For continuous data flow like buffering or cycling through items.`,
   },
   {
     title: "Time Complexity",

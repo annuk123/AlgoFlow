@@ -89,15 +89,18 @@ export function DropMenuMain() {
 </li>
 
 
-              <ListItem href="../../about" title="Introduction">
-                Get an overview of how AlgoFlow helps you master DSA visually.
-              </ListItem>
-              <ListItem href="../dashboard/visualizer" title="Algorithm Visualizer">
-                Visualize and master DSA algorithms and problems Interactively
-              </ListItem>
-              <ListItem href="../../problems" title="Problem Visualizer">
-                Solve top curated DSA Problem with step-by-step interactive explanation.
-              </ListItem>
+            <ListItem href="/about" title="Introduction">
+  Get an overview of how AlgoFlow helps you master DSA visually.
+</ListItem>
+
+<ListItem href="/dashboard/visualizer" title="Algorithm Visualizer">
+  Visualize and master DSA algorithms and problems interactively
+</ListItem>
+
+<ListItem href="/problems" title="Problem Visualizer">
+  Solve top curated DSA Problems with step-by-step interactive explanation.
+</ListItem>
+
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

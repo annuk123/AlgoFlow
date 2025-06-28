@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const sidebarItems = [
   {
     title: "Core Queue Concepts",
-    content: `🔍 Core Concepts
+    content: `Core Concepts
 - FIFO (First In, First Out): The earliest added element is the first to be removed.
 - Queue: A linear data structure where insertion happens at the rear and deletion happens from the front.
 - Front: The element to be dequeued next.
@@ -20,7 +20,7 @@ const sidebarItems = [
   },
   {
     title: "When to Use a Queue",
-    content: `⚙️ When to Use a Queue
+    content: `When to Use a Queue
 - Task Scheduling: CPU scheduling, printing jobs.
 - Breadth-First Search (BFS): Level-wise traversal in trees and graphs.
 - Asynchronous Data Processing: Queues for handling incoming requests.
@@ -30,7 +30,7 @@ const sidebarItems = [
   },
   {
     title: "Supported Operations",
-    content: `🛠️ Supported Operations
+    content: `Supported Operations
 - Enqueue: Add element to the rear.
 - Dequeue: Remove element from the front.
 - Peek: View the front element.
@@ -40,7 +40,7 @@ const sidebarItems = [
   },
   {
     title: "Advanced Tips & Best Practices",
-    content: `💡 Advanced Tips & Best Practices
+    content: `Advanced Tips & Best Practices
 - Handle empty queue carefully to prevent underflow errors.
 - Use queues when order matters and tasks must be processed sequentially.
 - Consider a circular queue for efficient memory use in fixed-size queues.
