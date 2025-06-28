@@ -13,7 +13,7 @@ interface HashingControlPanelProps {
   onDelete: (key: number | string) => void;
   onClear: () => void;
   loadFactor: number;
-  onRehash: () => void;
+  onRehash: (newSize?: number) => void;
   setHashMethod: (method: string) => void;
   setCollisionMethod: (method: string) => void;
 }
@@ -140,7 +140,7 @@ export default function HashingControlPanel({
 
       {/* Rehash Button */}
       <Button
-        onClick={onRehash}
+        onClick={() => onRehash?.()}
         disabled={loadFactor === 0}
         className="w-full bg-yellow-500 hover:bg-yellow-600 text-white disabled:opacity-50"
       >
