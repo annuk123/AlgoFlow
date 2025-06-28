@@ -53,7 +53,7 @@ export default function StackSidebar() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <aside className="p-5 w-full md:w-80 bg-white dark:bg-gray-800 rounded-xl shadow-lg sticky top-6 space-y-4 h-fit border border-gray-200 dark:border-gray-700">
+    <aside className="p-5 w-full md:w-100 bg-white dark:bg-gray-800 rounded-xl shadow-lg sticky top-6 space-y-4 h-fit border border-gray-200 dark:border-gray-700">
       <h2 className="text-2xl font-bold text-center text-indigo-600 dark:text-indigo-400 mb-2">
         Stack & Queue Concepts
       </h2>

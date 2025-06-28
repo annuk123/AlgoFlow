@@ -4,6 +4,7 @@ import { useState } from "react";
 import ControlPanel from "./ControlPanel";
 import StackDisplay from "./StackDisplay";
 import OperationLog from "./OperationLog";
+import StackSidebar from "./StackSidebar";
 
 export default function StackVisualizerPage() {
   const [stack, setStack] = useState<string[]>([]);
@@ -65,6 +66,8 @@ export default function StackVisualizerPage() {
       <aside className="md:w-1/3">
         <OperationLog log={log} />
       </aside>
+
+      <StackSidebar />
     </main>
   );
 }
