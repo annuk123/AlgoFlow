@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/tooltip";
 
 interface HashTableSlotProps {
+  // value: string | number | symbol | null;
   index: number;
   keys: (string | number)[];
   highlight?: boolean;

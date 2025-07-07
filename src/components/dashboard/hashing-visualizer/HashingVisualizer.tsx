@@ -10,7 +10,7 @@ type HashMethod = "modulo" | "multiplicative" | "midSquare" | "folding";
 
 
 const TABLE_SIZE = 10;
-const MIN_TABLE_SIZE = 7;
+// const MIN_TABLE_SIZE = 7;
 
 export default function HashingVisualizer() {
   const [table, setTable] = useState<(string | number | null)[]>(Array(TABLE_SIZE).fill(null));
@@ -161,8 +161,8 @@ const deleteKey = (key: string | number) => {
           const newLoad = updated / table.length;
           setLoadFactor(newLoad);
 
-          if (newLoad < 0.25 && table.length > MIN_TABLE_SIZE) {
-            setTimeout(() => rehashTable(Math.max(MIN_TABLE_SIZE, Math.floor(table.length / 2))), 800);
+          if (newLoad < 0.25 && table.length > TABLE_SIZE) {
+            setTimeout(() => rehashTable(Math.max(TABLE_SIZE, Math.floor(table.length / 2))), 800);
           }
 
           return updated;

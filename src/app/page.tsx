@@ -1,223 +1,239 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { useEffect, useState, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/nav/nav";
 import { motion } from "framer-motion";
-import Footer from "@/components/Footer/page";
-import WhyChooseUs from "@/components/whychooseus/choose";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import FeedbackSection from "@/components/feedbackcomponent/feedback";
-import FAQSection from "@/components/faq/faq";
+import dynamic from "next/dynamic";
 
+// Lazy Components
+const WhyChooseUs = dynamic(() => import("@/components/whychooseus/choose"), {
+  ssr: false,
+  loading: () => <p className="text-center">Loading...</p>,
+});
+
+const FeedbackSection = dynamic(() => import("@/components/feedbackcomponent/feedback"), {
+  ssr: false,
+  loading: () => <p className="text-center">Loading feedback...</p>,
+});
+
+const FAQSection = dynamic(() => import("@/components/faq/faq"), {
+  ssr: false,
+  loading: () => <p className="text-center">Loading FAQ...</p>,
+});
+
+const Footer = dynamic(() => import("@/components/Footer/page"), {
+  ssr: false,
+  loading: () => <p className="text-center">Loading footer...</p>,
+});
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
-const feedback = useQuery(api.feedback.getAllFeedback);
+  const feedback = useQuery(api.feedback.getAllFeedback);
 
+  const [cachedFeedback, setCachedFeedback] = useState<any[] | null>(null);
+
+  // Avoid SSR hydration issues
   useEffect(() => {
-    setIsMounted(true); // run only on client
+    setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null; // Avoid SSR hydration issues
+  // Save new feedback to cache
+  useEffect(() => {
+    if (feedback) {
+      setCachedFeedback(feedback);
+      localStorage.setItem("cachedFeedback", JSON.stringify(feedback));
+      localStorage.setItem("feedbackCacheTime", String(Date.now()));
+    }
+  }, [feedback]);
 
-  // Define the features array
+  // Load cached feedback if fresh
+  useEffect(() => {
+    const data = localStorage.getItem("cachedFeedback");
+    const time = localStorage.getItem("feedbackCacheTime");
+    if (data && time) {
+      const isFresh = Date.now() - parseInt(time) < 5 * 60 * 1000;
+      if (isFresh) setCachedFeedback(JSON.parse(data));
+    }
+  }, []);
+
+  if (!isMounted) return null;
+
   const features = [
     {
       title: "Interactive Algorithm Visualizations",
       description: "Watch algorithms come to life with step-by-step animations and intuitive controls. Perfect for visual learners and curious minds.",
-      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=tvxsdo63ztf9ck84u67t&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
-      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster1.png"
+      video: "https://player.cloudinary.com/embed/?cloud_name=dfepqicgm&public_id=Untitled_video_-_Made_with_Clipchamp_3_vocnro&profile=cld-looping",
     },
     {
       title: "LeetCode Problem Practice",
       description: "Tackle real coding challenges with our integrated LeetCode problem set. Visualize solutions and track your progress effortlessly.",
       video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=j2fkfdymvdj0xqmj3fdk&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
-      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster2.png"
     },
     {
       title: "Striver's A2Z DSA Problems",
       description: "Master the fundamentals with Striver's A2Z DSA problems. Visualize each step and build a solid foundation in data structures and algorithms.",
       video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=igr5dsg3bgkfyvwyomte&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
-      poster: "https://res.cloudinary.com/dpiobntr2/image/upload/v1746568505/algoflow_poster3.png"
     }
   ];
 
   return (
-    <main className="flex z-10 flex-col min-h-screen bg-background text-foreground transition-colors duration-500">
-      {/* Navbar */}
+    <main className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="flex flex-1 flex-col items-center justify-center text-center px-6 relative overflow-hidden min-h-[90vh]">
-  {/* Animated Background Blobs */}
-  <div className="absolute inset-0 -z-10 overflow-hidden">
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 0.4, scale: 1 }}
-      transition={{ duration: 2 }}
-      className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-primary to-secondary rounded-full blur-3xl opacity-40 animate-pulse"
-    />
-    <motion.div 
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 0.4, scale: 1 }}
-      transition={{ duration: 2, delay: 0.7 }}
-      className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-secondary to-primary rounded-full blur-3xl opacity-40 animate-pulse"
-    />
+      {/* Hero */}
+<section className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] overflow-hidden dark:bg-[#0d1117] bg-white text-white">
+
+  {/* Animated Glow Background */}
+  <div className="absolute inset-0 z-0">
+    <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-indigo-500/30 via-sky-500/20 to-transparent rounded-full blur-3xl animate-pulse-slow" />
+    <div className="absolute bottom-[-150px] right-1/2 translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-emerald-400/20 via-cyan-500/10 to-transparent rounded-full blur-2xl" />
   </div>
+
+  {/* Optional Grid Background */}
+  <div className="absolute inset-0 bg-[radial-gradient(#1f2937_1px,transparent_1px)] bg-[size:24px_24px] opacity-10 pointer-events-none z-0" />
 
   {/* Content */}
-  <motion.h1 
-    initial={{ opacity: 0, y: -60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary animate-gradient"
-  >
-    Visualize Your <br />
-    <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary">
-      DSA Journey
-    </span> 
-    Like Never Before
-  </motion.h1>
-
-  <motion.p 
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.3 }}
-    className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl"
-  >
-    Welcome to <span className="font-semibold text-primary">AlgoFlow</span> — where complex algorithms turn into 
-    <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient"> beautiful, interactive visual stories.</span> Learn smarter, practice faster, master deeper.
-  </motion.p>
-
-  <motion.div
-    initial={{ opacity: 0, scale: 0.9 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1, delay: 0.6 }}
-  >
-    <Button 
-      size="lg" 
-      className="rounded-full px-8 py-6 text-lg shadow-lg bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary transition-all hover:scale-110 duration-300"
+  <div className="relative z-10 mt-16">
+    <motion.h1
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-violet-500 drop-shadow-[0_0_25px_rgba(1,1,1,0.7)]"
     >
-      Get Started
-    </Button>
-  </motion.div>
-</section>
+      Visualize Your <br />
+      <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-cyan-400 drop-shadow-[0_0_30px_rgba(1,1,1,0.6)]">
+        DSA Journey
+      </span>
+      Like Never Before
+    </motion.h1>
 
-<div className="relative flex items-center justify-center text-center -top-30 py-32 bg-white dark:bg-background overflow-hidden">
-  {/* Background Overlay (optional) */}
-  <div className="absolute inset-0 z-0" />
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.4 }}
+      className="mt-6 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto text-muted-foreground drop-shadow-[0_0_12px_rgba(94,234,212,0.25)]"
+    >
+      Welcome to <span className="font-semibold text-primary">AlgoFlow</span> — where tough algorithms become
+      <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-300 drop-shadow-[0_0_14px_rgba(94,234,212,0.4)]"> interactive visual stories</span> that stick with you forever.
+    </motion.p>
 
-  {/* Centered Video */}
-  <div className="relative z-10 max-w-5xl w-full rounded-3xl overflow-hidden shadow-2xl group transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
-  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
-  <iframe
-    src="https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=jhoi6cbftm6rdmssnaiy&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false"
-    allow="autoplay; fullscreen"
-    className="w-full aspect-video object-cover"
-  />
-      <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
-</div>
-
-
-  {/* Optional Animation Styles */}
-  <style jsx>{`
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in-up {
-      animation: fade-in-up 0.8s ease-out forwards;
-    }
-
-    .delay-100 {
-      animation-delay: 0.1s;
-    }
-  `}</style>
-</div>
-
-<section className="relative px-6 md:px-20 bg-background text-foreground">
-  <motion.h2
-    initial={{ opacity: 0, y: -40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6 }}
-    className="text-4xl md:text-5xl font-bold text-center mb-20"
-  >
-    Unlock The Full Potential of
-     <span className="tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient"> Algo</span><span className="text-foreground">Flow</span> 
-  </motion.h2>
-
-  <div className="flex flex-col gap-32">
-    {features.map((feature, index) => {
-      const isReversed = index % 2 !== 0;
-
-      return (
-        <motion.div
-          key={feature.title}
-          initial={{ opacity: 0, x: isReversed ? 80 : -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          className={`flex flex-col-reverse  md:flex-row ${
-            isReversed ? "md:flex-row-reverse" : ""
-          } items-center gap-12`}
-         > 
-          {/* Text */}
-          <div className="md:w-1/2 text-center md:text-left space-y-4">
-            <h3 className="text-3xl font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground text-lg">
-              {feature.description}
-            </p>
-          </div>
-
-          {/* Video with Poster Thumbnail */}
-<div className="md:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl group relative transition-transform duration-500 hover:scale-[1.015] hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3)]">
-  <div className="relative w-full aspect-video overflow-hidden">
-    {/* Video */}
-    <iframe
-      src={feature.video}
-      className="w-full h-full object-cover"
-      allow="autoplay; fullscreen"
-    />
-
-    {/* Bottom Fade Effect */}
-    <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
-  </div>
-</div>
-
-
-        </motion.div>
-      );
-    })}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, delay: 0.8 }}
+      className="mt-10"
+    >
+      <Button size="lg" className="rounded-full px-8 py-6 text-lg shadow-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:scale-110 transition-all">
+         Get Started
+      </Button>
+    </motion.div>
   </div>
 </section>
-{/* <!-- Call to Action Section --> */}
-<WhyChooseUs />
 
-<FeedbackSection
-  feedback={
-    (feedback ?? []).map(fb => ({
-      ...fb,
-      createdAt: String(fb.createdAt),
-    }))
-  }
+
+
+      {/* Hero Promo Video */}
+      <div className="relative py-32 flex justify-center items-center overflow-hidden">
+        <div className="relative z-10 max-w-5xl w-full rounded-3xl overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 pointer-events-none" />
+
+          <iframe
+  loading="lazy"
+  // @ts-expect-error: fetchpriority is not yet in TS types
+  fetchPriority="low"
+  src="https://player.cloudinary.com/embed/?cloud_name=dfepqicgm&public_id=algoflux_ndxgte&profile=cld-looping&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false"
+  className="w-full h-full aspect-video object-cover"
+  allow="autoplay; fullscreen"
+  allowFullScreen
 />
 
-<FAQSection />
+        </div>
+      </div>
 
-      {/* Footer */}
-      <Footer />
+      {/* Features */}
+      <section className="px-6 md:px-20">
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center mb-20"
+        >
+          Unlock The Full Potential of{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">Algo</span><span className="text-foreground">Flow</span>
+        </motion.h2>
+
+        <div className="flex flex-col gap-32">
+          {features.map((feature, index) => {
+            const isReversed = index % 2 !== 0;
+            return (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, x: isReversed ? 80 : -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className={`flex flex-col-reverse md:flex-row ${isReversed ? "md:flex-row-reverse" : ""} items-center gap-12`}
+              >
+                {/* Text */}
+                <div className="md:w-1/2 text-center md:text-left space-y-4">
+                  <h3 className="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground text-lg">{feature.description}</p>
+                </div>
+
+                {/* Video */}
+                <div className="md:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl relative">
+                  {/* <iframe
+                    loading="lazy"
+                    fetchpriority="low"
+                    src={feature.video}
+                    className="w-full h-full aspect-video object-cover"
+                    allow="autoplay; fullscreen"
+                  /> */}
+
+                            <iframe
+  loading="lazy"
+  // @ts-expect-error: fetchpriority is not yet in TS types
+  fetchPriority="low"
+  src={feature.video}
+  className="w-full h-full aspect-video object-cover"
+  allow="autoplay; fullscreen"
+  allowFullScreen
+/>
+                  <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black to-transparent pointer-events-none z-10" />
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Call to Actions */}
+      <Suspense fallback={<div className="text-center py-12">Loading why choose us...</div>}>
+        <WhyChooseUs />
+      </Suspense>
+
+      <Suspense fallback={<div className="text-center py-12">Loading feedback...</div>}>
+        <FeedbackSection
+          feedback={(cachedFeedback ?? []).map(fb => ({
+            ...fb,
+            createdAt: String(fb.createdAt),
+          }))}
+        />
+      </Suspense>
+
+      <Suspense fallback={<div className="text-center py-12">Loading FAQs...</div>}>
+        <FAQSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="text-center py-12">Loading footer...</div>}>
+        <Footer />
+      </Suspense>
     </main>
   );
 }
-

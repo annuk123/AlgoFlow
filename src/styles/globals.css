@@ -15,6 +15,16 @@
   animation: gradientMove 6s ease infinite;
 }
 
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.4 }
+  50% { opacity: 0.8 }
+}
+.animate-pulse-slow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
+
+
 /* GLOBAL STYLES FOR VISUALIZER PAGES */
 
 /* Container for layout content */
