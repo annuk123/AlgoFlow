@@ -8,6 +8,16 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import dynamic from "next/dynamic";
 
+type Feedback = {
+  _id: string;
+  createdAt: string | number;
+  name: string;
+  message: string;
+  rating?: number; // optional in case it's missing
+};
+
+
+
 // Lazy Components
 const WhyChooseUs = dynamic(() => import("@/components/whychooseus/choose"), {
   ssr: false,
@@ -33,7 +43,7 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const feedback = useQuery(api.feedback.getAllFeedback);
 
-  const [cachedFeedback, setCachedFeedback] = useState<any[] | null>(null);
+  const [cachedFeedback, setCachedFeedback] = useState<Feedback[] | null>(null);
 
   // Avoid SSR hydration issues
   useEffect(() => {
@@ -43,8 +53,12 @@ export default function Home() {
   // Save new feedback to cache
   useEffect(() => {
     if (feedback) {
-      setCachedFeedback(feedback);
-      localStorage.setItem("cachedFeedback", JSON.stringify(feedback));
+      const normalizedFeedback = feedback.map(fb => ({
+        ...fb,
+        createdAt: String(fb.createdAt),
+      }));
+      setCachedFeedback(normalizedFeedback);
+      localStorage.setItem("cachedFeedback", JSON.stringify(normalizedFeedback));
       localStorage.setItem("feedbackCacheTime", String(Date.now()));
     }
   }, [feedback]);
@@ -219,13 +233,15 @@ export default function Home() {
       </Suspense>
 
       <Suspense fallback={<div className="text-center py-12">Loading feedback...</div>}>
-        <FeedbackSection
-          feedback={(cachedFeedback ?? []).map(fb => ({
-            ...fb,
-            createdAt: String(fb.createdAt),
-          }))}
-        />
-      </Suspense>
+  <FeedbackSection
+    feedback={(cachedFeedback ?? []).map((fb) => ({
+      ...fb,
+      createdAt: String(fb.createdAt),
+      rating: typeof fb.rating === "number" ? fb.rating : 5,
+    }))}
+  />
+</Suspense>
+
 
       <Suspense fallback={<div className="text-center py-12">Loading FAQs...</div>}>
         <FAQSection />
