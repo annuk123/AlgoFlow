@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { Variants, easeOut } from "framer-motion";
 export interface Feedback {
   _id?: string; // Optional unique identifier
   name: string;
@@ -12,7 +13,7 @@ export interface Feedback {
   createdAt: string; // or Date
 }
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
@@ -20,7 +21,7 @@ const fadeUp = {
     transition: {
       delay: i * 0.12,
       duration: 0.6,
-      ease: "easeOut",
+      ease: easeOut, 
     },
   }),
 };
