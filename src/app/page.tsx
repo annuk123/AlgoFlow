@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import dynamic from "next/dynamic";
+import TreeAnimation from "@/components/bg/TreeAnimation";
 
 type Feedback = {
   _id: string;
@@ -96,21 +97,34 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-background text-foreground">
       <Navbar />
+      
 
       {/* Hero */}
-<section className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] overflow-hidden dark:bg-[#0d1117] bg-white text-white">
 
-  {/* Animated Glow Background */}
+
+
+<section className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] overflow-hidden dark:bg-[#0d1117] bg-white text-white">
+  
+  {/* Tree Animation Layer */}
+  <div className="absolute inset-0 z-10 px-8 pointer-events-none">
+  <TreeAnimation />
+  <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+</div>
+
+  {/* Background Gradient */}
   <div className="absolute inset-0 z-0">
     <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-indigo-500/30 via-sky-500/20 to-transparent rounded-full blur-3xl animate-pulse-slow" />
     <div className="absolute bottom-[-150px] right-1/2 translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-emerald-400/20 via-cyan-500/10 to-transparent rounded-full blur-2xl" />
   </div>
 
-  {/* Optional Grid Background */}
+  {/* Grid */}
   <div className="absolute inset-0 bg-[radial-gradient(#1f2937_1px,transparent_1px)] bg-[size:24px_24px] opacity-10 pointer-events-none z-0" />
 
   {/* Content */}
-  <div className="relative z-10 mt-16">
+  <div className="relative z-20 mt-16"> {/* Notice: z-20 to be above animation */}
+    {/* motion.h1, p, button as-is */}
+
+     <div className="relative z-10 mt-16">
     <motion.h1
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
@@ -119,7 +133,7 @@ export default function Home() {
     >
       Visualize Your <br />
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-cyan-400 drop-shadow-[0_0_30px_rgba(1,1,1,0.6)]">
-        DSA Journey
+        DSA Journey {" "}
       </span>
       Like Never Before
     </motion.h1>
@@ -145,7 +159,9 @@ export default function Home() {
       </Button>
     </motion.div>
   </div>
+  </div>
 </section>
+
 
 
 
