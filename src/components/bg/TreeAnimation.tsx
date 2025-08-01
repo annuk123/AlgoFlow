@@ -64,7 +64,7 @@ export default function TreeAnimation() {
         viewBox="0 0 640 160"
         preserveAspectRatio="none"
         className="w-full h-full"
-      >
+      > 
         <defs>
           <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
             <feGaussianBlur stdDeviation="2" result="blur" />
