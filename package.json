@@ -48,6 +48,8 @@
     "react-markdown": "^10.1.0",
     "react-monaco-editor": "^0.58.0",
     "react-syntax-highlighter": "^15.6.1",
+    "react-turnstile": "^1.1.4",
+    "resend": "^4.7.0",
     "shadcn": "^2.6.0",
     "skeleton": "^1.0.0",
     "slugify": "^1.6.6",

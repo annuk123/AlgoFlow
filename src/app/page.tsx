@@ -8,6 +8,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import dynamic from "next/dynamic";
 import TreeAnimation from "@/components/bg/TreeAnimation";
+import { NewsletterForm } from "@/components/NewsLetter/NewsletterForm";
 
 type Feedback = {
   _id: string;
@@ -193,7 +194,7 @@ export default function Home() {
           className="text-4xl md:text-5xl font-bold text-center mb-20"
         >
           Unlock The Full Potential of{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">Algo</span><span className="text-foreground">Flow</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400">Algo</span><span className="text-foreground">Flux</span>
         </motion.h2>
 
         <div className="flex flex-col gap-32">
@@ -262,6 +263,10 @@ export default function Home() {
       <Suspense fallback={<div className="text-center py-12">Loading FAQs...</div>}>
         <FAQSection />
       </Suspense>
+
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-100 to-cyan-50">
+      <NewsletterForm />
+    </div>
 
       <Suspense fallback={<div className="text-center py-12">Loading footer...</div>}>
         <Footer />
