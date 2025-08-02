@@ -85,12 +85,12 @@ export default function Home() {
     {
       title: "LeetCode Problem Practice",
       description: "Tackle real coding challenges with our integrated LeetCode problem set. Visualize solutions and track your progress effortlessly.",
-      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=j2fkfdymvdj0xqmj3fdk&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dfepqicgm&public_id=Untitled_video_-_Made_with_Clipchamp_16_xp4ifo&profile=cld-looping",
     },
     {
       title: "Striver's A2Z DSA Problems",
       description: "Master the fundamentals with Striver's A2Z DSA problems. Visualize each step and build a solid foundation in data structures and algorithms.",
-      video: "https://player.cloudinary.com/embed/?cloud_name=dpiobntr2&public_id=igr5dsg3bgkfyvwyomte&player[autoplay]=true&player[autoplayMode]=on-scroll&player[muted]=true&player[loop]=true&player[controls]=false",
+      video: "https://player.cloudinary.com/embed/?cloud_name=dfepqicgm&public_id=Untitled_video_-_Made_with_Clipchamp_17_kabrma&profile=cld-looping",
     }
   ];
 
