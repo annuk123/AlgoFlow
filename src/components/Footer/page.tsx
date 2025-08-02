@@ -47,12 +47,13 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="w-full text-white bg-gray-950 mt-4 backdrop-blur-sm border-t border-cyan-800/30 shadow-inner rounded-tl-3xl rounded-tr-3xl">
-      <div className="max-w-7xl mx-auto px-6 py-16 space-y-12">
-
-{/* AlgoFlow Summary */}
+<footer
+  className="relative z-10 -mt-20 w-full text-white bg-gray-950 backdrop-blur-sm border-t-4 border-cyan-800/30 shadow-inner rounded-tl-3xl rounded-tr-3xl mb-0"
+>
+  <div className="max-w-7xl mx-auto px-6 py-20 space-y-12">
+{/* AlgoFlux Summary */}
 <div className="flex flex-col lg:flex-row justify-between items-start gap-10 text-center lg:text-left">
-  {/* Left: About AlgoFlow */}
+  {/* Left: About AlgoFlux*/}
   <div className="flex-1 space-y-4">
     <motion.h2
       className="text-2xl sm:text-3xl font-extrabold text-white"
@@ -70,10 +71,10 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.2 }}
     >
-      AlgoFlow is a next-generation DSA learning and problem-solving platform — combining interactive algorithms, AI-driven feedback, and visual learning to empower developers, students, and teams to learn faster, think deeper, and code smarter.
+      AlgoFlux is a next-generation DSA learning and problem-solving platform; combining interactive algorithms, AI-driven feedback, and visual learning to empower developers, students, and teams to learn faster, think deeper, and code smarter.
     </motion.p>
-    <p className="italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 text-sm pt-2">
-  “AlgoFlow is like LeetCode meets visual learning — but smarter.”
+    <p className="italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 text-md pt-2">
+  “AlgoFlux is like LeetCode meets visual learning — but smarter.”
 </p>
 
   </div>
@@ -107,7 +108,7 @@ export default function Footer() {
         </div>
 
         {/* Footer bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 border-t border-cyan-800/30 pt-8 text-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 border-t border-cyan-800/30 pt-8 text-sm mb-0">
           <p className="text-gray-500 text-center sm:text-left">
             &copy; {new Date().getFullYear()} AlgoFlux by <span className="text-cyan-400 font-medium">Annu Kumari</span> • Built with ❤️ for 
           </p>

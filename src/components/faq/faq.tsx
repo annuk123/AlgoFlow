@@ -51,8 +51,8 @@ const faqs = [
 
 
   return (
-    <section className="px-6">
-      <div className="text-center mb-10">
+    <section className="px-6 py-10">
+      <div className="text-center">
         <div className="inline-flex items-center gap-2  text-lg font-semibold ">
           <FaQuestionCircle className="text-3xl text-sky-500" />
           <h1 className="text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-400 animate-gradient">Frequently Asked Questions</h1>
