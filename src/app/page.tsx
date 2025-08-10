@@ -143,10 +143,10 @@ export default function Home() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.4 }}
-      className="mt-6 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto text-muted-foreground drop-shadow-[0_0_12px_rgba(94,234,212,0.25)]"
+      className="mt-6 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto text-gray-700 dark:text-muted-foreground dark:drop-shadow-[0_0_12px_rgba(94,234,212,0.25)]"
     >
       Welcome to <span className="font-semibold text-primary">AlgoFlow</span> — where tough algorithms become
-      <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-300 drop-shadow-[0_0_14px_rgba(94,234,212,0.4)]"> interactive visual stories</span> that stick with you forever.
+      <span className="font-semibold text-primary dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-indigo-400 dark:via-sky-400 dark:to-emerald-300 dark:drop-shadow-[0_0_14px_rgba(94,234,212,0.4)]"> interactive visual stories</span> that stick with you forever.
     </motion.p>
 
     <motion.div
