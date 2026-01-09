@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 const nodes = [
   { id: 1, x: 0, y: 80 },
@@ -57,6 +58,7 @@ const getNodeById = (id: number) => nodes.find((n) => n.id === id)!;
 export default function TreeAnimation() {
   const [highlightedNode, setHighlightedNode] = useState<number | null>(null);
   const numberOfSparks = 4;
+  const { theme } = useTheme();
 
   return (
     <div className="absolute top-0 left-0 w-full h-screen -z-10 overflow-hidden">
@@ -86,7 +88,7 @@ export default function TreeAnimation() {
               y1={a.y}
               x2={b.x}
               y2={b.y}
-              stroke="white"
+              stroke={theme === "light" ? "black" : "white"}
               strokeWidth="0.3"
               filter="url(#glow)"
             />
